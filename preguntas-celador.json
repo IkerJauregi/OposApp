@@ -1,0 +1,5402 @@
+[
+  {
+    "documento": "CELADOR",
+    "id": 1,
+    "pregunta": "En Osakidetza, para todos los tipos de jornada, excepto la nocturna, el trabajo efectivo anual a realizar en concepto de jornada ordinaria será de:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "1592 horas.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "1433 horas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "1447 horas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "1492 horas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 2,
+    "pregunta": "Podrá acogerse a la exención de trabajo nocturno el personal mayor de:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "60 años.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "55 años.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "50 años.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "62 años.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 3,
+    "pregunta": "Al personal mayor de 60 años que preste sus servicios en régimen de turnos rotatorios se le aplicará a la hora nocturna el factor multiplicador que se señala a continuación:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "1,15.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "1,25.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "1,20.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "1,10.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 4,
+    "pregunta": "Con carácter general, la jornada normalizada diaria será de:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "6 horas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "6 horas y 30 minutos.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "7 horas.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "7 horas y 30 minutos.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 5,
+    "pregunta": "En el ámbito de osakidetza, durante el disfrute por el personal de las vacaciones reglamentarias:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "No se podrá hacer uso de las licencias, pero sí de los permisos.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Se podrá hacer uso de las licencias, en los casos establecidos.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "No se podrá hacer uso de las licencias o permisos retribuidos.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Se podrá hacer uso de las licencias o permisos, sin retribución.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 6,
+    "pregunta": "Mantener al paciente en bipedestación está indicado para:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "La realización de una punción lumbar.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "La realización de pruebas ginecológica.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "La realización de pruebas radiológicas.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Cambios posturales.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 7,
+    "pregunta": "Describa la posición genupectoral:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "De rodillas e inclinado hacia delante.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Boca abajo.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Tumbado de lado en posición fetal.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Boca arriba con manos en el pecho.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 8,
+    "pregunta": "Los arneses de uso en pacientes:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Son desechados tras su uso.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Se utilizan para inmovilizar al paciente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Tras su uso por el paciente se envían a la lavandería.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Son de talla única.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 9,
+    "pregunta": "El ecógrafo realiza exploraciones utilizando:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Ondas electromagnéticas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Ultrasonidos.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Rayos X.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Ninguna de las respuestas anteriores es correcta.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 10,
+    "pregunta": "Defina temperatura de ignición:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Temperatura a la cual una sustancia comienza a desprender vapores en cantidad suficiente para mantener la combustión.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Temperatura a la cual una sustancia puede llegar a arder en determinadas condiciones ambientales.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Temperatura a la cual una sustancia empieza a arder espontáneamente.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Ninguna de las anteriores afirmaciones es correcta.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 11,
+    "pregunta": "El agua es el agente extintor por excelencia pero uno de sus inconvenientes es:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Provoca daños excesivos en la estructura y mobiliario de los edificios.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Requiere equipos de bombeo.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Es inadecuado para fuegos de materiales sólidos.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Conduce la electricidad.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 12,
+    "pregunta": "En caso de accidente biológico, ¿cuánto tiempo se recomienda limpiar la herida bajo el agua?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "2 o 3 minutos induciendo el sangrado.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Hasta que deje de sangrar la herida.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "2 o tres minutos restregando suavemente la herida.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "No está recomendado limpiar con agua.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 13,
+    "pregunta": "Durante el transcurso de la licencia por enfermedad:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "El trabajador podrá realizar actividades lucrativas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "El trabajador percibirá las retribuciones en los porcentajes establecidos legalmente.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "El trabajador podrá superar el periodo de contratación estipulado.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "El trabajador podrá ser despedido.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 14,
+    "pregunta": "El prefijo EPI indica la posición:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Encima.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Debajo.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Lateral.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Inferior.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 15,
+    "pregunta": "Para que una combustión sea posible es necesaria la presencia de:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Humedad relativa baja.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Ozono.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Comburente.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Humedad relativa alta.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 16,
+    "pregunta": "En caso de sufrir una agresión en el trabajo, ¿qué es lo que NO debe hacer?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Identificar al agresor y retenerlo hasta la llegada de la policía.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Comunicar la agresión a su responsable inmediato.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Si requiere asistencia sanitaria acudir a la Unidad Básica de Prevención.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Cumplimentar el formulario correspondiente.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 17,
+    "pregunta": "Indique la respuesta correcta sobre la posición de Roser:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Persona tumbada boca arriba.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Paciente tumbado boca abajo, con la cabeza ladeada.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Paciente boca arriba, con la cabeza colgando por la parte superior de la cama.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Paciente tumbado boca arriba, en un plano oblicuo de 45ž, con la cabeza más baja que los pies.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 18,
+    "pregunta": "¿Cuál es la indicación de posición en un paciente con problemas cardiacos y respiratorios?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Tremdelemburg.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Fowler.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Decúbito supino.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Decúbito lateral.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 19,
+    "pregunta": "¿Cómo se denomina a la posición en la que el paciente se encuentra vertical sobre los pies?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Decúbito supino.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Decúbito frontal.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Tremdelemburg",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Bipedestación.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 20,
+    "pregunta": "¿En qué posición se colocará a un paciente inconsciente?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Sims.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Genupectoral.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Decúbito supino.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Decúbito lateral.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 21,
+    "pregunta": "En la posición decúbito lateral, ¿cómo se encontrará el paciente?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Inconsciente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Tumbado y en posición fetal.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "De rodillas e inclinado hacia delante.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Tumbado de lado y con la pierna superior flexionada en ángulo recto.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 22,
+    "pregunta": "Como norma general, ¿en qué posición encontraremos a un paciente consciente que está recibiendo oxigenoterapia en la cama?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Decúbito supino.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Decúbito prono.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Sentado.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Bipedestación.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 23,
+    "pregunta": "Indique la respuesta correcta sobre la posición de Morestin:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Paciente en decúbito supino con la cabeza más baja que los pies.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Paciente en decúbito supino con la cabeza más alta que los pies.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Paciente en decúbito prono.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Paciente decúbito supino con las piernas elevadas y flexionadas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 24,
+    "pregunta": "Entre los pasos posteriores a la movilización de un paciente:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Dejarlo acomodado, volver a colocar sueros en su lugar y verificar su seguridad.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Adoptar mecánica postural y retirar los objetos que le puedan molestar.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Frenar la cama e informar al paciente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Todas son correctas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 25,
+    "pregunta": "En caso de movilizar a una persona con múltiples traumatismos, indique la respuesta correcta:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Dependerá si el paciente puede colaborar.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Se le desplazará agarrándole por las axilas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Se le desplazará con una transfer entre dos o más personas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Se le desplazará en bloque.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 26,
+    "pregunta": "En el movimiento hacia un lateral de la cama, estando la persona inconsciente, en decúbito supino, realizando el movimiento entre dos personas:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Una persona pasará los brazos por debajo de las axilas y la otra persona cogerá al paciente por rodillas y muslos.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Doblaremos la rodilla del paciente contraria al sentido del giro.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Doblaremos la rodilla del paciente del lado del sentido del giro.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Todas son correctas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 27,
+    "pregunta": "En el movimiento del paciente de plano a plano en el procedimiento con dos personas, indique la respuesta INCORRECTA:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Se coloca una persona a cada lado, cada una coge la sábana lo más próximo posible al paciente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "El cabecero de uno de los planos se coloca en el piecero del otro, o viceversa, para quedar los dos en ángulo recto y perpendiculares.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "La persona más alejada del paciente apoyará su rodilla en el plano vacío para ayudarse en la movilización.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Colocar los dos planos a la misma altura, si es posible. Inmovilizar ambos y cubrir el hueco entre ambos.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 28,
+    "pregunta": "Cuando realizamos el movimiento del paciente hacia la cabecera de la cama sin ayuda del paciente, éste lo deberá realizar, como mínimo:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Una sola persona.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Dos personas.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Tres personas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Cuatro personas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 29,
+    "pregunta": "El movimiento del paciente de la cama al sillón, cuando realizamos el procedimiento entre dos personas, sin colaboración del paciente, entre los pasos a realizar encontramos:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Sujetamos al paciente por los hombros y las rodillas, le giramos hasta sentarlo al borde de la cama.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Flexionamos las rodillas para abrazar ligeramente al paciente por la cintura para ayudarle a incorporarse de pie y a continuación en un cuarto de giro le sentamos en la silla o sillón.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "a) y b) son correctas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Una persona se pondrá al lado de la cabecera de la cama, en un costado. El otro se pone en el costado a la altura de la zona lumbar del paciente. Entre los dos, queda la silla en la que lo vamos a sentar.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 30,
+    "pregunta": "Entre los dispositivos y materiales para ayudar en la movilización se encuentran, indique la respuesta correcta:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Discos giratorios.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Bastón.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Silla de ruedas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Cama o camilla.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 31,
+    "pregunta": "En cuanto a las grúas, ¿qué tipos de grúas podemos encontrar?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Eléctrica, mecánica e hidráulica.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Eléctrica enchufable y eléctrica con batería.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Hidráulica y manual.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Mecánica y manual.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 32,
+    "pregunta": "Para colocar al paciente el arnés de una grúa desde una posición de decúbito lateral:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Colocar al enfermo en decúbito lateral y pasar el arnés por debajo de la entremetida.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Colocar al enfermo en decúbito supino y pasar el arnés de arriba-abajo por detrás y por debajo de una sábana entremetida.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Colocar al enfermo en decúbito prono y pasar el arnés de abajo-arriba por detrás y por encima de una sábana entremetida.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Todas son correctas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 33,
+    "pregunta": "¿Cuál es la finalidad principal de un purifica de ambiente?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Se utiliza para vaporizar o dispersar un líquido en partículas muy finas para su inhalación.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Dispositivo utilizado para eliminar del aire sustancias contaminantes.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Aparato destinado a calentar las camas de los pacientes antes de su ingreso.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Equipo diseñado exclusivamente para la esterilización por calor seco del material quirúrgico.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 34,
+    "pregunta": "Respecto a las grúas: (Indique la respuesta INCORRECTA):",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Están equipadas con arnés.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Se emplean para la movilización de pacientes.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Permite al paciente caminar con mayor seguridad.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Algunos modelos incorporan un sistema de camillas de cintas para levantar horizontalmente al paciente.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 35,
+    "pregunta": "Para colocar adecuadamente el arnés en la grúa, para enganchar las bandas:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Se debe enganchar en primer lugar la zona del cuerpo y posteriormente las piernas.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Se debe enganchar en primer lugar las piernas y posteriormente el cuerpo.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Se debe enganchar en primer lugar el lateral no dominante y posteriormente el dominante.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Se debe enganchar en primer lugar el lateral dominante y posteriormente el no dominante.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 36,
+    "pregunta": "Una vez elevado el paciente con suavidad en la grúa, debemos abrir las patas de la grúa para:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Aumentar la estabilidad.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "No debemos abrir las patas de la grúa sino cerrarlas para que ocupe menos y sea más fácil manejarla.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Procurar mayor seguridad en el traslado.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "a) y c) son correctas.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 37,
+    "pregunta": "Son normas generales del arnés. (Indique la respuesta la INCORRECTA):",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Revisar antes de cada uso.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "No utilizar si está deshilachado.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Tras el alta del paciente enviar a lavandería.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "El paciente debe tener contacto directamente con el arnés, aunque veamos que lo puede manchar.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 38,
+    "pregunta": "La ubicación del arnés es: (Indique la respuesta INCORRECTA):",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Planta de hospitalización.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Uno en cada habitación.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Almacén.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Dependencias que cada Organización determine.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 39,
+    "pregunta": "Sirve para deslizar de un plano a otro al paciente, suele utilizarse para transportar al paciente desde la cama al tablero quirúrgico o viceversa:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Camilla tijera.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Arnés.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Transfer.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Correa de sujeción.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 40,
+    "pregunta": "Son tipos de transfer:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Transfer fijo.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Rampa o chapa.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Rolón o rollbord.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Todas son ciertas.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 41,
+    "pregunta": "¿Cuál es el primer paso en la utilización de transfer para transportar entre dos planos?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Se mete el transfer entre la sábana y el paciente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Se mete el transfer debajo de la sábana y el paciente.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Se centra al paciente en el transfer.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Se pasa al paciente con el transfer.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 42,
+    "pregunta": "Los transfers fijos, se manejan con:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Pedal.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Manivela.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Mando.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Todas son correctas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 43,
+    "pregunta": "Es un elemento que consiste en una chapa, recubierta de una tela, que hace las veces de cinta sin fin:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Rolón/Rollbord.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Arnés.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Transfer fijo.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Rampa o chapa.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 44,
+    "pregunta": "Cuando nos referimos a las partes de la cama, el dispositivo a través del cual el paciente se ayuda para moverse en la cama, se denomina:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Vallas laterales.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Trapecio o potencia.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Vallas escamoteables.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Cabecero.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 45,
+    "pregunta": "Con respecto a los frenos de la cama:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Se pueden encontrar en la parte baja, lateral y media de una cama.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "La palanca de frenos no permite fijar la dirección de las ruedas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Nunca debemos circular con una rueda en sentido contrario, pues la cama se bambolea.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Se puede circular con las ruedas en sentido contrario.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 46,
+    "pregunta": "¿Qué pieza de la cama se puede retirar si el médico necesita intubar al paciente?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "El cabezal escamoteable.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Las vallas escamoteables.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "El trapecio.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "El portasuero del cabezal.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 47,
+    "pregunta": "¿Qué función tiene la 5ł rueda de la camilla?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Facilita la movilización del paciente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Facilita la dirección y el giro.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Nos permite movilizar la cama cuando alargamos su longitud.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Nos permite tener mayor estabilidad.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 48,
+    "pregunta": "¿En qué caso NO se realizará el traslado del paciente en la cama desde el piecero?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Para entrar en los ascensores.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Con pacientes con oxigenoterapia.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Cuando traslademos al paciente a realizar una ecografía.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Con pacientes monitorizados y el monitor colocado en la parte del piecero.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 49,
+    "pregunta": "¿Dónde se ubican las camillas en el hospital?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "En la entrada principal exclusivamente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "En las urgencias pediátricas y de adultos exclusivamente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "En los servicios especiales como los quirófanos, urgencias, exploraciones en consultas, etc.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "En las consultas exclusivamente.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 50,
+    "pregunta": "La camilla de exploración tiene un cabecero que es elevable, ¿en cuántas posiciones?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "El cabecero es fijo.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "En dos posiciones.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "En tres posiciones.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "En cuatro posiciones.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 51,
+    "pregunta": "La camilla de traslado tiene una serie de características: Indique la respuesta INCORRECTA:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Pueden incorporar chasis para la realización de radiografías.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "No permite instalar portasueros.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Lleva vallas laterales escamoteables.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Lleva portabalas de oxígeno.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 52,
+    "pregunta": "Cuando utilizamos una camilla tijera tenemos que tener en cuenta que:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Se debe colocar entre cuatro personas mínimo, ya que sirve para inmovilizar.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "El plano donde se encuentra el paciente tiene que estar horizontal.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "El plano donde se encuentra el paciente tiene que estar semi sentado.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Se debe utilizar inseparablemente junto a las correas de sujeción.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 53,
+    "pregunta": "Cuando utilizamos las correas de sujeción, en una sujeción lateral:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Solo permite fijar el cuerpo del paciente en decúbito supino.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "No impide que el cuerpo del paciente ruede de manera lateral.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Permite fijar el cuerpo del paciente en decúbito supino y lateral, pero no permite en decúbito prono.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Todas son incorrectas.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 54,
+    "pregunta": "Con respecto a la silla de ruedas: Indique la respuesta INCORRECTA:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Cubrir al paciente por delante cuando vaya sentado y con camisón.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Poner al paciente en contacto directo con el cuero de la silla, para evitar que se resbale.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Evitar que el paciente se desplace por encima de los reposapiés al incorporarse.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Tener precaución con las sondas ya que se podrían enganchar en las ruedas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 55,
+    "pregunta": "Señala la correcta con respecto al manejo de la silla de ruedas en la entrada y la salida del ascensor:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Para entrar se hará de frente al ascensor y para salir saldremos de frente a la puerta.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Para entrar se hará de espaldas al ascensor y para salir saldremos de espaldas a la puerta.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Para entrar se hará de frente al ascensor y para salir lo haremos de espaldas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Para entrar se hará de espaldas al ascensor y para salir saldremos de frente a la puerta.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 56,
+    "pregunta": "¿Dónde se sitúan las sillas de ruedas dentro del hospital? Teléfono: 685 19 12 19 www.esferaoposiciones.com En cumplimiento del Reglamento General de Protección de Datos y de la Ley Orgánica 3/2018, sus datos personales serán tratados por ESFERA OPOSICIONES con la finalidad de gestionar su relación con la entidad y el envío de comunicaciones por cualquier medio. Puede ejercer sus derechos de acceso, rectificación, supresión y oposición en Ramón Montenegro 32, 27002 (LUGO) Pá",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "En la entrada principal exclusivamente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Se ubicarán en las entradas al hospital y en las unidades de hospitalización.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "En las entradas de urgencias pediátricas y de adultos exclusivamente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "En la zona de quirófanos, la UCI y las urgencias exclusivamente.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 57,
+    "pregunta": "¿Qué elemento NO se encuentra dentro de los accesorios que puede llevar una silla de ruedas?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Tabla que sirve para que los pacientes no puedan doblar el brazo.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Portabalas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Portasueros.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Bolsa portadocumentos.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 58,
+    "pregunta": "¿Qué particularidad presenta la mesa de quirófano?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Puede ser articulada y el cabecero es escamoteable para que el médico pueda intubar.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Es desmontable para que se pueda limpiar y desinfectar con tranquilidad.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Permite la movilización total de las extremidades del paciente en función de la intervención de que se trate.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Todas son correctas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 59,
+    "pregunta": "En una bombona o bala de oxígeno portátil, ¿dónde se conecta el tubo de las gafas nasales?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "En la parte frontal hay una toma de salida de oxígeno.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "En la parte posterior hay una toma de salida.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "En la conexión de pared, en el humidificador.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "En la parte superior, junto al regulador de caudal.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 60,
+    "pregunta": "¿Para qué sirve un balón de insuflación (AMBU)?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Para la ventilación de personas con problemas respiratorios graves.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Para la ventilación de personas con problemas respiratorios leves.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Para la ventilación manual de paciente que precise reanimación.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Para la ventilación manual de pacientes que se encuentran con un ataque de ansiedad.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 61,
+    "pregunta": "¿Para qué sirve una bomba de perfusión?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Para introducir alimentos por vía nasogástrica.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Para introducir de forma lenta y continua una sustancia medicamentosa por vía intravenosa.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Para introducir alimentos por vía intravenosa.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Para introducir de forma lenta y continua una sustancia medicamentosa por vía nasogástrica.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 62,
+    "pregunta": "¿Cómo se denomina al colchón que evita la aparición en el paciente de úlceras por presión?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Colchón para estancias prolongadas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Colchón de aire.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Colchón anti-presión.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Colchón anti-escaras.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 63,
+    "pregunta": "A el armazón metálico utilizado en camas traumatológicas se le denomina:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Arco de protección.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Bastidor de Stryker.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Cuadro balcánico.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Arco salvasábanas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 64,
+    "pregunta": "¿Qué tipo de férulas se utiliza para realizar, junto con las pesas, tracción en los miembros inferiores?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Férula de Tracción bimodal.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Férula de Matrix.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Férula de Brown.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Férula Rígida.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 65,
+    "pregunta": "¿Para qué sirve la tabla de paradas?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Es una superficie dura para acostar al paciente sobre una camilla.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Es una superficie dura para acostar al paciente sobre una silla.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Es una superficie dura para personas con múltiples traumatismos.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Es una superficie dura para acostar al paciente sobre el suelo.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 66,
+    "pregunta": "¿Cómo se denomina el aparato que se utiliza para ver, diagnosticar y tratar problemas en la cavidad pélvico-abdominal?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Aparato de escopia.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Electrocardiógrafo.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Torre de laparoscopia.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Ecógrafo.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 67,
+    "pregunta": "El término hiperglucemia hace referencia a:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Defecto de la glucosa en sangre.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Exceso de glucosa en sangre.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Nivel normal de glucosa en sangre.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Todas son correctas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 68,
+    "pregunta": "El término hemiplejia hacer referencia a:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Parálisis de un lado del cuerpo.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Parálisis de todo el cuerpo.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Parálisis de una extremidad superior.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Parálisis de una extremidad inferior.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 69,
+    "pregunta": "A la definición referente al hígado le corresponde el prefijo:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Bio-.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Bradi-.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Endo.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Hepat-.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 70,
+    "pregunta": "A la definición referente a los huesos le corresponde el prefijo:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Intra-.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Necro-.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Osteo-.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Poli-.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 71,
+    "pregunta": "El sufijo ITIS se corresponde con la definición:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Medicamento.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Inflamación.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Dolor.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Célula.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 72,
+    "pregunta": "El sufijo que indica que el término es referente a la mama, es:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Grafía.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Mastia.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Algia.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Megalia.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 73,
+    "pregunta": "¿Qué siglas se corresponden a la prueba de Electrocardiograma?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "A.F.G.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "T.A.C.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "E.C.G.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "E.M.G.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 74,
+    "pregunta": "¿Qué siglas corresponden a la Unidad de Reanimación Post Anestésica?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "S.R.P.A.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "R.P.A.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "U.R.P.A.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "R.P.A.N.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 75,
+    "pregunta": "¿Qué siglas corresponden a la Enfermedad Pulmonar Obstructiva Crónica?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "E.P.O.T.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "E.P.O.D.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "P.O.C.D.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "E.P.O.C.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 76,
+    "pregunta": "La especialidad médica que se ocupa de las afecciones del corazón y aparato circulatorio:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Cardiología.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Neurología.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Nefrología.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Endocrinología.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 77,
+    "pregunta": "La especialidad médica que tiene como función llevar a la normalidad funcional y anatómica la cobertura corporal, es decir la forma del cuerpo:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Cirugía plástica.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Cirugía vascular.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Cirugía cardiovascular.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Cirugía general.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 78,
+    "pregunta": "Hace referencia al estudio y tratamiento de enfermedades de la sangre:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Nefrología.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Dermatología.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Obstetricia.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Hematología.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 79,
+    "pregunta": "La formación quirúrgica de un ano artificial, o estoma, a través del abdomen con el fin de evacuar el contenido intestinal, se denomina:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Edema",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Úlcera.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Melena.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Colostomía.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 80,
+    "pregunta": "¿Cómo se denomina al recipiente de borde plano y ancho utilizado por el paciente para excretar en posición de decúbito supino?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Cuña.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Batea.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Botella.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Orinal.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 81,
+    "pregunta": "¿Qué prueba estudia la función respiratoria?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Electrocardiograma.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Espirometría.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Endoscopia.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Ecografía.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 82,
+    "pregunta": "El término paraplejia, se corresponde con la siguiente definición:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Parálisis de los miembros o extremidades inferiores (de la cintura hacia abajo).",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Parálisis de las cuatro extremidades.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Parálisis del hemicuerpo derecho.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Parálisis del hemicuerpo izquierdo.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 83,
+    "pregunta": "El tubo que, introducido por el meato, llega hasta la vejiga, se denomina:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Sonda nasogástrica.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Sonda vesical.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "a) y b) son incorrectas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "a) y b) son correctas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 84,
+    "pregunta": "La lesión secundaria de la piel, con pérdida de sustancia, muy profunda, que ocupa la dermis, epidermis e hipodermis, se denomina:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Herida.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Úlcera.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Mácula.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Pústula.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 85,
+    "pregunta": "Cualquier suceso no esperado ni deseado que da lugar a la pérdida de la salud o lesiones a los trabajadores, se denomina:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Accidente de trabajo.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Incidente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "a) y b) son correctas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "a) y b) son incorrectas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 86,
+    "pregunta": "Para colocar al paciente el arnés de una grúa desde la posición sentado en una silla:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Colocar el arnés de abajo-arriba, por detrás y por debajo de una sábana entremetida, hasta la altura de la cintura.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Colocar el arnés de arriba-abajo, por detrás y por debajo de una sábana entremetida, hasta la altura de la cintura.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Colocar el arnés de arriba-abajo, por delante y por encima de una sábana entremetida, hasta la altura de la cintura.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Colocar el arnés de abajo-arriba, por delante y por encima de una sábana entremetida, hasta la altura de la cintura.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 87,
+    "pregunta": "El término taquicardia hace referencia a:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Aceleración del ritmo cardíaco.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Disminución del ritmo cardíaco.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Aceleración de la frecuencia respiratoria.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Disminución de la frecuencia respiratoria.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 88,
+    "pregunta": "El término disnea, se corresponde con la siguiente definición:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Dificultad para deglutir.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Dificultad para hablar.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Dificultad para respirar.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Dificultad para articular palabras.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 89,
+    "pregunta": "¿Cómo se denomina el carro que sirve para el depósito del material sanitario necesario para realizar las curas a los pacientes?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Carro de curas.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Carro de material.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Carro sanitario.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Carro de farmacia.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 90,
+    "pregunta": "La sujeción abdominal de las correas de sujeción:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Se puede instalar antes o después de que el paciente se haya acostado.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Se debe instalar siempre antes de que el paciente se acueste.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Se debe instalar siempre después de que el paciente se acueste.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Se debe instalar con la cama vacía.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 91,
+    "pregunta": "En cuanto a la utilización de rolón o rollbord:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "En el desplazamiento no deberemos mantener el eje cabeza-pies recto.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "En el desplazamiento deberemos mantener el eje cabeza-pies recto.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Se ladea totalmente al paciente para apoyarlo en el centro del rolón.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "b) y c) son incorrectas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 92,
+    "pregunta": "La bombona de oxígeno consta de varias partes, entre las que se encuentran:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Un manómetro, que mide la presión que hay en la botella.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Un tirador de apertura.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "En un lateral, hay una leyenda sobre las instrucciones de uso y seguridad.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Todas las respuestas son correctas.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 93,
+    "pregunta": "Según las normas generales de movilización de pacientes, ¿cuál de las siguientes actuaciones se considera obligatoria?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Priorizar la rapidez del traslado del paciente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Guardar en todo momento la intimidad del paciente.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Informar al paciente solo si colabora activamente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Evitar cualquier movilización siempre si el paciente presenta dolor.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 94,
+    "pregunta": "En cuanto a los pasos previos a la movilización del paciente, ¿qué acción debe realizarse antes de dicha movilización?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Colocar al paciente en posición Fowler siempre que sea posible.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Frenar la cama.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Solicitar autorización médica por escrito.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Comprobar las constantes vitales del paciente.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 95,
+    "pregunta": "Al realizar el traslado del paciente en silla de ruedas, señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Comprobar el correcto funcionamiento de la silla antes de usarla.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Informar al paciente del procedimiento que se va a realizar.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Colocar los reposapiés antes de sentar al paciente.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Asegurar que los frenos estén puestos durante las transferencias.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 96,
+    "pregunta": "El parte interno de notificación de accidente/incidente es:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "El documento opcional para comunicar verbalmente un suceso.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "El registro necesario para declarar un accidente de trabajo, un incidente o una agresión, y que sea reconocido legalmente.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Un informe médico emitido por la Mutua.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Un documento exclusivo para accidentes con baja laboral.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 97,
+    "pregunta": "Según el manual de prevención de incendios, el polvo polivalente es:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "El agente extintor más seguro para su uso.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Adecuado únicamente para fuegos de materiales sólidos (A).",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "El agente extintor por excelencia por su eficacia y abundancia para fuegos de materiales sólidos (A).",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Ineficaz contra brasas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 98,
+    "pregunta": "Ante una situación de emergencia relacionada con un incendio, el trabajador debe:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Abandonar el centro inmediatamente sin avisar.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Confirmar la emergencia, informar a su responsable e intentar sofocar el conato de incendio con ayuda del extintor.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Esperar instrucciones sin intervenir.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Utilizar agua siempre como primera opción.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 99,
+    "pregunta": "El importe máximo de los adelantos de nómina a conceder será de:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "3.000 euros.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "6.000 euros.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "3.500 euros.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "4.500 euros.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 100,
+    "pregunta": "Cuando la duración de una jornada exceda de seis horas continuadas existirá un período de descanso de:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Diez minutos.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Treinta minutos.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Quince minutos.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Veinte minutos.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 101,
+    "pregunta": "El personal liberado para el estudio del euskera podrá percibir:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "El 50% de las retribuciones fijas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "El 75% de las retribuciones totales, tanto fijas como variables, que por cartelera tenga asignadas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "El 100% de las retribuciones fijas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "El 100% de las retribuciones, tanto fijas como variables, que por cartelera tenga asignadas.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 102,
+    "pregunta": "En caso de agresión, el trabajador o trabajadora deberá:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Comunicarlo exclusivamente a la Mutua.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Ponerlo en conocimiento de en el menor plazo de tiempo posible a su responsable inmediato.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Esperar a que la Dirección abra expediente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Comunicarlo únicamente a los Delegados de Prevención.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 103,
+    "pregunta": "Los fuegos de clase C son aquellos que se producen en:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Materiales sólidos que dejan brasas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Líquidos inflamables.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Gases inflamables.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Metales combustibles.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 104,
+    "pregunta": "Según el Decreto 255/1997 ¿qué es el Ente Público Osakidetza-Servicio vasco de salud?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Una sociedad anónima de capital mixto.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Un organismo autónomo estatal.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "El Ente Institucional de la Comunidad Autónoma, de naturaleza pública y bajo la calificación de Ente Público de Derecho Privado.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Una fundación sanitaria privada.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 105,
+    "pregunta": "¿Qué posición se utiliza específicamente para el lavado de pelo y la RCP?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Fowler.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Roser.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Sims.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Antitrendelemburg.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 106,
+    "pregunta": "En el movimiento de cama a sillón con paciente colaborador, ¿qué debe hacerse antes de sentarlo al borde de la cama?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Colocar la silla a 90ž.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Incorporar el cabezal en Fowler.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Retirar la entremetida.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Ajustar el trapecio.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 107,
+    "pregunta": "Corresponde a cada organización de servicios del Ente Público Osakidetza-Servicio vasco de salud:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Únicamente funciones asistenciales clínicas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "El ejercicio de todas las facultades de gestión y administración necesarias para la provisión de servicios sanitarios encomendados.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Aprobar el Plan Estratégico del Ente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Elaborar los Presupuestos Generales de la Comunidad Autónoma.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 108,
+    "pregunta": "¿Qué acción ayuda a prevenir accidentes por orden y limpieza?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Dejar material en zonas de paso.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Mantener objetos cerca para tenerlos a mano.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "No dejar objetos en zonas de paso.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Guardar solo el material pesado.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 109,
+    "pregunta": "¿Qué requisito es imprescindible antes de entrar en áreas con radiación ionizante?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Llevar ropa blanca.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Usar dosímetro personal.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "No llevar objetos metálicos.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Haber comido previamente.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 110,
+    "pregunta": "¿Qué acción debe evitarse al manejar agujas?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Desecharlas en contenedores.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Reencapucharlas para tirarlas con mayor seguridad.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Usar guantes.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Todas son correctas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 111,
+    "pregunta": "El arnés se utiliza junto con:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Silla convencional.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Bastón.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Grúa.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Camilla simple.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 112,
+    "pregunta": "Según el Decreto 255/1997, Osakidetza es el Ente Institucional de la Comunidad Autónoma, bajo la calificación de:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Ente privado de Derecho Privado.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Ente privado de Derecho Público.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Ente público de Derecho Público.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Ente público de Derecho Privado.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 113,
+    "pregunta": "¿Cuál NO es uno de los fines de interés general del Ente Público Osakidetza-Servicio vasco de salud?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Ejecutar la provisión del servicio público sanitario mediante las prestaciones de asistencia primaria y especializada que sean objeto de aseguramiento y contratación pública.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Garantizar el trato equitativo de las personas residentes en la Comunidad Autónoma del País Vasco mediante solo la emisión de tarjetas sanitarias.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Proporcionar a las personas que accedan a sus servicios las condiciones necesarias para el pleno ejercicio de sus derechos y deberes de carácter instrumental o complementario.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Promover la docencia en ciencias de la salud.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 114,
+    "pregunta": "La organización rectora de Osakidetza está comprendida por:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Presidente y Consejo Administración.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Presidente, secretario y Consejo de Administración.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Viceconsejero, gerente y Consejo de Administración.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Director ejecutivo, secretario y Consejo de Administración.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 115,
+    "pregunta": "Dentro del organigrama de Osakidetza, ¿qué función le corresponde al Consejero de Sanidad?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Gerencia.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Presidencia.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Director ejecutivo.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Secretario.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 116,
+    "pregunta": "¿Quiénes forman parte del Consejo de Administración de Osakidetza?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "El Viceconsejero y tres miembros nombrados por el Consejero de Hacienda.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "El gerente y cuatro miembros en representación de la Administración del Estado.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "El consejero de Hacienda y tres miembros a propuesta del Consejero de Sanidad.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "El presidente y cinco miembros en representación de la administración de la Comunidad Autónoma.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 117,
+    "pregunta": "Según el Decreto 255/1997, las organizaciones de servicios sanitarios dependientes del Ente Público Osakidetza-Servicio vasco de salud realizarán la actividad de provisión de servicios sanitarios, actuando a tal efecto, ¿bajo qué principio?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Principio de equidad.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Principio de reciprocidad.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Principio de autonomía económico-financiera y de gestión.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Principio de igualdad.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 118,
+    "pregunta": "El Consejo de Administración del Ente Público, al objeto de preservar los criterios de eficacia y eficiencia en la gestión, adoptará las medidas de intervención que considere necesarias sobre las organizaciones de servicios. Estas pueden ser:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Suspender temporalmente, y con carácter total o parcial, las facultades de gestión que tienen atribuidas las organizaciones de servicios del Ente Público.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "No podrá suspender en ningún caso las facultades de gestión.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Suspender temporalmente, y de manera exclusivamente parcial, las facultades de gestión que tienen atribuidas las organizaciones de servicios del Ente Público.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Suspender temporalmente, y de manera exclusivamente total, las facultades de gestión que tienen atribuidas las organizaciones de servicios del Ente Público.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 119,
+    "pregunta": "¿Cuál de las siguientes afirmaciones NO son funciones del Consejo Técnico que va a desarrollar dentro de las previsiones del Plan Estratégico de la Organización?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Propuesta de líneas de actuación en materia de investigación, docencia y formación.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Valoración de nuevas estrategias asistenciales, diagnósticas y terapéuticas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Formulación de políticas, propuestas y recomendaciones referidas a la calidad asistencial.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Conocer y participar en el plan de salud de la zona.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 120,
+    "pregunta": "¿Cómo está establecido el periodo de descanso?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "En descanso diario, con un periodo mínimo ininterrumpido de 12 horas y descanso semanal, con periodo mínimo ininterrumpido de 24 horas semanales.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "En descanso diario, con un periodo mínimo ininterrumpido de 8 horas y descanso semanal, con periodo mínimo ininterrumpido de 36 horas semanales.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "En descanso diario, con un periodo mínimo ininterrumpido de 8 horas y descanso semanal, con periodo mínimo ininterrumpido de 24 horas semanales.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "En descanso diario, con un periodo mínimo ininterrumpido de 12 horas y descanso semanal, con periodo mínimo ininterrumpido de 32 horas semanales.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 121,
+    "pregunta": "Con respecto a las vacaciones, el personal tendrá derecho a disfrutar durante cada año completo de servicio de una vacación retribuida de:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "30 días laborales sin computarse los sábados como laborales.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "30 días laborales computándose los sábados como laborales.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "28 días laborales sin computarse los sábados como laborales.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "28 días laborales computándose los sábados como laborales.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 122,
+    "pregunta": "En el supuesto de que estando disfrutando las vacaciones el personal iniciara una situación de IT (incapacidad temporal), ¿qué sucede con el periodo vacacional?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "El periodo vacacional quedará interrumpido.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Con contratos de sustitución, se pierde el periodo vacacional.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Solo al personal estatutario se le interrumpe el periodo vacacional.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "El periodo vacacional no quedará interrumpido.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 123,
+    "pregunta": "En todas las Organizaciones de servicios se establecerán anualmente, previa negociación, los calendarios de días laborables anuales y los horarios de trabajo. ¿Quiénes realizan dicha negociación?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "El personal estatutario y los representantes del personal.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "La Dirección y la Viceconsejería de Sanidad.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "El personal estatutario y el personal interino.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "La Dirección y los representantes del personal.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 124,
+    "pregunta": "Las carteleras de trabajo específicas negociadas en cada unidad tendrán carácter obligatorio bimestral. ¿En qué casos se pueden modificar?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Cuando el jefe del servicio, previa petición de los trabajadores, así lo decida.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Cuando el jefe del servicio lo decida, sin necesidad de petición de los trabajadores de su unidad.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Por necesidades exclusivamente graves, urgentes o imprevisibles.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Tras el aumento de la demanda de trabajo, ya sea por bajas o vacaciones.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 125,
+    "pregunta": "Si quisieras solicitar una licencia, ¿ante quien se tiene que solicitar?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "La Dirección de Recursos Humanos de la organización de servicios correspondiente.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "La Dirección de la Organización de Servicios correspondiente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "La secretaria de la Organización.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Primero ante la jefatura del servicio, posteriormente ante la Dirección de la Organización del servicio correspondiente.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 126,
+    "pregunta": "En caso de realizar un acogimiento simple de un menor, ¿a qué tengo derecho?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "A un permiso por asuntos propios.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "A una licencia retribuida.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "En caso de acogimiento no se tiene los mismos derechos que si fuera un alumbramiento.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Todas son correctas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 127,
+    "pregunta": "La especialidad médica que se ocupa del estudio de la estructura y la función renal se denomina:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Cardiología.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Neurología.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Nefrología",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Endocrinología.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 128,
+    "pregunta": "En caso de tener que asistir a exámenes académicos en un centro oficial en horario laboral, tendremos derecho a un permiso. ¿Dicho permiso de cuántos días será?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Un día natural por cada prueba de examen.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Un día laboral por cada prueba de examen.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Un día laboral independientemente de las pruebas de examen que tenga.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "No se tiene derecho a ningún día.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 129,
+    "pregunta": "En caso de tener que acudir a una consulta médica durante la jornada laboral, tendremos derecho a:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Una licencia.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Un permiso no retribuido y con un máximo de 4 horas, que podrá modificarse de manera excepcional.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Un permiso retribuido y con un máximo de 4 horas, que podrá modificarse de manera excepcional.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Un permiso no retribuido y con un máximo de 2 horas, que podrá modificarse de manera excepcional.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 130,
+    "pregunta": "La descripción ’paciente tumbado boca arriba, en un plano oblicuo de 45ž, con la cabeza más baja que los pies’ hace referencia a la posición: Teléfono: 685 19 12 19 www.esferaoposiciones.com En cumplimiento del Reglamento General de Protección de Datos y de la Ley Orgánica 3/2018, sus datos personales serán tratados por ESFERA OPOSICIONES con la finalidad de gestionar su relación con la entidad y el envío de comunicaciones por cualquier medio. Puede ejercer sus derechos de acceso, rectificación, supresión y oposición en Ramón Montenegro 32, 27002 (LUGO) Pá",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Sims.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Litotomía.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Anti-trendelemburg.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Trendelemburg.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 131,
+    "pregunta": "Señala la INCORRECTA. Entre las competencias necesarias para el desempeño del puesto de celador/celadora se encuentran:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Orientación al paciente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Resolución de problemas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Competencias necesarias para proporcionar cuidados de calidad.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Adaptación al cambio y contribución a la mejora.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 132,
+    "pregunta": "¿Cuál es la posición indicada en un parto?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Roser.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Fowler.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Sims o semiprona.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Litotomía.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 133,
+    "pregunta": "Son normas generales para la movilización de pacientes:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Retirar los objetos que nos molesten.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Dejar acomodado al paciente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Evitar movimientos bruscos en la movilización del paciente.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "b) y c) son correctas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 134,
+    "pregunta": "Señala la respuesta INCORRECTA. Son pasos previos a toda movilización:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Verificar la seguridad del paciente.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Colocar la cama en la posición que más nos ayude en la movilización del paciente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Retirar los objetos que nos molesten.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Adoptar mecánica postural.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 135,
+    "pregunta": "Señala la respuesta INCORRECTA. Son dispositivos y materiales para ayudar en la movilización:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Escabel.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Rolón.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Potencia.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Férula de Brown.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 136,
+    "pregunta": "A la hora de movilizar un paciente que no colabora hacia un lateral de la cama y posicionarlo en decúbito lateral izquierdo:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Comprobaremos que el brazo derecho no quede presionado debajo de su cuerpo.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Comprobaremos que el brazo izquierdo no quede presionado debajo de su cuerpo.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Comprobaremos que la pierna derecha no quede presionada debajo de su cuerpo.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Comprobaremos que la pierna izquierda no quede presionada debajo de su cuerpo.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 137,
+    "pregunta": "Cuando realizamos el movimiento del paciente de plano a plano, en un procedimiento con dos o más personas:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Las personas se sitúan en el lado contrario del plano por donde vamos a hacer el movimiento.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "El cabecero de uno de los planos se coloca en el piecero del otro, o viceversa, para quedar los dos en ángulo recto y perpendiculares.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Los cabeceros de ambos planos se colocan paralelamente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Las respuestas a) y b) son correctas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 138,
+    "pregunta": "Señale la respuesta que NO es correcta, en relación a las grúas:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Hay algunos modelos de grúas que incorporan un sistema de camillas de cintas para levantar horizontalmente al paciente y realizar el aseo y/o curas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Las grúas están equipadas con un arnés que nos ayuda en el movimiento del paciente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Se emplea en las unidades de hospitalización para la movilización de pacientes impedidos o demasiado pesados, garantizando así mayor seguridad y menor riesgo de lesiones para el paciente y para el personal de enfermería y celador.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Podemos encontrar tres tipos de grúas: hidráulica, eléctrica y electrohidráulica.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 139,
+    "pregunta": "En la utilización de transfer como puente entre plano y plano:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Se introduce por debajo de la sábana del paciente dejando la mitad del transfer debajo de éste y la otra mitad fuera de la camilla.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Se introduce por debajo de la sábana del paciente dejando todo el transfer debajo de la sábana del paciente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Se introduce por debajo de la sábana del paciente dejando dos tercios del transfer debajo de éste y el otro tercio fuera de la camilla.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Ninguna de las respuestas anteriores es correcta.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 140,
+    "pregunta": "¿Qué significa la sigla ’TAC’?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Tomografía Axial Computarizada.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Tratamiento Asistido Clínico.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Técnica de Análisis Corporal.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Tomografía Avanzada de Contraste.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 141,
+    "pregunta": "Señala la respuesta correcta en relación al transfer fijo:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "El transfer fijo, es en realidad un rolón eléctrico, con desplazamientos verticales.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "El transfer fijo, es en realidad un rolón eléctrico, con desplazamientos horizontales.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "a) y b) son correctas.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "a) y b) son incorrectas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 142,
+    "pregunta": "Señale la respuesta que NO es correcta en el manejo de la silla de ruedas:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "En las rampas, para subir lo haremos de frente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Para salir del ascensor, lo haremos de frente a la puerta.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Para entrar en el ascensor se hará de espaldas al mismo.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "En las rampas para bajar lo haremos de frente.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 143,
+    "pregunta": "Señale la respuesta INCORRECTA respecto al oxígeno:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Es un gas poco reactivo.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Su manipulación precisa de adopción de precauciones.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Es un gas incoloro e insípido.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Es un gas inodoro.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 144,
+    "pregunta": "Señale la respuesta que NO es correcta en el manejo de un paciente con bala de oxígeno:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Debemos colgar la bala de oxígeno en la cama del paciente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Si el traslado se realiza con el humidificador no se debe colocar la bala tumbada.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Cerraremos el caudalímetro para prevenir fugas durante el traslado.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "a) y b) son correctas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 145,
+    "pregunta": "El aparato que regula la nutrición vía sanguínea se denomina:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Bomba de nutrición enteral.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Bomba de nutrición parenteral.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Bomba de perfusión.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Bomba de nutrición contínua.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 146,
+    "pregunta": "Señale la respuesta que NO es correcta en relación con el microdifusor electrotérmico:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Los tratamientos DVA proporcionan reducciones importantes en los niveles de contaminación microbiológica de todos los puntos, excepto en los más alejados o de difícil acceso.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Es el sistema que permite la desinfección total de superficies a través del aire.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Es un proceso en el que el aire sirve de vector de transmisión del aerosol biocida.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "b) y c) son verdaderas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 147,
+    "pregunta": "El aparato cuya finalidad es registrar corrientes eléctricas del corazón se denomina:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Electrocardiógrafo.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Ecocardiógrafo.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Ecógrafo.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "a) y b) son correctas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 148,
+    "pregunta": "Señale la respuesta correcta respecto al Escabel:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Puede utilizarse como ayuda para subir a la cama.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Se utiliza para el descanso de los pies en pacientes que están sentados.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Se utiliza para evitar el roce de las sábanas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "a) y b) son correctas.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 149,
+    "pregunta": "Señala, de los siguientes sufijos, cuál significa ’aumento de volumen’:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "-logía.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "-tomía.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "-osis.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "-megalia.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 150,
+    "pregunta": "El trapecio o potencia:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Es un armazón metálico utilizado en camas traumatológicas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Es un dispositivo que permite limitar los movimientos de la cabeza y cuello.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Es un recipiente para transportar muestras, recoger residuos orgánicos y de curas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Es un dispositivo a través del cual se ayuda el paciente para moverse en la cama.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 151,
+    "pregunta": "La especialidad que se encarga del cuidado total de los pacientes cuya enfermedad no responde al tratamiento activo con intención curativa es:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Cuidados contínuos.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Cuidados paliativos.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Cuidados terminales.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Cuidados intensivos.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 152,
+    "pregunta": "La técnica mediante la cual se separan los componentes de la sangre siendo seleccionados los necesarios , para su aplicación en medicina, y devueltos al torrente sanguíneo el resto de sus componentes, se denomina:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Frotis.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Amniocentesis.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Aféresis.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Desbridación.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 153,
+    "pregunta": "La cirugía reparadora de los vasos sanguíneos se denomina:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Angioplastia.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Broncoscopia.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Colangiografía.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Profilaxis.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 154,
+    "pregunta": "Para colocar el arnés al paciente desde la posición de decúbito lateral:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Debemos pasar el arnés por encima de la entremetida, moverlo hacia decúbito lateral contrario, estirar el arnés y la entremetida.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Debemos pasar el arnés por encima de la entremetida, moverlo hacia decúbito lateral contrario, estirar el arnés y la entremetida para finalizar en decúbito supino.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Debemos pasar el arnés por debajo de la entremetida, moverlo hacia decúbito supino, estirar el arnés y la entremetida para finalizar en decúbito lateral.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Debemos pasar el arnés por debajo de la entremetida, moverlo hacia decúbito lateral contrario, estirar el arnés y la entremetida para finalizar en decúbito supino.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 155,
+    "pregunta": "La quinta rueda de las camillas sirve para:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "", 
+        "estado": "NULA"
+      },
+      {
+        "letra": "b",
+        "texto": "Fijar la dirección de las ruedas delanteras en sentido de la marcha.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Facilitar los desplazamientos laterales.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "a) y c) son correctas.",
+        "estado": "NULA"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 156,
+    "pregunta": "La actuación inmediata a realizar ante una agresión será:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Aunque se necesite asistencia médica, lo primero sería la interposición de la correspondiente denuncia ante la autoridad policial.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Si requiere asistencia médica, acuda a la Unidad Básica de Prevención (UBP) correspondiente.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Aunque se necesite asistencia médica, lo primero es elaborar junto con el responsable inmediato, un informe lo más exhaustivo posible.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Cumplimente el Registro para la Notificación de Accidente ’Formato I’ firmado por el responsable inmediato, antes de acudir al servicio de urgencias.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 157,
+    "pregunta": "El fuego se clasifica en diferentes clases, y no todas se apagan con el mismo agente extintor. Por eso, para cada clase de fuego encontramos diferentes tipos de extintores:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Para fuegos de clase B se puede utilizar agua.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Para fuegos de clase ABC se puede utilizar extintores de Polvo Polivalente.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Para fuegos de clase ABC se puede utilizar agua pulverizada o dióxido de carbono (CO2).",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Para fuegos de clase C se puede utilizar extintores de dióxido de carbono (CO2).",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 158,
+    "pregunta": "¿Qué precaución se tiene que tener en cuenta cuando se utiliza un extintor de dióxido de carbono?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Solo es adecuado para fuegos de tipo C y el contacto de CO2 con partes del cuerpo al salir al exterior puede producir quemaduras por calor.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Solo es adecuado para fuegos de tipo A y B y el contacto de CO2 con partes del cuerpo al salir al exterior puede producir quemaduras por calor.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Solo es adecuado para fuegos de tipo C y el contacto de CO2 con partes del cuerpo al salir al exterior puede producir quemaduras por frío.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Solo es adecuado para fuegos de tipo A y B y el contacto de CO2 con partes del cuerpo al salir al exterior puede producir quemaduras por frío.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 159,
+    "pregunta": "Un accidente biológico se produce por la exposición accidental a agentes biológicos, y esto puede ocurrir por:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Contacto con piel no intacta.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Contacto con piel intacta.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Contacto con sangre u otros fluidos biológicos a través de cortes o pinchazos.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "a) y c) son correctas.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 160,
+    "pregunta": "¿Cómo se denomina al suceso no esperado ni deseado que no dando lugar a pérdidas de salud o lesiones a las personas, pueda ocasionar daños en el equipo que estamos manejando?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Accidente de trabajo.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Accidente sin baja.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Accidente in-itinere.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Incidente.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 161,
+    "pregunta": "Con respecto a las vacaciones:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Las vacaciones pueden ser compensadas con dinero si así lo solicita mediante un escrito notarial 15 días antes de cada periodo vacacional.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Como norma general, las vacaciones no podrán ser compensadas, ni en todo ni en parte, en metálico.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "El trabajador solicita al inicio de su prestación laboral si quiere ser compensado en parte en metálico cuando finalice su periodo de contratación.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "En ningún caso se podrá solicitar que se compense las vacaciones.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 162,
+    "pregunta": "Elige la respuesta correcta en relación al equipo de protección individual:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Cualquier máquina, aparato, instrumento o instalación utilizada en el trabajo.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Toda herramienta o dispositivo que el responsable inmediato entrega al trabajador para realizar su tarea de forma rápida.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Un conjunto de medidas colectivas diseñadas para eliminar los riesgos ambientales en el entorno sanitario.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Cualquier equipo destinado a ser llevado o sujetado por el trabajador para que le proteja de uno o varios riesgos que puedan amenazar su seguridad o salud en el trabajo.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 163,
+    "pregunta": "En una sujeción abdominal, las correas de sujeción:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "La parte inferior se sujeta a la cama y la superior se coloca alrededor de la cintura del paciente.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "La parte abdominal se sujeta a la cama y la inferior se coloca alrededor de los miembros inferiores del paciente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Facilita la inmovilización total del paciente encamado.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "a) y c) son correctas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 164,
+    "pregunta": "En las correas de peto, el kit número 1, para el corsé abdominal, contaremos con:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "4 botones de cierre magnético.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "5 botones de cierre magnético.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "3 botones de cierre magnético.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "6 botones de cierre magnético.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 165,
+    "pregunta": "¿Qué se debe comprobar siempre después de movilizar a un paciente?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Que la cama esté en posición Trendelemburg.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Que el paciente tenga el suero lleno.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "La seguridad del paciente.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Que el paciente esté en decúbito supino.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 166,
+    "pregunta": "¿Qué aparato se utiliza para realizar exploraciones mediante ondas de ultrasonido?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Ecocardiógrafo.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Ecógrafo.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Endoscopio.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Monitor.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 167,
+    "pregunta": "¿Qué material se utiliza para inmovilizar completamente la columna en pacientes politraumatizados?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Tabla para paradas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Férula de Brown.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Tablero de inmovilización espinal.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Escopia.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 168,
+    "pregunta": "Según en la Carpeta Roja, ¿Cuál de las siguientes afirmaciones sobre la Hoja de Consulta en Prevención es INCORRECTA?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "El trabajador la entrega a su responsable inmediato.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Sirve para sugerencias de mejora.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Solo puede usarse para quejas formales.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Puede emplearse para consultar sobre vigilancia de la salud.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 169,
+    "pregunta": "¿Cuál de las siguientes afirmaciones sobre riesgos ergonómicos es INCORRECTA? Teléfono: 685 19 12 19 www.esferaoposiciones.com En cumplimiento del Reglamento General de Protección de Datos y de la Ley Orgánica 3/2018, sus datos personales serán tratados por ESFERA OPOSICIONES con la finalidad de gestionar su relación con la entidad y el envío de comunicaciones por cualquier medio. Puede ejercer sus derechos de acceso, rectificación, supresión y oposición en Ramón Montenegro 32, 27002 (LUGO) Pá",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Mantener la misma postura durante un tiempo ayuda a evitar fatiga.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Acompañar el movimiento del tronco con los pies.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Flexionar las piernas y mantener la espalda recta al movilizar pacientes.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Realizar cambios frecuentes de postura.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 170,
+    "pregunta": "¿Qué acción forma parte del procedimiento correcto al usar un extintor según el manual?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Apuntar directamente al centro de las llamas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Realizar movimientos en abanico cubriendo la base del fuego.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Mantener el extintor inclinado para aumentar el alcance.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Probar el extintor apuntando hacia arriba antes de usarlo.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 171,
+    "pregunta": "Según el manual de Riesgos Generales de Osakidetza, ¿cuál de las siguientes es una norma general en el manejo de productos químicos en un centro sanitario?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Se permite el consumo de bebidas en las áreas de manipulación siempre que los envases estén cerrados.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Se pueden oler los productos químicos para identificarlos en caso de que la etiqueta no sea legible.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "En caso de trasvase a otro recipiente, identifique el contenido y etiquete el nuevo envase.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Mantenga abiertos los recipientes con productos químicos, en especial los que contengan productos volátiles (glutaraldehído) para evitar la acumulación de gases.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 172,
+    "pregunta": "Indica la respuesta INCORRECTA en relación al uso del extintor:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Apunte hacia la base del fuego.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Coloque el extintor en posición vertical.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Coloque el extintor en posición horizontal.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Rompa el precinto y retire el seguro.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 173,
+    "pregunta": "La temperatura a la cual una sustancia comienza a desprender vapores en cantidad suficiente para mantener la combustión, se denomina:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Proceso de combustión.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Temperatura de autoinflamación.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Punto de inflamación.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Calor.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 174,
+    "pregunta": "¿Qué medida se establece para asegurar el seguimiento de la jornada en los centros de Osakidetza?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Existirá un sistema de control horario, de obligado cumplimiento en todas las organizaciones de servicios dependiente del Ente público.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Los Jefes de Unidad supervisarán a diario quién entra y quién sale.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Se implementará un registro de firmas manual únicamente en aquellos centros que no dispongan de sistemas informáticos de fichaje.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Todas las respuestas son correctas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 175,
+    "pregunta": "A la hemorragia procedente del útero, que no está relacionada con la regla se le denomina:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Metrorragia.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Melena.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Aftas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Amniocentesis.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 176,
+    "pregunta": "¿Cómo se denomina el aparato que se utiliza para realizar ecografías cardíacas?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Ecocardiógrafo.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Escopia.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Electrocardiógrafo.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Hemofiltro.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 177,
+    "pregunta": "El término esplenomegalia hace referencia a:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Estrechamiento de un orificio.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Hinchazón por acúmulo anormal de líquido.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Inflamación del bazo.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Enfermedad de carácter agudo consistente en una inflamación del hígado.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 178,
+    "pregunta": "A la inflamación de un ganglio linfático se le denomina:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Adenoma.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Aféresis.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Adenitis.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Absceso.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 179,
+    "pregunta": "A la membrana interna que contiene el líquido amniótico, se le denomina:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Amniocentesis.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Amnios.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Anamnesis.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Anemia.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 180,
+    "pregunta": "A la definición referente a las vida le corresponde el prefijo:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Bio-.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Hidro-.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Inter-.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Logía-.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 181,
+    "pregunta": "En el decreto 255/1998, ¿quién es competente para fijar o trasladar el domicilio del Ente Público Osakidetza-Servicio vasco de salud?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "El Gobierno Vasco mediante Decreto.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "El Departamento de Sanidad de la Comunidad Autónoma.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "El Consejo de Administración del Ente Público.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "El Director de Régimen Económico y Financiero del Ente Público.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 182,
+    "pregunta": "De acuerdo con la clasificación de los fuegos, ¿cómo se catalogaría un incendio que involucra exclusivamente a líquidos?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Fuegos clase A.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Fuegos clase B.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Fuegos clase C.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Fuegos clase D.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 183,
+    "pregunta": "Si se produce un fuego en una zona con brasas, ¿cuál de los siguientes agentes extintores NO debe utilizarse según las propiedades descritas en el manual?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Polvo polivalente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Agua.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Dióxido de carbono.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Todas las respuestas son correctas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 184,
+    "pregunta": "Indica la respuesta correcta en relación a la radiación ionizante:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "El acceso a las áreas en las cuales se utiliza radiación ionizante está restringido a personas autorizadas.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "La radiación ionizante pueden ser diversas: infrarroja y láser, Electromagnética...",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Los efectos para la salud evidenciados son escasos (calor local, enrojecimiento de piel).",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Todas las respuestas son correctas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 185,
+    "pregunta": "En el uso de pantallas de Visualización de datos (PVD’s), ¿cómo se debe colocar la pantalla respecto a los ojos?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "De manera que los ojos se sitúen a la altura de los bordes superiores de esta.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "De manera que los ojos se sitúen a la altura de los bordes inferiores de esta.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Lo más alta posible para estirar el cuello.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Por debajo del nivel de la mesa.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 186,
+    "pregunta": "En caso de sufrir un accidente laboral que precise asistencia médica inmediata en horario de mañana (8:00 a 15:00), ¿a dónde debe acudir el trabajador prioritariamente?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "A su médico de cabecera en el centro de salud.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "A la Unidad Básica de Prevención (UPB) de su organización.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Directamente a las oficinas de Mutualia.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Todas las respuestas son incorrectas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 187,
+    "pregunta": "Para que un accidente de trabajo sea considerado in itinere, es necesario que:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "El medio de locomoción sea el habitual.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "El trayecto no se haya modificado o interrumpido voluntariamente.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "El margen de tiempo está dentro de los límites normales.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Todas las respuestas son correctas.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 188,
+    "pregunta": "Indica la respuesta correcta en relación al tubo de Guedel:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Cánula que se utiliza para impedir que la lengua caiga hacia atrás, bloqueando la vía respiratoria.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Tubo flexible, que puede introducirse en un vaso o una cavidad del cuerpo, para introducir o extraer líquidos.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Se le denomina también cánula de Mayo.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Las respuestas a y c son correctas.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 189,
+    "pregunta": "El término hematuria hace referencia a:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Vómito en sangre procedente de estómago-intestino.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Coloración amarillenta de la piel.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Presencia de sangre en orina.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Expulsión de sangre procedente de vías respiratorias.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 190,
+    "pregunta": "El término colelitiasis se define como:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Inflamación de la vejiga de la orina causada por infección bacteriana.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Estudio y visualización de las vías biliares, a través de Rx, y la inyección de un preparado radiopaco.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Presencia de piedras en vesícula biliar.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Todas las respuestas son incorrectas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 191,
+    "pregunta": "El término aneurisma hace referencia a:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Dilatación de la pared debilitada de un vaso sanguíneo.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Estudio con técnicas radiológicas de las estructuras vasculares.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Coloración azul violeta de la piel y mucosas debida a la falta de oxígeno en la sangre.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Todas las respuestas son incorrectas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 192,
+    "pregunta": "La especialidad médica encargada del estudio de la función normal, la anatomía y los desórdenes producidos por alteraciones de las glándulas endocrinas es:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Dermatología.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Hematología.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Endocrinología.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Nefrología.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 193,
+    "pregunta": "A la definición referente al dolor, le corresponde el sufijo:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "-grafía.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "-algia.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "-itis.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "-citosis.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 194,
+    "pregunta": "A la definición referente a las venas le corresponde el prefijo:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Hemi-.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Endo-.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Hidro-.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Flebo-.",
+        "estado": "Correcta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 195,
+    "pregunta": "El término histerectomía hace referencia a:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Extirpación del útero.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Hemorragia del útero.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Caída del útero.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Todas las respuestas son correctas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 196,
+    "pregunta": "Indica la respuesta correcta en relación a la licencia por traslado o mudanza del domicilio habitual:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Tendrá derecho a una licencia de un día de duración dentro del plazo de un mes natural a contar desde la fecha de empadronamiento en el nuevo domicilio.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Tendrá derecho a una licencia de un día de duración dentro del plazo de un año natural a contar desde la fecha de empadronamiento en el nuevo domicilio.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Tendrá derecho a una licencia de dos días naturales de duración dentro del plazo de un mes natural a contar desde la fecha de empadronamiento en el nuevo domicilio.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "d",
+        "texto": "Tendrá derecho a una licencia de dos días naturales de duración dentro del plazo de un año natural a contar desde la fecha de empadronamiento en el nuevo domicilio.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 197,
+    "pregunta": "Indica la respuesta correcta en relación a la licencia para atender el cuidado de un familiar de primer grado por razones de enfermedad muy grave:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "El trabajador tendrá derecho a solicitar una reducción de hasta el cincuenta por ciento de la jornada laboral con carácter retribuido y por el plazo máximo de 2 meses.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "El trabajador tendrá derecho a solicitar una reducción de hasta el cincuenta por ciento de la jornada laboral con carácter retribuido y por el plazo máximo de 1 mes.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "El trabajador tendrá derecho a solicitar una reducción de hasta el cien por ciento de la jornada laboral con carácter retribuido y por el plazo máximo de 1 mes.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Todas las respuestas son incorrectas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 198,
+    "pregunta": "Según el Acuerdo Regulador de Osakidetza, ¿cuál es la duración de la licencia retribuida por matrimonio propio?",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "El personal tiene derecho a una licencia de 20 días naturales de duración que podrá disfrutar con anterioridad o posterioridad a su celebración, incluyendo dicha fecha en ese periodo.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "El personal tiene derecho a una licencia de 25 días naturales de duración que podrá disfrutar con anterioridad o posterioridad a su celebración, incluyendo dicha fecha en ese periodo.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "El personal tiene derecho a una licencia de 20 días naturales de duración que podrá disfrutar únicamente con posterioridad a su celebración.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "El personal tiene derecho a una licencia de 25 días naturales de duración que podrá disfrutar únicamente con posterioridad a su celebración.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 199,
+    "pregunta": "A el tablero destinado a pacientes que precisen de una inmovilización de urgencia, se le denomina:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Tablero de inmovilización espinal.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "b",
+        "texto": "Tablero de paradas.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "c",
+        "texto": "Transpaleta eléctrica.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Camilla de exploración.",
+        "estado": "Incorrecta"
+      }
+    ]
+  },
+  {
+    "documento": "CELADOR",
+    "id": 200,
+    "pregunta": "El decreto 255/1997 en su artículo 4 (personalidad jurídica y capacidad de obrar) indica que el Ente Público Osakidetza-Servicio Vasco de Salud:",
+    "opciones": [
+      {
+        "letra": "a",
+        "texto": "Actúa con personalidad jurídica privada y capacidad limitada al ámbito sanitario.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "b",
+        "texto": "Dispone de personalidad jurídica pública diferenciada y plena capacidad de obrar para el cumplimiento de su objeto y fines.",
+        "estado": "Correcta"
+      },
+      {
+        "letra": "c",
+        "texto": "Carece de personalidad jurídica propia y depende orgánicamente del Departamento de Sanidad.",
+        "estado": "Incorrecta"
+      },
+      {
+        "letra": "d",
+        "texto": "Todas son incorrectas.",
+        "estado": "Incorrecta"
+      }
+    ]
+  }
+]

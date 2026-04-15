@@ -1,0 +1,602 @@
+CONTEXTO DEL PROYECTO
+=====================
+
+Resumen rapido
+--------------
+Este proyecto es una web estatica para practicar tests tipo oposicion en Euskadi.
+No tiene backend ni dependencias de build.
+Funciona solo en navegador con HTML + Tailwind CDN + JavaScript vanilla.
+
+La app actual usa un banco local de preguntas cargado desde preguntas-data.js.
+Ese archivo se genera a partir de preguntas.json para evitar problemas de fetch al abrir el HTML en local.
+
+La web ya implementa:
+- Modo practica
+- Modo examen
+- Correccion y resumen final
+- Revision de fallos
+- Estadisticas persistidas en localStorage
+- Recuerdo de configuracion de sesion en localStorage
+
+
+ARCHIVOS IMPORTANTES
+--------------------
+
+1. index.html
+- Es el punto de entrada de la web.
+- Carga:
+  - Google Fonts
+  - Tailwind por CDN
+  - estilos visuales basicos del fondo y paneles
+  - preguntas-data.js
+  - app.js
+- Contiene solo el contenedor principal:
+  - <div id="app"></div>
+- Toda la interfaz se pinta dinamicamente desde app.js.
+
+2. app.js
+- Es la logica principal de toda la aplicacion.
+- Esta envuelto en una IIFE:
+  - (function () { ... })();
+- Gestiona:
+  - limpieza y normalizacion del banco
+  - estado global
+  - render de la home
+  - render de sesion practica/examen
+  - render del resumen final
+  - persistencia en localStorage
+  - atajos de teclado
+
+3. preguntas.json
+- Es la fuente original de preguntas.
+- Estructura esperada por pregunta:
+  - documento
+  - id
+  - pregunta
+  - opciones (array de 4)
+  - cada opcion tiene letra, texto y estado
+- La app NO consume directamente este archivo en tiempo de ejecucion.
+- Sirve como fuente para generar preguntas-data.js.
+
+4. preguntas-data.js
+- Archivo generado.
+- Su contenido es basicamente:
+  - window.PREGUNTAS_RAW = [...];
+- Este SI es el archivo que carga la web.
+- Se usa asi para que la app funcione bien incluso si se abre index.html directamente desde disco local.
+
+5. contexto.txt
+- Este archivo.
+- Sirve para que otro chat o desarrollador entienda el proyecto sin releer todo el codigo.
+
+
+ARCHIVOS NO USADOS POR LA WEB ACTUAL
+------------------------------------
+
+- tabla.html
+  - El usuario pidio ignorarlo.
+  - No participa en la web actual.
+
+- PreguntasOposicion_v2.json
+  - En el estado actual del proyecto no se usa en runtime.
+  - Puede existir como referencia externa, pero la app no lo carga.
+
+
+ESTADO REAL DEL BANCO DE PREGUNTAS
+----------------------------------
+
+Estado actual comprobado:
+- Total de preguntas en preguntas.json: 500
+- Preguntas validas usadas por la app: 411
+- Preguntas descartadas: 89
+
+Distribucion de preguntas validas:
+- BATERIA_COMUN: 266
+- CELADOR: 145
+
+Importante:
+- El usuario pidio una web para radiologia en Euskadi, pero el JSON actual NO contiene una categoria explicita de radiodiagnostico.
+- La app se ha construido para funcionar con el banco disponible y dejar la estructura preparada para un futuro JSON mas especifico.
+
+
+ARQUITECTURA GENERAL
+--------------------
+
+La app sigue este flujo:
+
+1. index.html carga preguntas-data.js
+2. preguntas-data.js deja los datos en window.PREGUNTAS_RAW
+3. index.html carga app.js
+4. app.js:
+   - comprueba si localStorage esta disponible
+   - prepara los datos
+   - carga configuracion guardada
+   - carga estadisticas guardadas
+   - registra listeners
+   - hace el primer render
+
+No hay framework ni componentes externos.
+Todo se monta con plantillas HTML dentro de strings y root.innerHTML.
+
+
+ESTADO GLOBAL EN app.js
+-----------------------
+
+La app usa un objeto state central con esta idea:
+
+- questions
+  - lista de preguntas validas y normalizadas
+
+- documents
+  - categorias detectadas a partir de las preguntas validas
+  - cada item tiene key, label y count
+
+- meta
+  - rawCount
+  - validCount
+  - droppedCount
+
+- setup
+  - configuracion de la sesion actual/preferida
+  - mode: practice o exam
+  - document: all o una categoria concreta
+  - amount: numero de preguntas
+  - shuffle: mezclar o no
+  - examMinutes: duracion del examen
+
+- stats
+  - estadisticas persistidas del usuario
+
+- storageAvailable
+  - indica si localStorage esta operativo
+
+- session
+  - objeto temporal cuando hay una sesion activa
+
+- summary
+  - objeto con el resultado de la ultima sesion terminada
+
+- timerId
+  - id del intervalo del temporizador de examen
+
+
+FUNCIONES IMPORTANTES DE DATOS
+------------------------------
+
+repairMojibake(value)
+- Intenta arreglar textos con problemas de codificacion.
+- Se usa para rescatar caracteres raros del OCR o del origen.
+
+cleanText(value)
+- Limpia el texto de preguntas y respuestas.
+- Elimina:
+  - bloques basura del OCR
+  - textos legales repetidos
+  - marcas como Correct/Incorrecta embebidas
+  - caracteres sueltos molestos
+  - espacios repetidos
+
+isStrictlyValidQuestion(item)
+- Decide si una pregunta entra en el simulador.
+- Reglas:
+  - debe existir pregunta
+  - debe tener exactamente 4 opciones
+  - debe haber exactamente 1 opcion con estado === "Correcta"
+  - ninguna opcion debe contener ciertos patrones de OCR roto
+
+normalizeQuestion(item, index)
+- Convierte la pregunta original en una forma interna uniforme.
+- Reasigna las letras de opcion por posicion:
+  - A, B, C, D
+- Importante:
+  - la app NO confia en la letra original del JSON porque el OCR puede traer duplicados o errores
+  - la correcta se detecta por el campo estado
+
+buildDocuments(questions)
+- Agrupa por documento y genera las categorias visibles en la home.
+
+prepareData()
+- Punto principal de carga de datos.
+- Lee window.PREGUNTAS_RAW
+- filtra preguntas invalidas
+- normaliza preguntas
+- calcula metadatos
+- prepara cantidades por defecto
+
+
+PERSISTENCIA EN NAVEGADOR
+-------------------------
+
+La app guarda informacion en localStorage con estas claves:
+
+- ope-euskadi-setup-v1
+  - guarda la configuracion del usuario
+  - modo
+  - bloque
+  - cantidad
+  - shuffle
+  - minutos de examen
+
+- ope-euskadi-stats-v1
+  - guarda las estadisticas acumuladas
+
+La persistencia esta encapsulada en estas funciones:
+
+- safeStorage()
+  - comprueba si localStorage se puede usar
+
+- readStorageJson(key, fallbackValue)
+  - lee JSON desde localStorage
+
+- writeStorageJson(key, value)
+  - guarda JSON en localStorage
+
+- loadPersistedSetup()
+  - restaura configuracion guardada al arrancar
+
+- persistSetup()
+  - guarda la configuracion cuando cambia
+
+- loadPersistedStats()
+  - restaura estadisticas acumuladas
+
+- persistStats()
+  - guarda estadisticas acumuladas
+
+- resetPersistedStats()
+  - borra las estadisticas y reinicia el estado interno
+
+
+ESTRUCTURA DE LAS ESTADISTICAS
+------------------------------
+
+state.stats contiene:
+
+- totalSessions
+- practiceSessions
+- examSessions
+- totalQuestions
+- totalCorrect
+- totalIncorrect
+- totalUnanswered
+- bestScoreOverTen
+- bestPercentage
+- lastScoreOverTen
+- lastPlayedAt
+- currentStreak
+- bestStreak
+- recentSessions
+
+recentSessions guarda hasta 8 sesiones recientes con:
+- fecha/hora
+- modo
+- bloque origen
+- total
+- correctas
+- incorrectas
+- sin responder
+- porcentaje
+- nota sobre 10
+- si expiro el tiempo
+
+La regla de racha es:
+- si la nota de la sesion es >= 5, aumenta la racha aprobada
+- si la nota es < 5, la racha actual vuelve a 0
+
+
+FUNCIONAMIENTO DEL MODO PRACTICA
+--------------------------------
+
+Cuando el usuario lanza practica:
+- se selecciona el pool segun setup.document
+- se escoge la cantidad segun setup.amount
+- se mezclan si shuffle == true
+- se crea session.mode = "practice"
+
+En modo practica:
+- solo se puede responder una vez por pregunta
+- al responder, se muestra feedback inmediato
+- se pinta la correcta en verde
+- si se fallo, la opcion elegida sale en rojo
+- hay panel lateral con:
+  - correctas
+  - respondidas
+  - pendientes
+
+
+FUNCIONAMIENTO DEL MODO EXAMEN
+------------------------------
+
+Cuando el usuario lanza examen:
+- mismo sistema de seleccion de preguntas
+- se crea session.mode = "exam"
+- se calcula session.endsAt segun examMinutes
+- se arranca un setInterval de 1 segundo
+
+En modo examen:
+- no se muestra la solucion al responder
+- hay temporizador
+- se pueden marcar preguntas para revisar
+- existe panel lateral con numeracion de preguntas
+- el panel refleja estados:
+  - actual
+  - respondida
+  - marcada
+  - marcada y respondida
+
+Si el tiempo llega a 0:
+- finishSession("timeout")
+- el resumen marca timedOut = true
+
+
+OBJETO session
+--------------
+
+Una sesion activa tiene:
+
+- mode
+- sourceLabel
+  - nombre del bloque origen
+  - por ejemplo "Todo el banco", una categoria concreta o "Repaso de fallos"
+
+- questions
+  - preguntas seleccionadas para esa sesion
+
+- answers
+  - array paralelo a questions
+  - cada posicion guarda:
+    - null si no respondida
+    - indice 0..3 si respondida
+
+- currentIndex
+  - pregunta mostrada actualmente
+
+- marked
+  - Set con indices marcados para revisar
+
+- startedAt
+- endsAt
+
+
+FINALIZACION Y RESUMEN
+----------------------
+
+finishSession(reason = "manual")
+- corrige todas las preguntas
+- genera items enriquecidos
+- calcula:
+  - answered
+  - unanswered
+  - correct
+  - incorrect
+  - percentage
+  - scoreOverTen
+  - durationSeconds
+  - timedOut
+  - mistakes
+
+Despues:
+- guarda el resumen en state.summary
+- actualiza estadisticas acumuladas
+- persiste stats
+- destruye state.session
+- renderiza la pantalla de resultados
+
+
+PANTALLA HOME
+-------------
+
+La home muestra:
+- cantidad de preguntas validas y descartadas
+- descripcion del simulador
+- banco detectado
+- panel de configuracion
+- panel de memoria del navegador
+- estadisticas acumuladas
+- sesiones recientes
+
+Controles de configuracion:
+- Modo:
+  - Practica
+  - Examen
+
+- Bloque:
+  - all
+  - una categoria por documento detectado
+
+- Cantidad:
+  - opciones dinamicas como 10, 25, 50, 100, 200 o todas
+
+- Mezclar preguntas
+
+- Duracion del examen
+
+- Boton para empezar sesion
+
+Tambien tiene boton:
+- Borrar estadisticas
+
+
+PANTALLA DE RESULTADOS
+----------------------
+
+Muestra:
+- tipo de sesion
+- bloque usado
+- nota sobre 10
+- porcentaje
+- duracion
+- correctas
+- incorrectas
+- sin responder
+- total
+- resumen de estadisticas acumuladas
+- lista de preguntas falladas o no respondidas
+
+Botones disponibles:
+- Repetir practica/examen
+- Volver al inicio
+- Practicar fallos
+
+"Practicar fallos" crea una nueva sesion en modo practica con solo las preguntas de mistakes.
+
+
+RENDERIZADO
+-----------
+
+Toda la UI se decide desde render():
+
+- Si no hay preguntas validas:
+  - renderEmptyState()
+
+- Si hay sesion activa:
+  - renderSession()
+
+- Si no hay sesion activa pero hay summary:
+  - renderSummary()
+
+- En cualquier otro caso:
+  - renderHome()
+
+
+ATAJOS DE TECLADO
+-----------------
+
+Durante una sesion:
+- 1, 2, 3, 4
+  - responden A, B, C, D
+
+- A, B, C, D
+  - responden A, B, C, D
+
+- Flecha derecha
+  - siguiente pregunta
+
+- Flecha izquierda
+  - pregunta anterior
+
+- M
+  - marcar/desmarcar en examen
+
+Nota:
+- si el foco esta en un input o textarea, los atajos no se aplican
+
+
+DECISIONES IMPORTANTES DE DISEÑO
+--------------------------------
+
+1. La app es 100 por 100 cliente
+- no hay servidor
+- no hay API
+- no hay base de datos
+
+2. preguntas-data.js existe por compatibilidad local
+- cargar preguntas.json con fetch falla a veces al abrir HTML desde archivo local
+- por eso se genera un JS que asigna los datos a window.PREGUNTAS_RAW
+
+3. Se descartan preguntas dudosas
+- el banco original tiene OCR roto
+- se prefiere perder preguntas antes que meter items inseguros en examen
+
+4. La letra visible A/B/C/D se recalcula
+- no se usa la letra original del OCR como fuente de verdad
+- se usa la posicion de la opcion
+
+5. Persistencia local sin login
+- el progreso es solo del navegador actual
+- no se sincroniza entre dispositivos
+
+
+LIMITACIONES ACTUALES
+---------------------
+
+1. No hay backend
+- si el usuario cambia de navegador o borra datos del navegador, pierde las estadisticas
+
+2. No hay import/export de progreso
+- aun no existe boton para exportar estadisticas a JSON
+
+3. No hay filtrado por tema semantico
+- solo por campo documento
+- si en el futuro el JSON trae categorias de radiologia, habria que exponerlas
+
+4. No se usa PreguntasOposicion_v2.json
+- si ese archivo es el banco correcto, habria que integrarlo o sustituir preguntas.json
+
+5. No hay explicaciones pedagogicas
+- la app muestra cual era la correcta, pero no explica el por que
+
+6. El filtrado es estricto
+- algunas preguntas potencialmente recuperables pueden estar siendo descartadas por seguridad
+
+
+COMO ACTUALIZAR EL BANCO DE PREGUNTAS
+-------------------------------------
+
+Si se cambia preguntas.json:
+
+1. Mantener la estructura:
+   - documento
+   - id
+   - pregunta
+   - opciones[4]
+   - opciones[].estado con exactamente una "Correcta"
+
+2. Regenerar preguntas-data.js
+
+Ejemplo en PowerShell:
+
+Set-Content -Path .\preguntas-data.js -Value ('window.PREGUNTAS_RAW = ' + (Get-Content -Raw .\preguntas.json) + ';') -Encoding UTF8
+
+3. Abrir index.html y comprobar:
+   - numero de preguntas validas
+   - categorias detectadas
+   - que no se haya roto el render
+
+
+QUE DEBERIA SABER OTRO CHAT ANTES DE TOCAR EL PROYECTO
+------------------------------------------------------
+
+Si otro chat continua este trabajo, deberia asumir esto:
+
+- El archivo central es app.js
+- index.html es muy fino y solo hace bootstrap visual
+- preguntas-data.js se considera generado y sincronizado con preguntas.json
+- tabla.html esta fuera del flujo actual
+- el usuario pidio ignorar tabla.html
+- la experiencia ya esta funcional y no necesita framework
+- cualquier cambio debe respetar el enfoque "abrir index.html y usar"
+- la persistencia actual depende de localStorage
+
+
+MEJORAS NATURALES FUTURAS
+-------------------------
+
+Ideas coherentes para evolucionar esta base:
+
+- estadisticas por categoria/documento
+- ranking de preguntas mas falladas
+- exportar/importar progreso
+- filtro por solo falladas / solo no respondidas
+- modo examen con penalizacion
+- explicaciones por pregunta
+- selector de idioma o copy en euskera/castellano
+- integracion con un banco realmente especifico de radiologia
+- reintento adaptativo de preguntas con peor rendimiento
+
+
+RESUMEN OPERATIVO FINAL
+-----------------------
+
+Proyecto actual:
+- web estatica de test
+- usa index.html + app.js + preguntas-data.js
+- fuente de datos en preguntas.json
+- 411 preguntas validas ahora mismo
+- 2 modos: practica y examen
+- estadisticas y setup guardados en localStorage
+
+Si otro chat necesita continuar:
+- puede leer este archivo y luego tocar directamente app.js
+- no necesita reanalizar todo el proyecto desde cero
+- el punto mas delicado es no romper la limpieza/filtrado del OCR ni la persistencia en navegador
