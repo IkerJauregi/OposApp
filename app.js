@@ -14,6 +14,8 @@
     shuffle: true,
     examMinutes: 15,
   };
+  const QUESTION_BANK_SOURCES = ["preguntas-bateria-comun.json", "preguntas-celador.json"];
+  const QUESTION_BANK_FALLBACK_SOURCE = "preguntas.json";
   const DOCUMENT_LABELS = {
     BATERIA_COMUN: "Batería común",
     CELADOR: "Celador",
@@ -37,6 +39,8 @@
     summary: null,
     timerId: null,
     isStatsPanelOpen: false,
+    dataStatus: "idle",
+    dataError: "",
   };
 
   function createDefaultStats() {
@@ -304,6 +308,34 @@
     };
   }
 
+  async function loadQuestionSource(path) {
+    const response = await fetch(path, { cache: "no-store" });
+
+    if (!response.ok) {
+      throw new Error(`No se ha podido cargar ${path} (${response.status}).`);
+    }
+
+    const payload = await response.json();
+    if (!Array.isArray(payload)) {
+      throw new Error(`El archivo ${path} no contiene una lista de preguntas.`);
+    }
+
+    return payload;
+  }
+
+  async function loadQuestionBank() {
+    try {
+      const sources = await Promise.all(QUESTION_BANK_SOURCES.map((path) => loadQuestionSource(path)));
+      return sources.flat();
+    } catch (error) {
+      try {
+        return await loadQuestionSource(QUESTION_BANK_FALLBACK_SOURCE);
+      } catch {
+        throw error;
+      }
+    }
+  }
+
   function buildDocuments(questions) {
     const counts = questions.reduce((accumulator, question) => {
       accumulator[question.rawDocument] = (accumulator[question.rawDocument] || 0) + 1;
@@ -319,17 +351,17 @@
       .sort((left, right) => left.label.localeCompare(right.label, "es"));
   }
 
-  function prepareData() {
-    const rawQuestions = Array.isArray(window.PREGUNTAS_RAW) ? window.PREGUNTAS_RAW : [];
-    const validQuestions = rawQuestions
+  function prepareData(rawQuestions) {
+    const sourceQuestions = Array.isArray(rawQuestions) ? rawQuestions : [];
+    const validQuestions = sourceQuestions
       .filter(isStrictlyValidQuestion)
       .map((question, index) => normalizeQuestion(question, index));
 
     state.questions = validQuestions;
     state.documents = buildDocuments(validQuestions);
-    state.meta.rawCount = rawQuestions.length;
+    state.meta.rawCount = sourceQuestions.length;
     state.meta.validCount = validQuestions.length;
-    state.meta.droppedCount = rawQuestions.length - validQuestions.length;
+    state.meta.droppedCount = sourceQuestions.length - validQuestions.length;
     state.setup.amount = Math.min(25, validQuestions.length || 0);
     state.setup.examMinutes = recommendedExamMinutes(state.setup.amount);
   }
@@ -1334,7 +1366,12 @@
           </div>
 
           <article class="mt-8 rounded-[1.8rem] bg-white/90 p-6 ring-1 ring-slate-200">
-            <p class="text-sm font-semibold uppercase tracking-[0.22em] text-slate-400">Enunciado</p>
+            <div class="flex flex-wrap items-center gap-3">
+              <p class="text-sm font-semibold uppercase tracking-[0.22em] text-slate-400">Enunciado</p>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-600">
+                N.º ${question.id}
+              </span>
+            </div>
             <h2 class="mt-4 text-2xl font-bold leading-10 text-ink">
               ${escapeHtml(question.question)}
             </h2>
@@ -1431,6 +1468,9 @@
                   <div class="flex flex-wrap items-center gap-3">
                     <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
                       Pregunta ${item.index + 1}
+                    </span>
+                    <span class="rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-600 ring-1 ring-slate-200">
+                      N.º ${item.question.id}
                     </span>
                     <span class="rounded-full bg-tide/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-tide">
                       ${escapeHtml(item.question.document)}
@@ -1571,11 +1611,28 @@
   }
 
   function renderEmptyState() {
+    const title =
+      state.dataStatus === "loading"
+        ? "Cargando preguntas"
+        : state.dataStatus === "error"
+          ? "No he podido montar el simulador"
+          : "No he podido montar el simulador";
+    const description =
+      state.dataStatus === "loading"
+        ? "Estoy cargando el banco de preguntas desde los archivos JSON."
+        : state.dataStatus === "error"
+          ? `No se han podido cargar las preguntas desde los JSON. ${escapeHtml(state.dataError || "")} ${
+              window.location.protocol === "file:"
+                ? "Si estás abriendo el HTML directamente, lánzalo con un servidor local para que el navegador permita leer los JSON."
+                : ""
+            }`
+          : "No se han encontrado preguntas válidas para iniciar una sesión.";
+
     root.innerHTML = `
       <section class="glass-panel mx-auto max-w-3xl rounded-[2rem] border border-white/70 p-8 text-center shadow-soft">
-        <p class="font-display text-3xl font-semibold text-ink">No he podido montar el simulador</p>
+        <p class="font-display text-3xl font-semibold text-ink">${title}</p>
         <p class="mt-4 text-lg leading-8 text-slate-600">
-          No se han encontrado preguntas válidas para iniciar una sesión.
+          ${description}
         </p>
       </section>
     `;
@@ -1739,11 +1796,27 @@
     }
   }
 
-  state.storageAvailable = Boolean(safeStorage());
-  prepareData();
-  loadPersistedSetup();
-  loadPersistedStats();
-  root.addEventListener("click", handleClick);
-  document.addEventListener("keydown", handleKeyDown);
-  render();
+  async function init() {
+    state.storageAvailable = Boolean(safeStorage());
+    state.dataStatus = "loading";
+    root.addEventListener("click", handleClick);
+    document.addEventListener("keydown", handleKeyDown);
+    render();
+
+    try {
+      const rawQuestions = await loadQuestionBank();
+      prepareData(rawQuestions);
+      loadPersistedSetup();
+      loadPersistedStats();
+      state.dataStatus = "ready";
+      state.dataError = "";
+    } catch (error) {
+      state.dataStatus = "error";
+      state.dataError = error instanceof Error ? error.message : "Error desconocido al cargar las preguntas.";
+    }
+
+    render();
+  }
+
+  init();
 })();
