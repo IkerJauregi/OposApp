@@ -14,8 +14,8 @@
     shuffle: true,
     examMinutes: 15,
   };
-  const QUESTION_BANK_SOURCES = ["preguntas-bateria-comun.json", "preguntas-celador.json"];
-  const QUESTION_BANK_FALLBACK_SOURCE = "preguntas.json";
+  const QUESTION_BANK_SOURCES = ["data/preguntas-bateria-comun.json", "data/preguntas-celador.json"];
+  const QUESTION_BANK_FALLBACK_SOURCE = "data/preguntas.json";
   const DOCUMENT_LABELS = {
     BATERIA_COMUN: "Batería común",
     CELADOR: "Celador",
@@ -41,6 +41,8 @@
     isStatsPanelOpen: false,
     dataStatus: "idle",
     dataError: "",
+    canUseJsonFallback: false,
+    activeDataSource: "supabase",
   };
 
   function createDefaultStats() {
@@ -364,25 +366,26 @@
 
   async function loadQuestionBank() {
     if (isSupabaseConfigured()) {
-      try {
-        const supabaseQuestions = await loadQuestionBankFromSupabase();
-        if (Array.isArray(supabaseQuestions) && supabaseQuestions.length) {
-          return supabaseQuestions;
-        }
-      } catch (error) {
-        console.warn(error);
+      const supabaseQuestions = await loadQuestionBankFromSupabase();
+      if (Array.isArray(supabaseQuestions) && supabaseQuestions.length) {
+        state.activeDataSource = "supabase";
+        return supabaseQuestions;
       }
+
+      throw new Error("Supabase no ha devuelto preguntas activas.");
     }
 
+    state.activeDataSource = "json";
+    return await loadQuestionSource(QUESTION_BANK_FALLBACK_SOURCE);
+  }
+
+  async function loadQuestionBankFromJsonFallback() {
+    state.activeDataSource = "json";
     try {
       const sources = await Promise.all(QUESTION_BANK_SOURCES.map((path) => loadQuestionSource(path)));
       return sources.flat();
     } catch (error) {
-      try {
-        return await loadQuestionSource(QUESTION_BANK_FALLBACK_SOURCE);
-      } catch {
-        throw error;
-      }
+      return await loadQuestionSource(QUESTION_BANK_FALLBACK_SOURCE);
     }
   }
 
@@ -1751,14 +1754,30 @@
           : "No he podido montar el simulador";
     const description =
       state.dataStatus === "loading"
-        ? "Estoy cargando el banco de preguntas desde los archivos JSON."
+        ? `Estoy cargando el banco de preguntas desde ${state.activeDataSource === "json" ? "los archivos JSON" : "Supabase"}.`
         : state.dataStatus === "error"
-          ? `No se han podido cargar las preguntas desde los JSON. ${escapeHtml(state.dataError || "")} ${
-              window.location.protocol === "file:"
+          ? `${
+              state.canUseJsonFallback
+                ? "No se han podido cargar las preguntas desde Supabase."
+                : `No se han podido cargar las preguntas desde ${state.activeDataSource === "json" ? "los JSON" : "la fuente configurada"}.`
+            } ${escapeHtml(state.dataError || "")} ${
+              state.activeDataSource === "json" && window.location.protocol === "file:"
                 ? "Si estás abriendo el HTML directamente, lánzalo con un servidor local para que el navegador permita leer los JSON."
                 : ""
             }`
           : "No se han encontrado preguntas válidas para iniciar una sesión.";
+    const action =
+      state.dataStatus === "error" && state.canUseJsonFallback
+        ? `
+          <button
+            type="button"
+            data-load-json-fallback="true"
+            class="mt-6 inline-flex items-center justify-center rounded-[1.1rem] bg-ink px-5 py-3 font-semibold text-white transition hover:bg-slate-900"
+          >
+            Usar copia local JSON
+          </button>
+        `
+        : "";
 
     root.innerHTML = `
       <section class="glass-panel mx-auto max-w-3xl rounded-[2rem] border border-white/70 p-8 text-center shadow-soft">
@@ -1766,6 +1785,7 @@
         <p class="mt-4 text-lg leading-8 text-slate-600">
           ${description}
         </p>
+        ${action}
       </section>
     `;
   }
@@ -1789,8 +1809,8 @@
     renderHome();
   }
 
-  function handleClick(event) {
-    const target = event.target.closest("[data-set-mode], [data-set-document], [data-set-amount], [data-toggle-stats-panel], [data-start-session], [data-answer], [data-nav], [data-jump], [data-finish-session], [data-toggle-mark], [data-go-home], [data-repeat-mode], [data-retry-mistakes], [data-reset-stats], [data-report-question]");
+  async function handleClick(event) {
+    const target = event.target.closest("[data-set-mode], [data-set-document], [data-set-amount], [data-toggle-stats-panel], [data-start-session], [data-answer], [data-nav], [data-jump], [data-finish-session], [data-toggle-mark], [data-go-home], [data-repeat-mode], [data-retry-mistakes], [data-reset-stats], [data-report-question], [data-load-json-fallback]");
 
     if (!target) {
       return;
@@ -1891,8 +1911,29 @@
     if (target.dataset.reportQuestion) {
       const question = getQuestionByCompositeKey(target.dataset.reportQuestion);
       if (question) {
-        submitQuestionReport(question);
+        await submitQuestionReport(question);
       }
+      return;
+    }
+
+    if (target.dataset.loadJsonFallback) {
+      state.dataStatus = "loading";
+      state.dataError = "";
+      render();
+
+      try {
+        const rawQuestions = await loadQuestionBankFromJsonFallback();
+        prepareData(rawQuestions);
+        loadPersistedSetup();
+        loadPersistedStats();
+        state.dataStatus = "ready";
+        state.dataError = "";
+        state.canUseJsonFallback = false;
+      } catch (error) {
+        state.dataStatus = "error";
+        state.dataError = error instanceof Error ? error.message : "Error desconocido al cargar el JSON.";
+      }
+      render();
     }
   }
 
@@ -1950,9 +1991,11 @@
       loadPersistedStats();
       state.dataStatus = "ready";
       state.dataError = "";
+      state.canUseJsonFallback = false;
     } catch (error) {
       state.dataStatus = "error";
       state.dataError = error instanceof Error ? error.message : "Error desconocido al cargar las preguntas.";
+      state.canUseJsonFallback = isSupabaseConfigured();
     }
 
     render();

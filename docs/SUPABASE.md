@@ -3,12 +3,12 @@
 ## 1. Crear el proyecto
 
 1. Crea un proyecto en Supabase.
-2. En `SQL Editor`, ejecuta [`supabase/schema.sql`](./supabase/schema.sql).
+2. En `SQL Editor`, ejecuta [`../supabase/schema.sql`](../supabase/schema.sql).
 3. En `Authentication > Users`, crea el usuario con el que entrarás a `admin.html`.
 
 ## 2. Configurar la app
 
-Rellena [`supabase-config.js`](./supabase-config.js) con:
+Rellena [`../supabase-config.js`](../supabase-config.js) con:
 
 ```js
 window.OposAppConfig = window.OposAppConfig || {};
@@ -28,8 +28,8 @@ La `anonKey` es pública y se puede usar en GitHub Pages. La `service role key` 
 Desde terminal:
 
 ```powershell
-$env:SUPABASE_URL="https://fdnrrzxhhhmljeezibjx.supabase.co/rest/v1/"
-$env:SUPABASE_SERVICE_ROLE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZkbnJyenhoaGhtbGplZXppYmp4Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NjI3MDkyNiwiZXhwIjoyMDkxODQ2OTI2fQ.2yp-2Pib20_qz092SDGTn6eFqQeHZW61HfrOPQ5NiDw"
+$env:SUPABASE_URL="https://TU-PROYECTO.supabase.co"
+$env:SUPABASE_SERVICE_ROLE_KEY="TU_SERVICE_ROLE_KEY"
 node .\scripts\import-to-supabase.mjs
 ```
 

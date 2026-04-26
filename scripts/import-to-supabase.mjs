@@ -8,7 +8,7 @@ const rootDir = path.resolve(__dirname, "..");
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
-const SOURCES = ["preguntas-bateria-comun.json", "preguntas-celador.json"];
+const SOURCES = ["data/preguntas-bateria-comun.json", "data/preguntas-celador.json"];
 const CHUNK_SIZE = 200;
 
 function repairMojibake(value) {
