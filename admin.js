@@ -22,6 +22,8 @@
   const state = {
     client: null,
     authStatus: "loading",
+    userEmail: "",
+    isAdmin: false,
     dataStatus: "idle",
     error: "",
     saveMessage: "",
@@ -86,6 +88,10 @@
 
   function getSupabaseService() {
     return window.OposAppSupabase || null;
+  }
+
+  function isAdminUser(user) {
+    return user?.app_metadata?.role === "admin" || user?.user_metadata?.role === "admin";
   }
 
   function createDraftQuestion() {
@@ -347,27 +353,6 @@
     render();
   }
 
-  async function signIn(email, password) {
-    if (!state.client) {
-      return;
-    }
-
-    state.authStatus = "loading";
-    state.error = "";
-    render();
-
-    const { error } = await state.client.auth.signInWithPassword({ email, password });
-    if (error) {
-      state.authStatus = "signed_out";
-      state.error = error.message;
-      render();
-      return;
-    }
-
-    state.authStatus = "signed_in";
-    await loadData();
-  }
-
   async function signOut() {
     if (!state.client) {
       return;
@@ -375,6 +360,8 @@
 
     await state.client.auth.signOut();
     state.authStatus = "signed_out";
+    state.userEmail = "";
+    state.isAdmin = false;
     state.selectedQuestionId = null;
     state.draftQuestion = null;
     render();
@@ -399,7 +386,7 @@
           <p class="text-sm font-semibold uppercase tracking-[0.24em] text-tide">Panel admin</p>
           <h1 class="mt-3 font-display text-4xl font-semibold text-ink">Editar preguntas desde cualquier navegador</h1>
           <p class="mt-4 max-w-2xl text-lg leading-8 text-slate-600">
-            Entra con tu cuenta de Supabase Auth para revisar incidencias, corregir el banco y publicar cambios al momento.
+            El acceso está unificado con el simulador. Primero inicia sesión desde la portada y luego vuelve aquí con la misma sesión.
           </p>
           <div class="mt-8 grid gap-4 sm:grid-cols-3">
             <article class="rounded-3xl bg-white/85 p-5 ring-1 ring-slate-200">
@@ -420,33 +407,16 @@
         </section>
 
         <section class="glass-panel rounded-[2rem] border border-white/70 p-8 shadow-soft">
-          <p class="font-display text-2xl font-semibold text-ink">Acceso</p>
-          <form data-login-form class="mt-6 space-y-4">
-            <label class="block">
-              <span class="text-sm font-semibold text-slate-600">Email</span>
-              <input
-                type="email"
-                name="email"
-                required
-                class="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-800 outline-none transition focus:border-tide"
-              />
-            </label>
-            <label class="block">
-              <span class="text-sm font-semibold text-slate-600">Contraseña</span>
-              <input
-                type="password"
-                name="password"
-                required
-                class="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-800 outline-none transition focus:border-tide"
-              />
-            </label>
-            <button
-              type="submit"
-              class="inline-flex w-full items-center justify-center rounded-[1.1rem] bg-ink px-5 py-3 font-semibold text-white transition hover:bg-slate-900"
-            >
-              Entrar
-            </button>
-          </form>
+          <p class="font-display text-2xl font-semibold text-ink">Mismo acceso</p>
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            Usa el login del simulador para entrar. Cuando tu cuenta tenga rol admin, podrás abrir este panel sin volver a autenticarte.
+          </p>
+          <a
+            href="index.html"
+            class="mt-6 inline-flex w-full items-center justify-center rounded-[1.1rem] bg-ink px-5 py-3 font-semibold text-white transition hover:bg-slate-900"
+          >
+            Ir al acceso
+          </a>
           ${
             state.error
               ? `<p class="mt-4 rounded-2xl bg-rose-50 px-4 py-3 text-sm font-medium text-rose-800">${escapeHtml(
@@ -456,6 +426,28 @@
           }
         </section>
       </div>
+    `;
+  }
+
+  function renderUnauthorizedState() {
+    root.innerHTML = `
+      <section class="glass-panel mx-auto max-w-3xl rounded-[2rem] border border-white/70 p-8 text-center shadow-soft">
+        <div class="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-rose-100 text-rose-700">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="h-7 w-7 fill-none stroke-current" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3l7 4v5c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V7l7-4z"></path>
+          </svg>
+        </div>
+        <p class="mt-5 font-display text-3xl font-semibold text-ink">Acceso restringido</p>
+        <p class="mt-4 text-lg leading-8 text-slate-600">
+          La sesión de ${escapeHtml(state.userEmail || "este usuario")} está activa, pero no tiene rol admin.
+        </p>
+        <a
+          href="index.html"
+          class="mt-6 inline-flex items-center justify-center rounded-[1.1rem] bg-ink px-5 py-3 font-semibold text-white transition hover:bg-slate-900"
+        >
+          Volver al simulador
+        </a>
+      </section>
     `;
   }
 
@@ -883,6 +875,11 @@
       return;
     }
 
+    if (!state.isAdmin) {
+      renderUnauthorizedState();
+      return;
+    }
+
     renderDashboard();
   }
 
@@ -920,10 +917,18 @@
     }
 
     state.authStatus = data.session ? "signed_in" : "signed_out";
+    state.userEmail = data.session?.user?.email || "";
+    state.isAdmin = isAdminUser(data.session?.user);
 
     state.client.auth.onAuthStateChange(async (_event, session) => {
       state.authStatus = session ? "signed_in" : "signed_out";
+      state.userEmail = session?.user?.email || "";
+      state.isAdmin = isAdminUser(session?.user);
       if (session) {
+        if (!state.isAdmin) {
+          render();
+          return;
+        }
         await loadData();
         return;
       }
@@ -935,7 +940,7 @@
       render();
     });
 
-    if (data.session) {
+    if (data.session && state.isAdmin) {
       await loadData();
       return;
     }
@@ -1011,14 +1016,6 @@
 
   root.addEventListener("submit", async (event) => {
     const form = event.target;
-
-    if (form.matches("[data-login-form]")) {
-      event.preventDefault();
-      const email = form.elements.namedItem("email").value.trim();
-      const password = form.elements.namedItem("password").value;
-      await signIn(email, password);
-      return;
-    }
 
     if (form.matches("[data-question-form]")) {
       event.preventDefault();

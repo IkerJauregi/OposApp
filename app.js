@@ -43,8 +43,10 @@
     dataError: "",
     canUseJsonFallback: false,
     activeDataSource: "supabase",
+    authReady: false,
     userId: null,
     userEmail: "",
+    isAdmin: false,
   };
 
   function createDefaultStats() {
@@ -654,6 +656,10 @@
     `;
   }
 
+  function isAdminUser(user) {
+    return user?.app_metadata?.role === "admin" || user?.user_metadata?.role === "admin";
+  }
+
   function getAuthActionMarkup(isDark = false) {
     if (state.userId) {
       return `
@@ -687,6 +693,8 @@
     if (!service?.hasConfig?.()) {
       state.userId = null;
       state.userEmail = "";
+      state.isAdmin = false;
+      state.authReady = true;
       return;
     }
 
@@ -696,28 +704,22 @@
       console.warn(error);
       state.userId = null;
       state.userEmail = "";
+      state.isAdmin = false;
+      state.authReady = true;
       return;
     }
 
     const session = data.session;
     state.userId = session?.user?.id || null;
     state.userEmail = session?.user?.email || "";
+    state.isAdmin = isAdminUser(session?.user);
+    state.authReady = true;
   }
 
-  async function signInUser() {
+  async function signInUser(email, password) {
     const service = getSupabaseService();
     if (!service?.hasConfig?.()) {
       window.alert("La configuración de Supabase no está lista todavía.");
-      return;
-    }
-
-    const email = window.prompt("Email de usuario:");
-    if (email === null) {
-      return;
-    }
-
-    const password = window.prompt("Contraseña:");
-    if (password === null) {
       return;
     }
 
@@ -747,7 +749,8 @@
     await client.auth.signOut();
     state.userId = null;
     state.userEmail = "";
-    state.stats = readStorageJson(STORAGE_KEYS.stats, createDefaultStats());
+    state.isAdmin = false;
+    state.stats = createDefaultStats();
     render();
   }
 
@@ -758,6 +761,91 @@
       <span class="rounded-full ${isSupabase ? "bg-cyan-100 text-cyan-900" : "bg-slate-200 text-slate-700"} px-3 py-1 text-sm font-semibold">
         Fuente: ${isSupabase ? "Supabase" : "JSON local"}
       </span>
+    `;
+  }
+
+  function renderAuthGate() {
+    root.innerHTML = `
+      <section class="glass-panel mx-auto max-w-5xl rounded-[2rem] border border-white/70 p-6 shadow-soft sm:p-8">
+        <div class="grid gap-8 xl:grid-cols-[1.08fr_0.92fr] xl:items-start">
+          <div>
+            <div class="flex flex-wrap gap-2">
+              ${getDataSourceMarkup()}
+            </div>
+            <p class="mt-5 text-xs font-semibold uppercase tracking-[0.24em] text-tide">Acceso</p>
+            <h1 class="mt-3 max-w-2xl font-display text-4xl leading-tight text-ink sm:text-[2.8rem]">
+              Inicia sesión para entrar al simulador
+            </h1>
+            <p class="mt-4 max-w-xl text-base leading-7 text-slate-600">
+              Todas las cuentas pasan por el mismo acceso. Si tu usuario tiene rol admin, el escudo saldrá en verde y podrás abrir el panel editorial.
+            </p>
+
+            <div class="mt-8 grid gap-4 sm:grid-cols-3">
+              <article class="rounded-3xl bg-white/85 p-5 ring-1 ring-slate-200/70">
+                <p class="text-sm font-medium text-slate-500">Banco</p>
+                <p class="mt-2 text-3xl font-extrabold text-ink">${state.meta.validCount}</p>
+                <p class="mt-1 text-sm text-slate-500">preguntas válidas</p>
+              </article>
+              <article class="rounded-3xl bg-white/85 p-5 ring-1 ring-slate-200/70">
+                <p class="text-sm font-medium text-slate-500">Bloques</p>
+                <p class="mt-2 text-3xl font-extrabold text-ink">${state.documents.length}</p>
+                <p class="mt-1 text-sm text-slate-500">categorías activas</p>
+              </article>
+              <article class="rounded-3xl bg-ink p-5 text-white">
+                <p class="text-sm font-medium text-cyan-200">Acceso admin</p>
+                <p class="mt-2 text-lg font-semibold">Mismo login, distinto rol</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="rounded-[1.8rem] bg-white/88 p-6 ring-1 ring-slate-200 shadow-[0_20px_60px_rgba(19,34,56,0.08)]">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <p class="font-display text-2xl font-semibold text-ink">Entrar</p>
+                <p class="mt-2 text-sm leading-6 text-slate-500">Usa tu cuenta de Supabase Auth.</p>
+              </div>
+              <span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-100 text-slate-500">
+                ${getIconMarkup("login")}
+              </span>
+            </div>
+
+            <form data-login-form class="mt-6 space-y-4">
+              <label class="block">
+                <span class="text-sm font-semibold text-slate-600">Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  class="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-800 outline-none transition focus:border-tide"
+                />
+              </label>
+              <label class="block">
+                <span class="text-sm font-semibold text-slate-600">Contraseña</span>
+                <input
+                  type="password"
+                  name="password"
+                  required
+                  class="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-800 outline-none transition focus:border-tide"
+                />
+              </label>
+              <button
+                type="submit"
+                class="inline-flex w-full items-center justify-center rounded-[1.1rem] bg-ink px-5 py-3 font-semibold text-white transition hover:bg-slate-900"
+              >
+                Entrar al simulador
+              </button>
+            </form>
+
+            ${
+              state.dataError
+                ? `<p class="mt-4 rounded-2xl bg-rose-50 px-4 py-3 text-sm font-medium text-rose-800">${escapeHtml(
+                    state.dataError,
+                  )}</p>`
+                : ""
+            }
+          </div>
+        </div>
+      </section>
     `;
   }
 
@@ -791,16 +879,17 @@
           <path d="M9.5 12.5l1.5 1.5 3.5-4"></path>
         </svg>
       `,
+      shield: `
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5 fill-none stroke-current" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3l7 4v5c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V7l7-4z"></path>
+        </svg>
+      `,
     };
 
     return icons[icon] || "";
   }
 
   function getHeaderActionsMarkup() {
-    const authTitle = state.userId ? `Salir (${state.userEmail || "usuario"})` : "Iniciar sesión";
-    const authAction = state.userId ? "data-auth-logout" : "data-auth-login";
-    const authIcon = state.userId ? "logout" : "login";
-
     return `
       <div class="flex items-center gap-2 sm:gap-3">
         <button
@@ -814,22 +903,41 @@
         </button>
         <button
           type="button"
-          ${authAction}="true"
-          title="${escapeHtml(authTitle)}"
-          aria-label="${escapeHtml(authTitle)}"
+          data-auth-logout="true"
+          title="Cerrar sesión"
+          aria-label="Cerrar sesión"
           class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white/90 text-ink ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:ring-tide/40"
         >
-          ${getIconMarkup(authIcon)}
+          ${getIconMarkup("logout")}
         </button>
-        <a
-          href="admin.html"
-          title="Panel admin"
-          aria-label="Panel admin"
-          class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-ink text-white transition hover:-translate-y-0.5 hover:bg-slate-900"
-        >
-          ${getIconMarkup("admin")}
-        </a>
+        ${
+          state.isAdmin
+            ? `
+              <a
+                href="admin.html"
+                title="Panel admin"
+                aria-label="Panel admin"
+                class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-ink text-white transition hover:-translate-y-0.5 hover:bg-slate-900"
+              >
+                ${getIconMarkup("admin")}
+              </a>
+            `
+            : ""
+        }
       </div>
+    `;
+  }
+
+  function getRoleBadgeMarkup() {
+    return `
+      <span
+        title="${state.isAdmin ? "Cuenta administradora" : "Cuenta estándar"}"
+        class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl ${
+          state.isAdmin ? "bg-emerald-100 text-emerald-700" : "bg-rose-100 text-rose-700"
+        }"
+      >
+        ${getIconMarkup("shield")}
+      </span>
     `;
   }
 
@@ -1213,7 +1321,10 @@
                   ${getDataSourceMarkup()}
                   ${getStorageStatusMarkup()}
                 </div>
-                <p class="mt-5 text-xs font-semibold uppercase tracking-[0.24em] text-tide">Simulador</p>
+                <div class="mt-5 flex items-center gap-3">
+                  ${getRoleBadgeMarkup()}
+                  <p class="text-xs font-semibold uppercase tracking-[0.24em] text-tide">Simulador</p>
+                </div>
                 <h1 class="mt-2 max-w-2xl font-display text-3xl leading-tight text-ink sm:text-4xl xl:text-[2.6rem]">
                   Práctica tipo test con modo estudio y examen
                 </h1>
@@ -1412,7 +1523,10 @@
           </div>
 
           <div class="mt-7 max-w-2xl">
-            <p class="font-display text-sm font-semibold uppercase tracking-[0.28em] text-tide">Simulador de oposición</p>
+            <div class="flex items-center gap-3">
+              ${getRoleBadgeMarkup()}
+              <p class="font-display text-sm font-semibold uppercase tracking-[0.28em] text-tide">Simulador de oposición</p>
+            </div>
             <h1 class="mt-3 font-display text-4xl leading-tight text-ink sm:text-[2.8rem]">
               Práctica tipo test con modo estudio y modo examen
             </h1>
@@ -2048,6 +2162,11 @@
       return;
     }
 
+    if (state.authReady && !state.userId) {
+      renderAuthGate();
+      return;
+    }
+
     if (state.session) {
       renderSession();
       return;
@@ -2097,11 +2216,6 @@
     if (target.dataset.toggleStatsPanel) {
       state.isStatsPanelOpen = !state.isStatsPanelOpen;
       render();
-      return;
-    }
-
-    if (target.dataset.authLogin) {
-      await signInUser();
       return;
     }
 
@@ -2239,6 +2353,19 @@
     }
   }
 
+  root.addEventListener("submit", async (event) => {
+    const form = event.target;
+
+    if (!form.matches("[data-login-form]")) {
+      return;
+    }
+
+    event.preventDefault();
+    const email = form.elements.namedItem("email").value.trim();
+    const password = form.elements.namedItem("password").value;
+    await signInUser(email, password);
+  });
+
   async function init() {
     state.storageAvailable = Boolean(safeStorage());
     state.dataStatus = "loading";
@@ -2259,6 +2386,7 @@
       state.dataStatus = "error";
       state.dataError = error instanceof Error ? error.message : "Error desconocido al cargar las preguntas.";
       state.canUseJsonFallback = isSupabaseConfigured();
+      state.authReady = true;
     }
 
     render();

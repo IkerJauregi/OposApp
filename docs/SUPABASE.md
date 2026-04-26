@@ -55,3 +55,10 @@ Si ya habías ejecutado una versión anterior de `schema.sql`, vuelve a lanzar e
 - El usuario público tiene que iniciar sesión desde la home para sincronizar sus estadísticas con Supabase.
 - Cada fila de `user_stats` queda ligada a `auth.users.id`.
 - Si no inicia sesión, el progreso sigue quedándose en `localStorage` del navegador.
+
+## 8. Rol admin
+
+- El simulador y el panel admin usan la misma sesión.
+- Para que una cuenta sea admin, añade `role: "admin"` en `app_metadata` o `user_metadata` del usuario en Supabase Auth.
+- Si el usuario es admin, el escudo del simulador aparece en verde y puede abrir `admin.html`.
+- Si no lo es, el escudo aparece en rojo y el panel admin queda bloqueado.
