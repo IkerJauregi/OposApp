@@ -296,6 +296,7 @@
 
     return {
       key: `${item.documento || "GEN"}-${item.id || index}-${index}`,
+      sourceId: item.supabaseId ?? null,
       id: item.id || index + 1,
       rawDocument: item.documento || "SIN_CATEGORIA",
       document: formatDocumentName(item.documento),
@@ -306,6 +307,44 @@
       })),
       correctIndex,
     };
+  }
+
+  function getSupabaseService() {
+    return window.OposAppSupabase || null;
+  }
+
+  function isSupabaseConfigured() {
+    return Boolean(getSupabaseService()?.hasConfig?.());
+  }
+
+  async function loadQuestionBankFromSupabase() {
+    const service = getSupabaseService();
+    if (!service?.hasConfig?.()) {
+      return null;
+    }
+
+    const client = service.getClient();
+    const config = service.getConfig();
+    const { data, error } = await client
+      .from(config.questionsTable)
+      .select("id, documento, question_number, pregunta, opciones, review_status, is_active")
+      .eq("is_active", true)
+      .order("documento", { ascending: true })
+      .order("question_number", { ascending: true });
+
+    if (error) {
+      throw new Error(`Supabase no ha devuelto las preguntas: ${error.message}`);
+    }
+
+    return (data || []).map((row) => ({
+      supabaseId: row.id,
+      documento: row.documento,
+      id: row.question_number,
+      pregunta: row.pregunta,
+      opciones: Array.isArray(row.opciones) ? row.opciones : [],
+      review_status: row.review_status,
+      is_active: row.is_active,
+    }));
   }
 
   async function loadQuestionSource(path) {
@@ -324,6 +363,17 @@
   }
 
   async function loadQuestionBank() {
+    if (isSupabaseConfigured()) {
+      try {
+        const supabaseQuestions = await loadQuestionBankFromSupabase();
+        if (Array.isArray(supabaseQuestions) && supabaseQuestions.length) {
+          return supabaseQuestions;
+        }
+      } catch (error) {
+        console.warn(error);
+      }
+    }
+
     try {
       const sources = await Promise.all(QUESTION_BANK_SOURCES.map((path) => loadQuestionSource(path)));
       return sources.flat();
@@ -364,6 +414,74 @@
     state.meta.droppedCount = sourceQuestions.length - validQuestions.length;
     state.setup.amount = Math.min(25, validQuestions.length || 0);
     state.setup.examMinutes = recommendedExamMinutes(state.setup.amount);
+  }
+
+  function getQuestionByCompositeKey(questionKey) {
+    if (state.session) {
+      const inSession = state.session.questions.find((question) => question.key === questionKey);
+      if (inSession) {
+        return inSession;
+      }
+    }
+
+    if (state.summary?.mistakes?.length) {
+      const inSummary = state.summary.mistakes.find((item) => item.question.key === questionKey);
+      if (inSummary) {
+        return inSummary.question;
+      }
+    }
+
+    return state.questions.find((question) => question.key === questionKey) || null;
+  }
+
+  async function submitQuestionReport(question) {
+    if (!question?.sourceId) {
+      window.alert("Esta pregunta no está vinculada todavía a Supabase.");
+      return;
+    }
+
+    const service = getSupabaseService();
+    if (!service?.hasConfig?.()) {
+      window.alert("La configuración de Supabase no está lista todavía.");
+      return;
+    }
+
+    const note = window.prompt("Describe el error que has visto en esta pregunta:");
+    if (note === null) {
+      return;
+    }
+
+    const trimmedNote = note.trim();
+    if (!trimmedNote) {
+      window.alert("Necesito un poco de contexto para guardar la incidencia.");
+      return;
+    }
+
+    const client = service.getClient();
+    const config = service.getConfig();
+    const payload = {
+      question_id: question.sourceId,
+      note: trimmedNote,
+      status: "new",
+      question_snapshot: {
+        documento: question.rawDocument,
+        question_number: question.id,
+        pregunta: question.question,
+        opciones: question.options.map((option, optionIndex) => ({
+          letra: LETTERS[optionIndex].toLowerCase(),
+          texto: option.text,
+          estado: optionIndex === question.correctIndex ? "Correcta" : "Incorrecta",
+        })),
+      },
+    };
+
+    const { error } = await client.from(config.reportsTable).insert(payload);
+    if (error) {
+      window.alert(`No he podido guardar la incidencia: ${error.message}`);
+      return;
+    }
+
+    window.alert("Incidencia guardada para revisarla en el panel admin.");
   }
 
   function getCurrentPool() {
@@ -1421,6 +1539,13 @@
             </div>
 
             <div class="flex flex-wrap gap-3">
+              <button
+                type="button"
+                data-report-question="${escapeHtml(question.key)}"
+                class="rounded-[1.1rem] bg-white px-5 py-3 font-semibold text-slate-700 ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:ring-coral/40"
+              >
+                Reportar pregunta
+              </button>
               ${
                 session.mode === "practice"
                   ? `
@@ -1483,6 +1608,13 @@
                   <p class="mt-3 rounded-2xl bg-emerald-50 px-4 py-3 text-sm leading-7 text-emerald-900">
                     <span class="font-semibold">Correcta:</span> ${escapeHtml(correctAnswer)}
                   </p>
+                  <button
+                    type="button"
+                    data-report-question="${escapeHtml(item.question.key)}"
+                    class="mt-4 rounded-[1rem] bg-white px-4 py-2 text-sm font-semibold text-slate-700 ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:ring-coral/40"
+                  >
+                    Reportar incidencia
+                  </button>
                 </article>
               `;
             })
@@ -1658,7 +1790,7 @@
   }
 
   function handleClick(event) {
-    const target = event.target.closest("[data-set-mode], [data-set-document], [data-set-amount], [data-toggle-stats-panel], [data-start-session], [data-answer], [data-nav], [data-jump], [data-finish-session], [data-toggle-mark], [data-go-home], [data-repeat-mode], [data-retry-mistakes], [data-reset-stats]");
+    const target = event.target.closest("[data-set-mode], [data-set-document], [data-set-amount], [data-toggle-stats-panel], [data-start-session], [data-answer], [data-nav], [data-jump], [data-finish-session], [data-toggle-mark], [data-go-home], [data-repeat-mode], [data-retry-mistakes], [data-reset-stats], [data-report-question]");
 
     if (!target) {
       return;
@@ -1753,6 +1885,14 @@
         state.summary.mistakes.map((item) => item.question),
         "practice",
       );
+      return;
+    }
+
+    if (target.dataset.reportQuestion) {
+      const question = getQuestionByCompositeKey(target.dataset.reportQuestion);
+      if (question) {
+        submitQuestionReport(question);
+      }
     }
   }
 
