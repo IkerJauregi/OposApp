@@ -38,7 +38,7 @@ create index if not exists question_reports_status_idx
   on public.question_reports (status);
 
 create table if not exists public.user_stats (
-  browser_id text primary key,
+  user_id uuid primary key references auth.users(id) on delete cascade,
   stats_payload jsonb not null default '{}'::jsonb,
   last_played_at timestamptz null,
   created_at timestamptz not null default now(),
@@ -106,21 +106,21 @@ for update
 using (auth.role() = 'authenticated')
 with check (auth.role() = 'authenticated');
 
-drop policy if exists "public can read user stats" on public.user_stats;
-create policy "public can read user stats"
+drop policy if exists "users can read own stats" on public.user_stats;
+create policy "users can read own stats"
 on public.user_stats
 for select
-using (true);
+using (auth.uid() = user_id);
 
-drop policy if exists "public can insert user stats" on public.user_stats;
-create policy "public can insert user stats"
+drop policy if exists "users can insert own stats" on public.user_stats;
+create policy "users can insert own stats"
 on public.user_stats
 for insert
-with check (true);
+with check (auth.uid() = user_id);
 
-drop policy if exists "public can update user stats" on public.user_stats;
-create policy "public can update user stats"
+drop policy if exists "users can update own stats" on public.user_stats;
+create policy "users can update own stats"
 on public.user_stats
 for update
-using (true)
-with check (true);
+using (auth.uid() = user_id)
+with check (auth.uid() = user_id);

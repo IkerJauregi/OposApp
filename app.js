@@ -6,7 +6,6 @@
   const STORAGE_KEYS = {
     setup: "ope-euskadi-setup-v1",
     stats: "ope-euskadi-stats-v1",
-    browserId: "ope-euskadi-browser-id-v1",
   };
   const DEFAULT_SETUP = {
     mode: "practice",
@@ -44,7 +43,8 @@
     dataError: "",
     canUseJsonFallback: false,
     activeDataSource: "supabase",
-    browserId: null,
+    userId: null,
+    userEmail: "",
   };
 
   function createDefaultStats() {
@@ -200,30 +200,6 @@
     }
   }
 
-  function getBrowserId() {
-    const storage = safeStorage();
-    if (!storage) {
-      return null;
-    }
-
-    const existingId = storage.getItem(STORAGE_KEYS.browserId);
-    if (existingId) {
-      return existingId;
-    }
-
-    const nextId =
-      typeof window.crypto?.randomUUID === "function"
-        ? window.crypto.randomUUID()
-        : `browser-${Date.now()}-${Math.random().toString(16).slice(2)}`;
-
-    try {
-      storage.setItem(STORAGE_KEYS.browserId, nextId);
-      return nextId;
-    } catch {
-      return null;
-    }
-  }
-
   function loadPersistedSetup() {
     const savedSetup = readStorageJson(STORAGE_KEYS.setup, null);
     if (!savedSetup || typeof savedSetup !== "object") {
@@ -282,16 +258,15 @@
 
   async function loadRemoteStatsFromSupabase() {
     const service = getSupabaseService();
-    if (!service?.hasConfig?.() || !state.browserId) {
+    if (!service?.hasConfig?.() || !state.userId) {
       return null;
     }
 
     const client = service.getClient();
-    const config = service.getConfig();
     const { data, error } = await client
       .from("user_stats")
       .select("stats_payload, last_played_at")
-      .eq("browser_id", state.browserId)
+      .eq("user_id", state.userId)
       .maybeSingle();
 
     if (error) {
@@ -312,23 +287,27 @@
 
   async function syncStatsToSupabase() {
     const service = getSupabaseService();
-    if (!service?.hasConfig?.() || !state.browserId) {
+    if (!service?.hasConfig?.() || !state.userId) {
       return false;
     }
 
     const client = service.getClient();
     const payload = {
-      browser_id: state.browserId,
+      user_id: state.userId,
       stats_payload: state.stats,
       last_played_at: state.stats.lastPlayedAt,
     };
 
-    const { error } = await client.from("user_stats").upsert(payload, { onConflict: "browser_id" });
+    const { error } = await client.from("user_stats").upsert(payload, { onConflict: "user_id" });
     return !error;
   }
 
   async function hydrateStats() {
     loadPersistedStats();
+
+    if (!state.userId) {
+      return;
+    }
 
     try {
       const remoteStats = await loadRemoteStatsFromSupabase();
@@ -652,6 +631,14 @@
   }
 
   function getStorageStatusMarkup() {
+    if (state.userId) {
+      return `
+        <span class="rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-800">
+          Estadísticas vinculadas a ${escapeHtml(state.userEmail || "tu usuario")}
+        </span>
+      `;
+    }
+
     if (state.storageAvailable) {
       return `
         <span class="rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-800">
@@ -665,6 +652,103 @@
         Progreso no disponible en este navegador
       </span>
     `;
+  }
+
+  function getAuthActionMarkup(isDark = false) {
+    if (state.userId) {
+      return `
+        <button
+          type="button"
+          data-auth-logout="true"
+          class="inline-flex shrink-0 items-center justify-center rounded-[1rem] ${
+            isDark ? "bg-white/15 text-white hover:bg-white/20" : "bg-white/90 text-ink ring-1 ring-slate-200 hover:ring-tide/40"
+          } px-4 py-3 text-sm font-semibold transition hover:-translate-y-0.5"
+        >
+          Salir (${escapeHtml(state.userEmail || "usuario")})
+        </button>
+      `;
+    }
+
+    return `
+      <button
+        type="button"
+        data-auth-login="true"
+        class="inline-flex shrink-0 items-center justify-center rounded-[1rem] ${
+          isDark ? "bg-white/15 text-white hover:bg-white/20" : "bg-white/90 text-ink ring-1 ring-slate-200 hover:ring-tide/40"
+        } px-4 py-3 text-sm font-semibold transition hover:-translate-y-0.5"
+      >
+        Iniciar sesión
+      </button>
+    `;
+  }
+
+  async function refreshAuthSession() {
+    const service = getSupabaseService();
+    if (!service?.hasConfig?.()) {
+      state.userId = null;
+      state.userEmail = "";
+      return;
+    }
+
+    const client = service.getClient();
+    const { data, error } = await client.auth.getSession();
+    if (error) {
+      console.warn(error);
+      state.userId = null;
+      state.userEmail = "";
+      return;
+    }
+
+    const session = data.session;
+    state.userId = session?.user?.id || null;
+    state.userEmail = session?.user?.email || "";
+  }
+
+  async function signInUser() {
+    const service = getSupabaseService();
+    if (!service?.hasConfig?.()) {
+      window.alert("La configuración de Supabase no está lista todavía.");
+      return;
+    }
+
+    const email = window.prompt("Email de usuario:");
+    if (email === null) {
+      return;
+    }
+
+    const password = window.prompt("Contraseña:");
+    if (password === null) {
+      return;
+    }
+
+    const client = service.getClient();
+    const { error } = await client.auth.signInWithPassword({
+      email: email.trim(),
+      password,
+    });
+
+    if (error) {
+      window.alert(`No se ha podido iniciar sesión: ${error.message}`);
+      return;
+    }
+
+    await refreshAuthSession();
+    await hydrateStats();
+    render();
+  }
+
+  async function signOutUser() {
+    const service = getSupabaseService();
+    if (!service?.hasConfig?.()) {
+      return;
+    }
+
+    const client = service.getClient();
+    await client.auth.signOut();
+    state.userId = null;
+    state.userEmail = "";
+    state.stats = readStorageJson(STORAGE_KEYS.stats, createDefaultStats());
+    render();
   }
 
   function getDataSourceMarkup() {
@@ -1072,6 +1156,7 @@
               >
                 Ver progreso
               </button>
+              ${getAuthActionMarkup()}
               <a
                 href="admin.html"
                 class="inline-flex shrink-0 items-center justify-center rounded-[1rem] bg-ink px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-900"
@@ -1318,6 +1403,7 @@
             >
               Ver progreso
             </button>
+            ${getAuthActionMarkup()}
             <a
               href="admin.html"
               class="inline-flex shrink-0 items-center justify-center rounded-[1rem] bg-ink px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-900"
@@ -1930,7 +2016,7 @@
   }
 
   async function handleClick(event) {
-    const target = event.target.closest("[data-set-mode], [data-set-document], [data-set-amount], [data-toggle-stats-panel], [data-start-session], [data-answer], [data-nav], [data-jump], [data-finish-session], [data-toggle-mark], [data-go-home], [data-repeat-mode], [data-retry-mistakes], [data-reset-stats], [data-report-question], [data-load-json-fallback]");
+    const target = event.target.closest("[data-set-mode], [data-set-document], [data-set-amount], [data-toggle-stats-panel], [data-start-session], [data-answer], [data-nav], [data-jump], [data-finish-session], [data-toggle-mark], [data-go-home], [data-repeat-mode], [data-retry-mistakes], [data-reset-stats], [data-report-question], [data-load-json-fallback], [data-auth-login], [data-auth-logout]");
 
     if (!target) {
       return;
@@ -1965,6 +2051,16 @@
     if (target.dataset.toggleStatsPanel) {
       state.isStatsPanelOpen = !state.isStatsPanelOpen;
       render();
+      return;
+    }
+
+    if (target.dataset.authLogin) {
+      await signInUser();
+      return;
+    }
+
+    if (target.dataset.authLogout) {
+      await signOutUser();
       return;
     }
 
@@ -2099,13 +2195,13 @@
 
   async function init() {
     state.storageAvailable = Boolean(safeStorage());
-    state.browserId = getBrowserId();
     state.dataStatus = "loading";
     root.addEventListener("click", handleClick);
     document.addEventListener("keydown", handleKeyDown);
     render();
 
     try {
+      await refreshAuthSession();
       const rawQuestions = await loadQuestionBank();
       prepareData(rawQuestions);
       loadPersistedSetup();

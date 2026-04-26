@@ -44,8 +44,14 @@ node .\scripts\import-to-supabase.mjs
 - La app pública lee preguntas activas de Supabase.
 - Cualquier persona puede usar `Reportar pregunta`.
 - En `admin.html` podéis iniciar sesión, corregir la pregunta y marcar la incidencia como resuelta.
-- La app guarda estadísticas por navegador en la tabla `user_stats` usando un identificador anónimo local.
+- La app guarda estadísticas por usuario autenticado en la tabla `user_stats`.
 
 ## 6. Al cambiar el esquema
 
-Si ya habías ejecutado una versión anterior de `schema.sql`, vuelve a lanzar el archivo actualizado en `SQL Editor` para crear `user_stats` y sus políticas.
+Si ya habías ejecutado una versión anterior de `schema.sql`, vuelve a lanzar el archivo actualizado en `SQL Editor` para recrear `user_stats` y sus políticas.
+
+## 7. Estadísticas por usuario
+
+- El usuario público tiene que iniciar sesión desde la home para sincronizar sus estadísticas con Supabase.
+- Cada fila de `user_stats` queda ligada a `auth.users.id`.
+- Si no inicia sesión, el progreso sigue quedándose en `localStorage` del navegador.
