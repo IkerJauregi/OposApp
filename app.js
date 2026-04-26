@@ -573,6 +573,16 @@
     `;
   }
 
+  function getDataSourceMarkup() {
+    const isSupabase = state.activeDataSource === "supabase";
+
+    return `
+      <span class="rounded-full ${isSupabase ? "bg-cyan-100 text-cyan-900" : "bg-slate-200 text-slate-700"} px-3 py-1 text-sm font-semibold">
+        Fuente: ${isSupabase ? "Supabase" : "JSON local"}
+      </span>
+    `;
+  }
+
   function renderStatsPanelMarkup() {
     const overallAccuracy = getOverallAccuracy();
     const averageScore = getAverageScoreOverTen();
@@ -950,6 +960,7 @@
                 <div class="flex flex-wrap gap-2">
                   <span class="rounded-full bg-tide/10 px-3 py-1 text-sm font-semibold text-tide">${state.meta.validCount} preguntas válidas</span>
                   <span class="rounded-full bg-amber-100 px-3 py-1 text-sm font-semibold text-amber-800">${state.meta.droppedCount} con fallo de OCR</span>
+                  ${getDataSourceMarkup()}
                   ${getStorageStatusMarkup()}
                 </div>
                 <p class="mt-5 text-xs font-semibold uppercase tracking-[0.24em] text-tide">Simulador</p>
@@ -1119,6 +1130,7 @@
             <div class="flex flex-wrap gap-2">
               <span class="rounded-full bg-tide/10 px-3 py-1 text-sm font-semibold text-tide">${state.meta.validCount} preguntas válidas</span>
               <span class="rounded-full bg-amber-100 px-3 py-1 text-sm font-semibold text-amber-800">${state.meta.droppedCount} con fallo de OCR</span>
+              ${getDataSourceMarkup()}
             </div>
 
             <div class="mt-5">
@@ -1151,6 +1163,7 @@
           <div class="flex flex-wrap items-center gap-3">
             <span class="rounded-full bg-tide/10 px-3 py-1 text-sm font-semibold text-tide">${state.meta.validCount} preguntas válidas</span>
             <span class="rounded-full bg-amber-100 px-3 py-1 text-sm font-semibold text-amber-800">${state.meta.droppedCount} con fallo de OCR</span>
+            ${getDataSourceMarkup()}
             ${getStorageStatusMarkup()}
           </div>
 
@@ -1467,6 +1480,7 @@
             } px-4 py-2 text-sm font-semibold">
               ${session.mode === "practice" ? "Modo práctica" : "Modo examen"}
             </span>
+            ${getDataSourceMarkup()}
             <span class="rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-slate-600 ring-1 ring-slate-200">
               ${escapeHtml(question.document)}
             </span>
