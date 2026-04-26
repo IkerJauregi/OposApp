@@ -761,6 +761,78 @@
     `;
   }
 
+  function getIconMarkup(icon) {
+    const icons = {
+      stats: `
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5 fill-none stroke-current" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19h16"></path>
+          <path d="M7 16V9"></path>
+          <path d="M12 16V5"></path>
+          <path d="M17 16v-3"></path>
+        </svg>
+      `,
+      login: `
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5 fill-none stroke-current" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+          <path d="M10 17l5-5-5-5"></path>
+          <path d="M15 12H3"></path>
+        </svg>
+      `,
+      logout: `
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5 fill-none stroke-current" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+          <path d="M16 17l5-5-5-5"></path>
+          <path d="M21 12H9"></path>
+        </svg>
+      `,
+      admin: `
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5 fill-none stroke-current" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3l7 4v5c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V7l7-4z"></path>
+          <path d="M9.5 12.5l1.5 1.5 3.5-4"></path>
+        </svg>
+      `,
+    };
+
+    return icons[icon] || "";
+  }
+
+  function getHeaderActionsMarkup() {
+    const authTitle = state.userId ? `Salir (${state.userEmail || "usuario"})` : "Iniciar sesión";
+    const authAction = state.userId ? "data-auth-logout" : "data-auth-login";
+    const authIcon = state.userId ? "logout" : "login";
+
+    return `
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button
+          type="button"
+          data-toggle-stats-panel="true"
+          title="Ver progreso"
+          aria-label="Ver progreso"
+          class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white/90 text-ink ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:ring-tide/40"
+        >
+          ${getIconMarkup("stats")}
+        </button>
+        <button
+          type="button"
+          ${authAction}="true"
+          title="${escapeHtml(authTitle)}"
+          aria-label="${escapeHtml(authTitle)}"
+          class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white/90 text-ink ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:ring-tide/40"
+        >
+          ${getIconMarkup(authIcon)}
+        </button>
+        <a
+          href="admin.html"
+          title="Panel admin"
+          aria-label="Panel admin"
+          class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-ink text-white transition hover:-translate-y-0.5 hover:bg-slate-900"
+        >
+          ${getIconMarkup("admin")}
+        </a>
+      </div>
+    `;
+  }
+
   function renderStatsPanelMarkup() {
     const overallAccuracy = getOverallAccuracy();
     const averageScore = getAverageScoreOverTen();
@@ -1134,7 +1206,7 @@
         <div class="space-y-6">
           <section class="glass-panel rounded-[2rem] border border-white/70 p-5 shadow-soft sm:p-7">
             <div class="flex flex-wrap items-start justify-between gap-4">
-              <div>
+              <div class="min-w-0 flex-1">
                 <div class="flex flex-wrap gap-2">
                   <span class="rounded-full bg-tide/10 px-3 py-1 text-sm font-semibold text-tide">${state.meta.validCount} preguntas válidas</span>
                   <span class="rounded-full bg-amber-100 px-3 py-1 text-sm font-semibold text-amber-800">${state.meta.droppedCount} con fallo de OCR</span>
@@ -1142,27 +1214,14 @@
                   ${getStorageStatusMarkup()}
                 </div>
                 <p class="mt-5 text-xs font-semibold uppercase tracking-[0.24em] text-tide">Simulador</p>
-                <h1 class="mt-2 font-display text-3xl leading-tight text-ink sm:text-4xl xl:text-[2.8rem]">
+                <h1 class="mt-2 max-w-2xl font-display text-3xl leading-tight text-ink sm:text-4xl xl:text-[2.6rem]">
                   Práctica tipo test con modo estudio y examen
                 </h1>
                 <p class="mt-3 max-w-2xl text-sm leading-6 text-slate-600 sm:text-base sm:leading-7">
                   Todo lo importante queda reunido en una sola caja para que la home sea más clara y más cómoda de usar.
                 </p>
               </div>
-              <button
-                type="button"
-                data-toggle-stats-panel="true"
-                class="inline-flex shrink-0 items-center justify-center rounded-[1rem] bg-white/90 px-4 py-3 text-sm font-semibold text-ink ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:ring-tide/40"
-              >
-                Ver progreso
-              </button>
-              ${getAuthActionMarkup()}
-              <a
-                href="admin.html"
-                class="inline-flex shrink-0 items-center justify-center rounded-[1rem] bg-ink px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-900"
-              >
-                Panel admin
-              </a>
+              ${getHeaderActionsMarkup()}
             </div>
 
             <div class="mt-6 grid gap-3 sm:grid-cols-3">
@@ -1182,7 +1241,7 @@
               </article>
             </div>
 
-            <div class="mt-8 grid gap-8 xl:grid-cols-[1.05fr_0.95fr] xl:items-start">
+            <div class="mt-8 grid gap-6 xl:grid-cols-[minmax(0,1fr)_minmax(19rem,24rem)] xl:items-start">
               <div>
                 <div>
                   <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Modo</p>
@@ -1309,7 +1368,7 @@
       return;
     }
     root.innerHTML = `
-      <div class="grid gap-6 xl:grid-cols-[1.2fr_0.9fr]">
+      <div class="grid gap-5 xl:grid-cols-[minmax(0,1fr)_minmax(20rem,28rem)] 2xl:grid-cols-[minmax(0,1.05fr)_minmax(22rem,30rem)]">
         <section class="space-y-4 xl:hidden">
           <div class="rounded-[1.75rem] bg-white/80 p-5 ring-1 ring-white/70 shadow-[0_12px_36px_rgba(19,34,56,0.08)] backdrop-blur-sm">
             <div class="flex flex-wrap gap-2">
@@ -1352,12 +1411,12 @@
             ${getStorageStatusMarkup()}
           </div>
 
-          <div class="mt-8 max-w-3xl">
+          <div class="mt-7 max-w-2xl">
             <p class="font-display text-sm font-semibold uppercase tracking-[0.28em] text-tide">Simulador de oposición</p>
-            <h1 class="mt-3 font-display text-4xl leading-tight text-ink sm:text-5xl">
+            <h1 class="mt-3 font-display text-4xl leading-tight text-ink sm:text-[2.8rem]">
               Práctica tipo test con modo estudio y modo examen
             </h1>
-            <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+            <p class="mt-4 max-w-xl text-base leading-7 text-slate-600">
               Elige el bloque, ajusta la cantidad de preguntas y empieza cuando quieras.
             </p>
           </div>
@@ -1391,25 +1450,12 @@
         </section>
 
         <section class="glass-panel rounded-[2rem] border border-white/70 p-6 shadow-soft sm:p-8">
-          <div class="flex items-start justify-between gap-4">
-            <div>
+          <div class="flex flex-wrap items-start justify-between gap-4">
+            <div class="min-w-0 flex-1">
               <p class="font-display text-2xl font-semibold text-ink">Configura tu sesión</p>
               <p class="mt-2 text-sm leading-6 text-slate-500">Elige el modo, el bloque de preguntas y cuántas quieres lanzar.</p>
             </div>
-            <button
-              type="button"
-              data-toggle-stats-panel="true"
-              class="inline-flex shrink-0 items-center justify-center rounded-[1rem] bg-white/90 px-4 py-3 text-sm font-semibold text-ink ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:ring-tide/40"
-            >
-              Ver progreso
-            </button>
-            ${getAuthActionMarkup()}
-            <a
-              href="admin.html"
-              class="inline-flex shrink-0 items-center justify-center rounded-[1rem] bg-ink px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-900"
-            >
-              Panel admin
-            </a>
+            ${getHeaderActionsMarkup()}
           </div>
 
           <div class="mt-8">
