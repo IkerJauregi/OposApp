@@ -51,20 +51,7 @@
 
   function createDefaultStats() {
     return {
-      totalSessions: 0,
-      practiceSessions: 0,
-      examSessions: 0,
-      totalQuestions: 0,
-      totalCorrect: 0,
-      totalIncorrect: 0,
-      totalUnanswered: 0,
-      bestScoreOverTen: 0,
-      bestPercentage: 0,
-      lastScoreOverTen: null,
-      lastPlayedAt: null,
-      currentStreak: 0,
-      bestStreak: 0,
-      recentSessions: [],
+      sessionHistory: [],
     };
   }
 
@@ -237,10 +224,18 @@
       return;
     }
 
+    const migratedHistory = Array.isArray(savedStats.sessionHistory)
+      ? savedStats.sessionHistory
+      : Array.isArray(savedStats.recentSessions)
+        ? savedStats.recentSessions.map((item) => ({
+            ...item,
+            questions: Array.isArray(item.questions) ? item.questions : [],
+          }))
+        : [];
+
     state.stats = {
       ...createDefaultStats(),
-      ...savedStats,
-      recentSessions: Array.isArray(savedStats.recentSessions) ? savedStats.recentSessions : [],
+      sessionHistory: migratedHistory,
     };
   }
 
@@ -255,7 +250,8 @@
   }
 
   function getStatsTimestamp(stats = state.stats) {
-    return stats?.lastPlayedAt ? new Date(stats.lastPlayedAt).getTime() || 0 : 0;
+    const lastPlayedAt = stats?.sessionHistory?.[0]?.at || null;
+    return lastPlayedAt ? new Date(lastPlayedAt).getTime() || 0 : 0;
   }
 
   async function loadRemoteStatsFromSupabase() {
@@ -282,8 +278,14 @@
     return {
       ...createDefaultStats(),
       ...data.stats_payload,
-      lastPlayedAt: data.last_played_at || data.stats_payload.lastPlayedAt || null,
-      recentSessions: Array.isArray(data.stats_payload.recentSessions) ? data.stats_payload.recentSessions : [],
+      sessionHistory: Array.isArray(data.stats_payload.sessionHistory)
+        ? data.stats_payload.sessionHistory
+        : Array.isArray(data.stats_payload.recentSessions)
+          ? data.stats_payload.recentSessions.map((item) => ({
+              ...item,
+              questions: Array.isArray(item.questions) ? item.questions : [],
+            }))
+          : [],
     };
   }
 
@@ -297,7 +299,7 @@
     const payload = {
       user_id: state.userId,
       stats_payload: state.stats,
-      last_played_at: state.stats.lastPlayedAt,
+      last_played_at: state.stats.sessionHistory[0]?.at || null,
     };
 
     const { error } = await client.from("user_stats").upsert(payload, { onConflict: "user_id" });
@@ -325,19 +327,21 @@
   }
 
   function getOverallAccuracy(stats = state.stats) {
-    if (!stats.totalQuestions) {
+    const overview = getStatsOverview(stats);
+    if (!overview.totalQuestions) {
       return 0;
     }
 
-    return Math.round((stats.totalCorrect / stats.totalQuestions) * 100);
+    return Math.round((overview.totalCorrect / overview.totalQuestions) * 100);
   }
 
   function getAverageScoreOverTen(stats = state.stats) {
-    if (!stats.totalQuestions) {
+    const overview = getStatsOverview(stats);
+    if (!overview.totalQuestions) {
       return "0.00";
     }
 
-    return ((stats.totalCorrect / stats.totalQuestions) * 10).toFixed(2);
+    return ((overview.totalCorrect / overview.totalQuestions) * 10).toFixed(2);
   }
 
   function formatDateTime(value) {
@@ -595,6 +599,10 @@
     state.setup.examMinutes = recommendedExamMinutes(state.setup.amount);
   }
 
+  function getCurrentStatsSourceLabel() {
+    return state.setup.document === "all" ? "Todo el banco" : formatDocumentName(state.setup.document);
+  }
+
   function buildRecentSessionEntry(summary) {
     return {
       at: new Date().toISOString(),
@@ -607,27 +615,146 @@
       percentage: summary.percentage,
       scoreOverTen: Number(summary.scoreOverTen),
       timedOut: summary.timedOut,
+      questions: summary.items.map((item) => ({
+        key: item.question.key,
+        id: item.question.id,
+        rawDocument: item.question.rawDocument,
+        document: item.question.document,
+        result: item.userAnswer === null ? "unanswered" : item.isCorrect ? "correct" : "incorrect",
+      })),
     };
   }
 
-  function updateStatsFromSummary(summary) {
-    const scoreOverTen = Number(summary.scoreOverTen);
-    const isPassing = scoreOverTen >= 5;
+  function getStatsOverview(stats = state.stats) {
+    const sessions = Array.isArray(stats?.sessionHistory) ? stats.sessionHistory : [];
+    const overview = {
+      totalSessions: sessions.length,
+      practiceSessions: 0,
+      examSessions: 0,
+      totalQuestions: 0,
+      totalCorrect: 0,
+      totalIncorrect: 0,
+      totalUnanswered: 0,
+      bestScoreOverTen: 0,
+      bestPercentage: 0,
+      lastScoreOverTen: null,
+      lastPlayedAt: null,
+      currentStreak: 0,
+      bestStreak: 0,
+    };
 
-    state.stats.totalSessions += 1;
-    state.stats.practiceSessions += summary.mode === "practice" ? 1 : 0;
-    state.stats.examSessions += summary.mode === "exam" ? 1 : 0;
-    state.stats.totalQuestions += summary.total;
-    state.stats.totalCorrect += summary.correct;
-    state.stats.totalIncorrect += summary.incorrect;
-    state.stats.totalUnanswered += summary.unanswered;
-    state.stats.bestScoreOverTen = Math.max(state.stats.bestScoreOverTen, scoreOverTen);
-    state.stats.bestPercentage = Math.max(state.stats.bestPercentage, summary.percentage);
-    state.stats.lastScoreOverTen = scoreOverTen;
-    state.stats.lastPlayedAt = new Date().toISOString();
-    state.stats.currentStreak = isPassing ? state.stats.currentStreak + 1 : 0;
-    state.stats.bestStreak = Math.max(state.stats.bestStreak, state.stats.currentStreak);
-    state.stats.recentSessions = [buildRecentSessionEntry(summary), ...state.stats.recentSessions].slice(0, 8);
+    if (!sessions.length) {
+      return overview;
+    }
+
+    overview.lastScoreOverTen = Number(sessions[0].scoreOverTen);
+    overview.lastPlayedAt = sessions[0].at;
+    let activeBestStreak = 0;
+
+    sessions.forEach((session) => {
+      overview.practiceSessions += session.mode === "practice" ? 1 : 0;
+      overview.examSessions += session.mode === "exam" ? 1 : 0;
+      overview.totalQuestions += Number(session.total || 0);
+      overview.totalCorrect += Number(session.correct || 0);
+      overview.totalIncorrect += Number(session.incorrect || 0);
+      overview.totalUnanswered += Number(session.unanswered || 0);
+      overview.bestScoreOverTen = Math.max(overview.bestScoreOverTen, Number(session.scoreOverTen || 0));
+      overview.bestPercentage = Math.max(overview.bestPercentage, Number(session.percentage || 0));
+    });
+
+    for (const session of sessions) {
+      if (Number(session.scoreOverTen || 0) >= 5) {
+        overview.currentStreak += 1;
+      } else {
+        break;
+      }
+    }
+
+    [...sessions].reverse().forEach((session) => {
+      if (Number(session.scoreOverTen || 0) >= 5) {
+        activeBestStreak += 1;
+        overview.bestStreak = Math.max(overview.bestStreak, activeBestStreak);
+      } else {
+        activeBestStreak = 0;
+      }
+    });
+
+    return overview;
+  }
+
+  function getQuestionStatsForSelection(mode = state.setup.mode, sourceLabel = getCurrentStatsSourceLabel()) {
+    const sessions = Array.isArray(state.stats.sessionHistory) ? state.stats.sessionHistory : [];
+    const questionsByKey = new Map(state.questions.map((question) => [question.key, question]));
+    const aggregates = new Map();
+
+    sessions
+      .filter((session) => session.mode === mode && session.sourceLabel === sourceLabel)
+      .forEach((session) => {
+        (session.questions || []).forEach((questionResult) => {
+          const question = questionsByKey.get(questionResult.key);
+          const current = aggregates.get(questionResult.key) || {
+            key: questionResult.key,
+            id: questionResult.id,
+            document: question?.document || questionResult.document || formatDocumentName(questionResult.rawDocument),
+            question: question?.question || "",
+            correct: 0,
+            incorrect: 0,
+            unanswered: 0,
+          };
+
+          if (questionResult.result === "correct") {
+            current.correct += 1;
+          } else if (questionResult.result === "incorrect") {
+            current.incorrect += 1;
+          } else {
+            current.unanswered += 1;
+          }
+
+          aggregates.set(questionResult.key, current);
+        });
+      });
+
+    return [...aggregates.values()].map((item) => ({
+      ...item,
+      attempts: item.correct + item.incorrect + item.unanswered,
+    }));
+  }
+
+  function renderQuestionPerformanceMarkup(items, type) {
+    if (!items.length) {
+      return `
+        <div class="rounded-3xl bg-white/80 p-4 ring-1 ring-slate-200">
+          <p class="text-sm leading-7 text-slate-500">Todavía no hay intentos suficientes en esta configuración.</p>
+        </div>
+      `;
+    }
+
+    return items
+      .map(
+        (item) => `
+          <article class="rounded-3xl bg-white/85 p-4 ring-1 ring-slate-200">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <p class="text-sm font-semibold text-ink">Pregunta ${item.id} · ${escapeHtml(item.document)}</p>
+                <p class="mt-1 text-sm text-slate-500">${escapeHtml(item.question || "Enunciado disponible al cargar la pregunta.")}</p>
+              </div>
+              <span class="rounded-full ${
+                type === "incorrect" ? "bg-rose-100 text-rose-800" : "bg-emerald-100 text-emerald-800"
+              } px-3 py-1 text-sm font-bold">
+                ${type === "incorrect" ? item.incorrect : item.correct}
+              </span>
+            </div>
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              ${item.correct} aciertos · ${item.incorrect} fallos · ${item.unanswered} en blanco
+            </p>
+          </article>
+        `,
+      )
+      .join("");
+  }
+
+  function updateStatsFromSummary(summary) {
+    state.stats.sessionHistory = [buildRecentSessionEntry(summary), ...state.stats.sessionHistory].slice(0, 40);
 
     persistStats();
   }
@@ -942,8 +1069,19 @@
   }
 
   function renderStatsPanelMarkup() {
+    const overview = getStatsOverview();
     const overallAccuracy = getOverallAccuracy();
     const averageScore = getAverageScoreOverTen();
+    const currentSourceLabel = getCurrentStatsSourceLabel();
+    const questionStats = getQuestionStatsForSelection(state.setup.mode, currentSourceLabel);
+    const topIncorrect = [...questionStats]
+      .filter((item) => item.incorrect > 0)
+      .sort((left, right) => right.incorrect - left.incorrect || right.attempts - left.attempts)
+      .slice(0, 5);
+    const topCorrect = [...questionStats]
+      .filter((item) => item.correct > 0)
+      .sort((left, right) => right.correct - left.correct || right.attempts - left.attempts)
+      .slice(0, 5);
 
     return `
       <div class="fixed inset-0 z-40 ${state.isStatsPanelOpen ? "" : "pointer-events-none"}">
@@ -974,7 +1112,7 @@
           <div class="mt-6 grid gap-4 sm:grid-cols-2">
             <article class="rounded-3xl bg-slate-50 p-4">
               <p class="text-sm text-slate-500">Sesiones guardadas</p>
-              <p class="mt-2 text-3xl font-extrabold text-ink">${state.stats.totalSessions}</p>
+              <p class="mt-2 text-3xl font-extrabold text-ink">${overview.totalSessions}</p>
             </article>
             <article class="rounded-3xl bg-slate-50 p-4">
               <p class="text-sm text-slate-500">Acierto global</p>
@@ -986,35 +1124,55 @@
             </article>
             <article class="rounded-3xl bg-slate-50 p-4">
               <p class="text-sm text-slate-500">Mejor nota</p>
-              <p class="mt-2 text-3xl font-extrabold text-ink">${state.stats.bestScoreOverTen.toFixed(2)}</p>
+              <p class="mt-2 text-3xl font-extrabold text-ink">${overview.bestScoreOverTen.toFixed(2)}</p>
             </article>
             <article class="rounded-3xl bg-slate-50 p-4">
               <p class="text-sm text-slate-500">Racha actual</p>
-              <p class="mt-2 text-3xl font-extrabold text-ink">${state.stats.currentStreak}</p>
-              <p class="mt-1 text-sm text-slate-500">Mejor: ${state.stats.bestStreak}</p>
+              <p class="mt-2 text-3xl font-extrabold text-ink">${overview.currentStreak}</p>
+              <p class="mt-1 text-sm text-slate-500">Mejor: ${overview.bestStreak}</p>
             </article>
             <article class="rounded-3xl bg-slate-50 p-4">
               <p class="text-sm text-slate-500">Última nota</p>
               <p class="mt-2 text-3xl font-extrabold text-ink">${
-                state.stats.lastScoreOverTen === null ? "--" : state.stats.lastScoreOverTen.toFixed(2)
+                overview.lastScoreOverTen === null ? "--" : overview.lastScoreOverTen.toFixed(2)
               }</p>
-              <p class="mt-1 text-sm text-slate-500">${formatDateTime(state.stats.lastPlayedAt)}</p>
+              <p class="mt-1 text-sm text-slate-500">${formatDateTime(overview.lastPlayedAt)}</p>
             </article>
           </div>
 
           <div class="mt-4 rounded-3xl bg-slate-50 p-4">
             <p class="text-sm text-slate-500">Práctica / Examen</p>
-            <p class="mt-2 text-3xl font-extrabold text-ink">${state.stats.practiceSessions}/${state.stats.examSessions}</p>
+            <p class="mt-2 text-3xl font-extrabold text-ink">${overview.practiceSessions}/${overview.examSessions}</p>
             <p class="mt-1 text-sm text-slate-500">sesiones completadas</p>
+          </div>
+
+          <div class="mt-6 rounded-3xl bg-slate-50 p-4">
+            <p class="text-sm text-slate-500">Análisis actual</p>
+            <p class="mt-2 text-lg font-bold text-ink">${state.setup.mode === "practice" ? "Práctica" : "Examen"} · ${escapeHtml(currentSourceLabel)}</p>
+            <p class="mt-1 text-sm text-slate-500">Las listas de abajo se calculan solo con esta configuración.</p>
           </div>
 
           <div class="mt-6">
             <div class="flex items-center justify-between gap-3">
               <p class="font-display text-xl font-semibold text-ink">Sesiones recientes</p>
-              <p class="text-sm text-slate-500">Máximo 8</p>
+              <p class="text-sm text-slate-500">Máximo 40</p>
             </div>
             <div class="mt-4 grid gap-3">
               ${renderRecentSessionsMarkup()}
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <p class="font-display text-xl font-semibold text-ink">Preguntas más falladas</p>
+            <div class="mt-4 grid gap-3">
+              ${renderQuestionPerformanceMarkup(topIncorrect, "incorrect")}
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <p class="font-display text-xl font-semibold text-ink">Preguntas más acertadas</p>
+            <div class="mt-4 grid gap-3">
+              ${renderQuestionPerformanceMarkup(topCorrect, "correct")}
             </div>
           </div>
 
@@ -1037,7 +1195,7 @@
   }
 
   function renderRecentSessionsMarkup() {
-    if (!state.stats.recentSessions.length) {
+    if (!state.stats.sessionHistory.length) {
       return `
         <div class="rounded-3xl bg-white/80 p-5 ring-1 ring-slate-200">
           <p class="text-sm leading-7 text-slate-500">
@@ -1047,7 +1205,7 @@
       `;
     }
 
-    return state.stats.recentSessions
+    return state.stats.sessionHistory
       .map(
         (item) => `
           <article class="rounded-3xl bg-white/85 p-4 ring-1 ring-slate-200">
@@ -1947,6 +2105,7 @@
 
   function renderSummary() {
     const summary = state.summary;
+    const overview = getStatsOverview();
     const mistakesMarkup =
       summary.mistakes.length > 0
         ? summary.mistakes
@@ -2008,7 +2167,13 @@
                 ${summary.timedOut ? "El tiempo se agotó y el examen se entregó automáticamente." : "La sesión ya está corregida y lista para revisar."}
               </p>
               <p class="mt-2 text-sm leading-6 text-slate-500">
-                ${state.storageAvailable ? "Este resultado ya se ha guardado en la memoria del navegador." : "No se ha podido guardar el resultado en este navegador."}
+                ${
+                  state.userId
+                    ? "Este resultado ya se ha vinculado a tu usuario."
+                    : state.storageAvailable
+                      ? "Este resultado ya se ha guardado en la memoria del navegador."
+                      : "No se ha podido guardar el resultado en este navegador."
+                }
               </p>
               <p class="mt-3 text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
                 Bloque: ${escapeHtml(summary.sourceLabel)}
@@ -2075,7 +2240,7 @@
           <div class="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             <article class="rounded-3xl bg-slate-50 p-4 ring-1 ring-slate-200">
               <p class="text-sm text-slate-500">Sesiones acumuladas</p>
-              <p class="mt-2 text-3xl font-extrabold text-ink">${state.stats.totalSessions}</p>
+              <p class="mt-2 text-3xl font-extrabold text-ink">${overview.totalSessions}</p>
             </article>
             <article class="rounded-3xl bg-slate-50 p-4 ring-1 ring-slate-200">
               <p class="text-sm text-slate-500">Acierto global</p>
@@ -2083,11 +2248,11 @@
             </article>
             <article class="rounded-3xl bg-slate-50 p-4 ring-1 ring-slate-200">
               <p class="text-sm text-slate-500">Mejor nota</p>
-              <p class="mt-2 text-3xl font-extrabold text-ink">${state.stats.bestScoreOverTen.toFixed(2)}</p>
+              <p class="mt-2 text-3xl font-extrabold text-ink">${overview.bestScoreOverTen.toFixed(2)}</p>
             </article>
             <article class="rounded-3xl bg-slate-50 p-4 ring-1 ring-slate-200">
               <p class="text-sm text-slate-500">Racha aprobada</p>
-              <p class="mt-2 text-3xl font-extrabold text-ink">${state.stats.currentStreak}</p>
+              <p class="mt-2 text-3xl font-extrabold text-ink">${overview.currentStreak}</p>
             </article>
           </div>
         </section>
