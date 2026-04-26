@@ -886,6 +886,22 @@
     renderDashboard();
   }
 
+  function restoreSearchFocus(value, selectionStart, selectionEnd) {
+    const input = root.querySelector("[data-filter-search]");
+    if (!input) {
+      return;
+    }
+
+    input.focus();
+    if (typeof selectionStart === "number" && typeof selectionEnd === "number") {
+      input.setSelectionRange(selectionStart, selectionEnd);
+      return;
+    }
+
+    const end = String(value || "").length;
+    input.setSelectionRange(end, end);
+  }
+
   async function initAuth() {
     const service = getSupabaseService();
     if (!service?.hasConfig?.()) {
@@ -971,8 +987,10 @@
     const target = event.target;
 
     if (target.matches("[data-filter-search]")) {
+      const { selectionStart, selectionEnd, value } = target;
       state.filters.search = target.value;
       render();
+      restoreSearchFocus(value, selectionStart, selectionEnd);
     }
   });
 

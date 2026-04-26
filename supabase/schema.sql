@@ -37,6 +37,17 @@ create index if not exists question_reports_question_id_idx
 create index if not exists question_reports_status_idx
   on public.question_reports (status);
 
+create table if not exists public.user_stats (
+  browser_id text primary key,
+  stats_payload jsonb not null default '{}'::jsonb,
+  last_played_at timestamptz null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create index if not exists user_stats_last_played_at_idx
+  on public.user_stats (last_played_at desc);
+
 create or replace function public.set_updated_at()
 returns trigger
 language plpgsql
@@ -53,8 +64,15 @@ before update on public.questions
 for each row
 execute function public.set_updated_at();
 
+drop trigger if exists trg_user_stats_updated_at on public.user_stats;
+create trigger trg_user_stats_updated_at
+before update on public.user_stats
+for each row
+execute function public.set_updated_at();
+
 alter table public.questions enable row level security;
 alter table public.question_reports enable row level security;
+alter table public.user_stats enable row level security;
 
 drop policy if exists "public can read active questions" on public.questions;
 create policy "public can read active questions"
@@ -87,3 +105,22 @@ on public.question_reports
 for update
 using (auth.role() = 'authenticated')
 with check (auth.role() = 'authenticated');
+
+drop policy if exists "public can read user stats" on public.user_stats;
+create policy "public can read user stats"
+on public.user_stats
+for select
+using (true);
+
+drop policy if exists "public can insert user stats" on public.user_stats;
+create policy "public can insert user stats"
+on public.user_stats
+for insert
+with check (true);
+
+drop policy if exists "public can update user stats" on public.user_stats;
+create policy "public can update user stats"
+on public.user_stats
+for update
+using (true)
+with check (true);

@@ -6,6 +6,7 @@
   const STORAGE_KEYS = {
     setup: "ope-euskadi-setup-v1",
     stats: "ope-euskadi-stats-v1",
+    browserId: "ope-euskadi-browser-id-v1",
   };
   const DEFAULT_SETUP = {
     mode: "practice",
@@ -43,6 +44,7 @@
     dataError: "",
     canUseJsonFallback: false,
     activeDataSource: "supabase",
+    browserId: null,
   };
 
   function createDefaultStats() {
@@ -198,6 +200,30 @@
     }
   }
 
+  function getBrowserId() {
+    const storage = safeStorage();
+    if (!storage) {
+      return null;
+    }
+
+    const existingId = storage.getItem(STORAGE_KEYS.browserId);
+    if (existingId) {
+      return existingId;
+    }
+
+    const nextId =
+      typeof window.crypto?.randomUUID === "function"
+        ? window.crypto.randomUUID()
+        : `browser-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+
+    try {
+      storage.setItem(STORAGE_KEYS.browserId, nextId);
+      return nextId;
+    } catch {
+      return null;
+    }
+  }
+
   function loadPersistedSetup() {
     const savedSetup = readStorageJson(STORAGE_KEYS.setup, null);
     if (!savedSetup || typeof savedSetup !== "object") {
@@ -242,11 +268,79 @@
 
   function persistStats() {
     writeStorageJson(STORAGE_KEYS.stats, state.stats);
+    void syncStatsToSupabase();
   }
 
   function resetPersistedStats() {
     state.stats = createDefaultStats();
     persistStats();
+  }
+
+  function getStatsTimestamp(stats = state.stats) {
+    return stats?.lastPlayedAt ? new Date(stats.lastPlayedAt).getTime() || 0 : 0;
+  }
+
+  async function loadRemoteStatsFromSupabase() {
+    const service = getSupabaseService();
+    if (!service?.hasConfig?.() || !state.browserId) {
+      return null;
+    }
+
+    const client = service.getClient();
+    const config = service.getConfig();
+    const { data, error } = await client
+      .from("user_stats")
+      .select("stats_payload, last_played_at")
+      .eq("browser_id", state.browserId)
+      .maybeSingle();
+
+    if (error) {
+      throw new Error(`No se han podido cargar las estadísticas remotas: ${error.message}`);
+    }
+
+    if (!data?.stats_payload || typeof data.stats_payload !== "object") {
+      return null;
+    }
+
+    return {
+      ...createDefaultStats(),
+      ...data.stats_payload,
+      lastPlayedAt: data.last_played_at || data.stats_payload.lastPlayedAt || null,
+      recentSessions: Array.isArray(data.stats_payload.recentSessions) ? data.stats_payload.recentSessions : [],
+    };
+  }
+
+  async function syncStatsToSupabase() {
+    const service = getSupabaseService();
+    if (!service?.hasConfig?.() || !state.browserId) {
+      return false;
+    }
+
+    const client = service.getClient();
+    const payload = {
+      browser_id: state.browserId,
+      stats_payload: state.stats,
+      last_played_at: state.stats.lastPlayedAt,
+    };
+
+    const { error } = await client.from("user_stats").upsert(payload, { onConflict: "browser_id" });
+    return !error;
+  }
+
+  async function hydrateStats() {
+    loadPersistedStats();
+
+    try {
+      const remoteStats = await loadRemoteStatsFromSupabase();
+      if (remoteStats && getStatsTimestamp(remoteStats) > getStatsTimestamp(state.stats)) {
+        state.stats = remoteStats;
+        writeStorageJson(STORAGE_KEYS.stats, state.stats);
+      } else if (remoteStats && getStatsTimestamp(remoteStats) < getStatsTimestamp(state.stats)) {
+        void syncStatsToSupabase();
+      }
+    } catch (error) {
+      console.warn(error);
+    }
   }
 
   function getOverallAccuracy(stats = state.stats) {
@@ -978,6 +1072,12 @@
               >
                 Ver progreso
               </button>
+              <a
+                href="admin.html"
+                class="inline-flex shrink-0 items-center justify-center rounded-[1rem] bg-ink px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-900"
+              >
+                Panel admin
+              </a>
             </div>
 
             <div class="mt-6 grid gap-3 sm:grid-cols-3">
@@ -1218,6 +1318,12 @@
             >
               Ver progreso
             </button>
+            <a
+              href="admin.html"
+              class="inline-flex shrink-0 items-center justify-center rounded-[1rem] bg-ink px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-900"
+            >
+              Panel admin
+            </a>
           </div>
 
           <div class="mt-8">
@@ -1939,7 +2045,7 @@
         const rawQuestions = await loadQuestionBankFromJsonFallback();
         prepareData(rawQuestions);
         loadPersistedSetup();
-        loadPersistedStats();
+        await hydrateStats();
         state.dataStatus = "ready";
         state.dataError = "";
         state.canUseJsonFallback = false;
@@ -1993,6 +2099,7 @@
 
   async function init() {
     state.storageAvailable = Boolean(safeStorage());
+    state.browserId = getBrowserId();
     state.dataStatus = "loading";
     root.addEventListener("click", handleClick);
     document.addEventListener("keydown", handleKeyDown);
@@ -2002,7 +2109,7 @@
       const rawQuestions = await loadQuestionBank();
       prepareData(rawQuestions);
       loadPersistedSetup();
-      loadPersistedStats();
+      await hydrateStats();
       state.dataStatus = "ready";
       state.dataError = "";
       state.canUseJsonFallback = false;

@@ -44,3 +44,8 @@ node .\scripts\import-to-supabase.mjs
 - La app pública lee preguntas activas de Supabase.
 - Cualquier persona puede usar `Reportar pregunta`.
 - En `admin.html` podéis iniciar sesión, corregir la pregunta y marcar la incidencia como resuelta.
+- La app guarda estadísticas por navegador en la tabla `user_stats` usando un identificador anónimo local.
+
+## 6. Al cambiar el esquema
+
+Si ya habías ejecutado una versión anterior de `schema.sql`, vuelve a lanzar el archivo actualizado en `SQL Editor` para crear `user_stats` y sus políticas.
