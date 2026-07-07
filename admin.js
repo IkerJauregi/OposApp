@@ -6,6 +6,7 @@
   const DOCUMENT_OPTIONS = [
     { value: "BATERIA_COMUN", label: "Batería común" },
     { value: "CELADOR", label: "Celador" },
+    { value: "RADIOGRAFIA", label: "Radiografía" },
   ];
   const REVIEW_STATUS_OPTIONS = [
     { value: "published", label: "Publicada" },

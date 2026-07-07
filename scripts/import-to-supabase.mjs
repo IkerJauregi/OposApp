@@ -8,7 +8,8 @@ const rootDir = path.resolve(__dirname, "..");
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
-const SOURCES = ["data/preguntas-bateria-comun.json", "data/preguntas-celador.json"];
+const SOURCES = ["data/preguntas-bateria-comun.json", "data/preguntas-rayos.json"];
+const INACTIVE_DOCUMENTS = ["CELADOR"];
 const CHUNK_SIZE = 200;
 
 function repairMojibake(value) {
@@ -96,9 +97,37 @@ async function importChunk(chunk) {
   }
 }
 
+async function deactivateDocument(documento) {
+  const endpoint = new URL("/rest/v1/questions", SUPABASE_URL);
+  endpoint.searchParams.set("documento", `eq.${documento}`);
+
+  const response = await fetch(endpoint, {
+    method: "PATCH",
+    headers: {
+      apikey: SUPABASE_SERVICE_ROLE_KEY,
+      Authorization: `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
+      "Content-Type": "application/json",
+      Prefer: "return=minimal",
+    },
+    body: JSON.stringify({
+      is_active: false,
+    }),
+  });
+
+  if (!response.ok) {
+    const text = await response.text();
+    throw new Error(`Supabase no ha podido desactivar ${documento} (${response.status}): ${text}`);
+  }
+}
+
 async function main() {
   if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
     throw new Error("Define SUPABASE_URL y SUPABASE_SERVICE_ROLE_KEY antes de lanzar el importador.");
+  }
+
+  for (const documento of INACTIVE_DOCUMENTS) {
+    await deactivateDocument(documento);
+    console.log(`Documento ${documento} marcado como inactivo.`);
   }
 
   const payloads = (await Promise.all(SOURCES.map(readSource))).flat();

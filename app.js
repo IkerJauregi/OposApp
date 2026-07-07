@@ -14,11 +14,13 @@
     shuffle: true,
     examMinutes: 15,
   };
-  const QUESTION_BANK_SOURCES = ["data/preguntas-bateria-comun.json", "data/preguntas-celador.json"];
-  const QUESTION_BANK_FALLBACK_SOURCE = "data/preguntas.json";
+  const QUESTION_BANK_SOURCES = ["data/preguntas-bateria-comun.json", "data/preguntas-rayos.json"];
+  const QUESTION_BANK_FALLBACK_SOURCE = null;
+  const ACTIVE_DOCUMENT_KEYS = ["BATERIA_COMUN", "RADIOGRAFIA"];
   const DOCUMENT_LABELS = {
     BATERIA_COMUN: "Batería común",
     CELADOR: "Celador",
+    RADIOGRAFIA: "Radiografía",
   };
   const OCR_WARNING_PATTERN =
     /Opci.n no disponible|error OCR|\(Correct|\bJncorrecta\b|Incor-\s*recta|Cor-\s*recta/i;
@@ -410,6 +412,7 @@
       .from(config.questionsTable)
       .select("id, documento, question_number, pregunta, opciones, review_status, is_active")
       .eq("is_active", true)
+      .in("documento", ACTIVE_DOCUMENT_KEYS)
       .order("documento", { ascending: true })
       .order("question_number", { ascending: true });
 
@@ -440,7 +443,7 @@
       throw new Error(`El archivo ${path} no contiene una lista de preguntas.`);
     }
 
-    return payload;
+    return payload.filter((item) => ACTIVE_DOCUMENT_KEYS.includes(item.documento));
   }
 
   async function loadQuestionBank() {
@@ -455,7 +458,8 @@
     }
 
     state.activeDataSource = "json";
-    return await loadQuestionSource(QUESTION_BANK_FALLBACK_SOURCE);
+    const sources = await Promise.all(QUESTION_BANK_SOURCES.map((path) => loadQuestionSource(path)));
+    return sources.flat();
   }
 
   async function loadQuestionBankFromJsonFallback() {
@@ -464,6 +468,10 @@
       const sources = await Promise.all(QUESTION_BANK_SOURCES.map((path) => loadQuestionSource(path)));
       return sources.flat();
     } catch (error) {
+      if (!QUESTION_BANK_FALLBACK_SOURCE) {
+        throw error;
+      }
+
       return await loadQuestionSource(QUESTION_BANK_FALLBACK_SOURCE);
     }
   }
