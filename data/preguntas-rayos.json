@@ -5964,26 +5964,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 222,
-        "pregunta": "¿Qué es la radiación?",
+        "pregunta": "Al plantear una secuencia, ¿con qué relación señal-ruido obtendré mayor calidad de imagen?",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Energía contenida en el núcleo del átomo.",
+                "texto": "1",
                 "estado": "Correcta"
             },
             {
                 "letra": "b",
-                "texto": "Energía emitida y transferida en el espacio.",
+                "texto": "0,63",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "c",
-                "texto": "Energía del movimiento en el nivel atómico y molecular.",
+                "texto": "0,5",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "Energía cinética de las moléculas.",
+                "texto": "0,37",
                 "estado": "Incorrecta"
             }
         ]
@@ -5991,53 +5991,53 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 223,
-        "pregunta": "La radiación ionizante es:",
+        "pregunta": "En un estudio rutina de cerebro en RM, el plano axial que utilizaremos será:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Un tipo especial de radiación.",
+                "texto": "Paralelo a la línea supraorbitomeatal.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Cualquier tipo de radiación capaz de retirar un electrón orbital.",
+                "texto": "Paralelo a la línea mesencefálica.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "c",
-                "texto": "Un tipo de radiación del espectro electromagnético.",
-                "estado": "Incorrecta"
+                "texto": "Paralelo a la línea orbitomeatal.",
+                "estado": "Correcta"
             },
             {
                 "letra": "d",
-                "texto": "Todas son correctas.",
-                "estado": "Correcta"
+                "texto": "Paralelo a la línea bicomisural.",
+                "estado": "Incorrecta"
             }
         ]
     },
     {
         "documento": "RADIOGRAFIA",
         "id": 224,
-        "pregunta": "¿En qué año recibió Wilhelm Conrad Röntgen el Premio Nobel de Física?",
+        "pregunta": "En relación con el fenómeno de quench, señale la afirmación CORRECTA:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "1913.",
+                "texto": "Es una pérdida brusca de vacío en el tubo de rayos X del TC.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "1901.",
+                "texto": "Es la evaporación súbita del helio líquido del imán superconductor, con pérdida de superconductividad.",
                 "estado": "Correcta"
             },
             {
                 "letra": "c",
-                "texto": "1895.",
+                "texto": "Es un artefacto producido por movimiento de la persona paciente.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "1909.",
+                "texto": "Es un fallo del sistema de gradientes que aumenta la temperatura del gantry.",
                 "estado": "Incorrecta"
             }
         ]
@@ -6045,26 +6045,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 225,
-        "pregunta": "En relación con la energía de ligadura de los electrones que se encuentran en las capas:",
+        "pregunta": "En la secuencia IR en RM, indica la VERDADERA:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Es mayor en la capa L que en la capa K.",
+                "texto": "Es como se llama a la secuencia Spin-Eco.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Es mayor en la capa N que en la capa M.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "c",
-                "texto": "Es menor en la capa K que en la capa O.",
+                "texto": "Comienza con un pulso de 180° revirtiendo la magnetización de los tejidos.",
                 "estado": "Incorrecta"
             },
             {
+                "letra": "c",
+                "texto": "Genera una fuerte ponderación en T2.",
+                "estado": "Correcta"
+            },
+            {
                 "letra": "d",
-                "texto": "Es mayor en la capa K que en la capa L.",
+                "texto": "Revierte la magnetización de los tejidos en sentido paralelo.",
                 "estado": "Incorrecta"
             }
         ]
@@ -6072,26 +6072,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 226,
-        "pregunta": "Cuál es la CORRECTA en relación con la radiación de frenado:",
+        "pregunta": "Las antenas de phased array:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Es la desaceleración de una partícula.",
+                "texto": "También se llaman antenas multielemento.",
                 "estado": "Correcta"
             },
             {
                 "letra": "b",
-                "texto": "Pierde su energía cinética con la interacción del núcleo.",
+                "texto": "Son específicas de la señal antiparalelo.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "c",
-                "texto": "Existe una fuerza de atracción entre el núcleo y el electrón por sus cargas opuestas.",
+                "texto": "Es solo una antena transmisora.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "Todas son correctas.",
+                "texto": "Es una única antena integrada sin amplificador.",
                 "estado": "Incorrecta"
             }
         ]
@@ -6099,53 +6099,53 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 227,
-        "pregunta": "Si hablamos de longitud de onda λ en los rayos X, señale la CORRECTA:",
+        "pregunta": "El espacio K en RM es:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "A mayor longitud de onda de los rayos X, mayor es su energía.",
+                "texto": "Una matriz de datos crudos.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Los rayos X con menor longitud de onda son los rayos X blandos.",
+                "texto": "También llamado espacio de Fourier.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "c",
-                "texto": "A mayor longitud de onda, más penetrabilidad.",
-                "estado": "Incorrecta"
+                "texto": "Un espacio donde se organizan los datos obtenidos antes de reconstruir la imagen.",
+                "estado": "Correcta"
             },
             {
                 "letra": "d",
-                "texto": "La longitud de onda de los rayos X está entre 1nm y 0,001 nm.",
-                "estado": "Correcta"
+                "texto": "Todo lo anterior es cierto.",
+                "estado": "Incorrecta"
             }
         ]
     },
     {
         "documento": "RADIOGRAFIA",
         "id": 228,
-        "pregunta": "Una característica de los átomos isómeros es:",
+        "pregunta": "¿Cómo se soluciona el artefacto de aliasing?",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Tienen igual número de protones y diferente número de neutrones.",
+                "texto": "Disminuyendo el FOV.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Tienen igual número atómico Z y diferente número másico A.",
+                "texto": "Manteniendo la dirección de fase.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "c",
-                "texto": "Tienen igual número atómico Z y mismo número másico A.",
+                "texto": "Aumentando el FOV.",
                 "estado": "Correcta"
             },
             {
                 "letra": "d",
-                "texto": "Tienen igual número atómico Z y diferente número másico.",
+                "texto": "Aumentando la matriz.",
                 "estado": "Incorrecta"
             }
         ]
@@ -6153,26 +6153,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 229,
-        "pregunta": "En la dispersión Compton es VERDADERO que:",
+        "pregunta": "Señala la CORRECTA respecto al concepto de desinfección:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Un fotón de alta energía interacciona con un átomo y desplaza un electrón de capa interna.",
-                "estado": "Incorrecta"
+                "texto": "Es el paso intermedio entre la limpieza física y la esterilización.",
+                "estado": "Correcta"
             },
             {
                 "letra": "b",
-                "texto": "Al aumentar la densidad, disminuye la dispersión Compton.",
-                "estado": "Incorrecta"
+                "texto": "Elimina la mayoría de los agentes patógenos de una superficie, a excepción de las esporas.",
+                "estado": "Correcta"
             },
             {
                 "letra": "c",
-                "texto": "Tras un suceso Compton es imposible que vuelva a suceder otro.",
+                "texto": "Destruye por completo todas las formas de vida microbiana.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "Un rayo X interacciona con un electrón de la capa más externa y lo expulsa, ionizando el átomo.",
+                "texto": "a) y b) son correctas.",
                 "estado": "Correcta"
             }
         ]
@@ -6180,53 +6180,53 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 230,
-        "pregunta": "En el efecto fotoeléctrico es FALSO que:",
+        "pregunta": "A la hora de preparar el campo estéril hay que seguir una serie de pautas, de las que se mencionan a continuación, ¿cuáles son las adecuadas?",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "El efecto fotoeléctrico surge cuando el rayo X incidente cede parte de su energía cuando choca con el átomo.",
-                "estado": "Incorrecta"
+                "texto": "Antes de depositar cualquier elemento en el campo estéril, hay que comprobar su fecha de caducidad.",
+                "estado": "Correcta"
             },
             {
                 "letra": "b",
-                "texto": "Surge entre el fotón incidente y un electrón de capas más internas del átomo.",
-                "estado": "Incorrecta"
+                "texto": "Detectar posibles alteraciones en los envoltorios.",
+                "estado": "Correcta"
             },
             {
                 "letra": "c",
-                "texto": "Se genera un fotoelectrón.",
+                "texto": "Ofrecer el instrumental al personal con atuendo y guantes estériles.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "La probabilidad del efecto fotoeléctrico no depende del número atómico Z del átomo.",
-                "estado": "Correcta"
+                "texto": "Todas son correctas.",
+                "estado": "Incorrecta"
             }
         ]
     },
     {
         "documento": "RADIOGRAFIA",
         "id": 231,
-        "pregunta": "Indica el factor adecuado en la relación de atenuación y los factores que influyen en ella:",
+        "pregunta": "Respecto a los dispositivos o equipos reutilizables que se usan para el cuidado de la persona paciente, ¿cuáles se consideran críticos?",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "A mayor energía, menor atenuación, por una menor longitud de onda λ y menor tamaño de las partículas.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "b",
-                "texto": "A mayor número atómico Z, menor atenuación por un aumento de probabilidad del efecto fotoeléctrico.",
+                "texto": "Los equipos o dispositivos que tocan tejido estéril.",
                 "estado": "Incorrecta"
             },
             {
+                "letra": "b",
+                "texto": "Los equipos o dispositivos que tocan membranas mucosas.",
+                "estado": "Correcta"
+            },
+            {
                 "letra": "c",
-                "texto": "A mayor densidad, menor atenuación porque hay más número de partículas.",
+                "texto": "Los equipos o dispositivos que tocan piel intacta.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "Ninguna es correcta.",
+                "texto": "Todos los anteriores.",
                 "estado": "Incorrecta"
             }
         ]
@@ -6234,26 +6234,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 232,
-        "pregunta": "Respecto a las propiedades de los rayos X:",
+        "pregunta": "Las precauciones estándar de aislamiento del HICPAC (Hospital Infection Control Practices Advisory Committe) se aplicarán a:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Viajan en línea recta.",
+                "texto": "Sudor.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Producen efectos biológicos.",
-                "estado": "Incorrecta"
+                "texto": "Sangre.",
+                "estado": "Correcta"
             },
             {
                 "letra": "c",
-                "texto": "Son capaces de penetrar y atravesar estructuras.",
-                "estado": "Incorrecta"
+                "texto": "Membranas mucosas.",
+                "estado": "Correcta"
             },
             {
                 "letra": "d",
-                "texto": "Todas son correctas.",
+                "texto": "Las respuestas b) y c) son correctas.",
                 "estado": "Correcta"
             }
         ]
@@ -6261,26 +6261,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 233,
-        "pregunta": "En la estructura de un tubo de rayos X, ¿cuál es FALSA?",
+        "pregunta": "Entre las recomendaciones para las precauciones de aislamiento en los hospitales NO se encuentra:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "El cátodo es el filamento y la parte negativa del tubo de rayos X.",
+                "texto": "Cambiarse los guantes entre contactos con pacientes.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "El ánodo es el lado positivo del tubo y el soporte mecánico del blanco.",
+                "texto": "Uso de habitaciones individuales.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "c",
-                "texto": "El cátodo produce electrones mediante la emisión termiónica.",
+                "texto": "Aislamientos de Cohortes si se precisa.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "El ánodo no sirve como disipador térmico.",
+                "texto": "Transporte ilimitado de pacientes.",
                 "estado": "Correcta"
             }
         ]
@@ -6288,237 +6288,21 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 234,
-        "pregunta": "Elige la definición sobre el efecto talón que corresponda:",
+        "pregunta": "Indica la respuesta CORRECTA respecto al lavado de manos.",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "No tiene ninguna utilidad en radiología.",
+                "texto": "Puede ser reemplazado por el uso de guantes siempre y cuando, el contacto sea con piel intacta.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Los fotones del lado anódico son más energéticos.",
+                "texto": "Es la medida más importante para reducir los riesgos de transmisión de microorganismos.",
                 "estado": "Correcta"
             },
             {
                 "letra": "c",
-                "texto": "Los rayos X cercanos al ánodo tendrán mayor intensidad.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "d",
-                "texto": "En mamografías el cátodo debe quedar en el pezón.",
-                "estado": "Incorrecta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 235,
-        "pregunta": "En relación con la radiación característica, elija la CORRECTA:",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "Se produce cuando un electrón interacciona con un electrón de capas internas del átomo.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "b",
-                "texto": "La energía de los rayos X característicos es igual en cualquier elemento blanco.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "No depende del elemento del blanco.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "d",
-                "texto": "Un blanco de tungsteno solo puede producir rayos X característicos M.",
-                "estado": "Incorrecta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 236,
-        "pregunta": "¿Qué establece la ley inversa del cuadrado?",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "La dosis de radiación aumenta proporcionalmente a la distancia del cuadrado.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "b",
-                "texto": "La intensidad de la radiación disminuye al aumentar la distancia entre la fuente y la receptoría (o quien recibe la señal).",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "La cantidad de la imagen mejora al aumentar la distancia foco-película.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "d",
-                "texto": "La radiación no se ve afectada por la distancia.",
-                "estado": "Incorrecta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 237,
-        "pregunta": "En el factor técnico de kV:",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "Si aumentamos el kV, aumenta el contraste afectando a la densidad óptica.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "Una técnica de alto kV es con 60 kV.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "Si aumentamos el kV no afectará a la calidad de la imagen.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "d",
-                "texto": "El kV no afecta en la penetrabilidad.",
-                "estado": "Incorrecta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 238,
-        "pregunta": "Si en un estudio modificamos el mAs:",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "No afecta al número total de electrones.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "Si aumentamos el mAs, reducimos a la mitad el número de electrones que chocan con el ánodo.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "No afecta a la cantidad de rayos X.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "d",
-                "texto": "Es el producto del tiempo de exposición y la corriente del tubo de rayos X.",
-                "estado": "Incorrecta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 239,
-        "pregunta": "La zona del chasis que se coloca más cerca del tubo de rayos X:",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "Se llama frontal.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "Está hecha de materiales con alto número atómico, como el plástico, que es fino y resistente.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "c",
-                "texto": "Internamente tiene una lámina fina de plomo y la pantalla intensificadora.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "d",
-                "texto": "a) y b) son correctas.",
-                "estado": "Incorrecta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 240,
-        "pregunta": "La velocidad de las pantallas intensificadoras:",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "Las rápidas tienen un tamaño de cristal grande.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "Si necesitamos velocidad, la capa luminiscente debe ser fina.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "La persona técnica puede controlar su velocidad.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "d",
-                "texto": "Ninguna es correcta.",
-                "estado": "Correcta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 241,
-        "pregunta": "¿Cuál de las siguientes afirmaciones sobre el funcionamiento de la Exposimetría Automática (AEC) es CORRECTA?",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "La AEC determina automáticamente el kVp necesario para obtener un contraste adecuado en cada exposición.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "La AEC interrumpe la exposición cuando se ha alcanzado la cantidad predeterminada de radiación necesaria para obtener una densidad óptica adecuada.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "La AEC compensa automáticamente errores en la colocación de la persona paciente respecto al detector.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "d",
-                "texto": "Con AEC, el tiempo de exposición permanece constante, independientemente del grosor de la persona paciente.",
-                "estado": "Incorrecta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 242,
-        "pregunta": "¿Qué grupo de factores incluye las rejillas, el tamaño del punto focal y la filtración?",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "Factores de técnica de exposición.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "b",
-                "texto": "Factores de calidad de imagen.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "Factores del generador.",
+                "texto": "Debe llevarse a cabo siempre con un agente antimicrobiano.",
                 "estado": "Incorrecta"
             },
             {
@@ -6530,27 +6314,243 @@
     },
     {
         "documento": "RADIOGRAFIA",
-        "id": 243,
-        "pregunta": "Para obtener una radiografía magnificada, se aumenta la _______ mientras se mantiene constante la ______:",
+        "id": 235,
+        "pregunta": "Señala la CORRECTA respecto a la transmisión por gotas:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "SOD - OID.",
-                "estado": "Incorrecta"
+                "texto": "Las gotas se producen al hablar, toser o estornudar.",
+                "estado": "Correcta"
             },
             {
                 "letra": "b",
-                "texto": "OID - SID.",
+                "texto": "Las gotas son de un tamaño de 5 micras o menor.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "c",
-                "texto": "SID - SOD.",
+                "texto": "Las gotas pueden permanecer en el aire suspendidas largos periodos de tiempo.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "d",
+                "texto": "Todas son correctas.",
+                "estado": "Incorrecta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 236,
+        "pregunta": "¿Qué precauciones están diseñadas para ser empleadas en la atención de todas las personas pacientes hospitalarias independientemente de su diagnóstico?",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Precauciones estándar.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "b",
+                "texto": "Precauciones por transmisión aérea.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "c",
+                "texto": "Precauciones basadas en la transmisión.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "d",
+                "texto": "a) y c) son correctas.",
+                "estado": "Incorrecta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 237,
+        "pregunta": "Señala la INCORRECTA respecto a las precauciones de transmisión aérea:",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "La puerta de la habitación debe permanecer cerrada.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Colocar a la persona paciente una mascarilla quirúrgica si va a ser transportado fuera de la habitación.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "c",
+                "texto": "El personal utilizará mascarilla sólo cuando vaya a trabajar a menos de un metro de la persona paciente.",
                 "estado": "Correcta"
             },
             {
                 "letra": "d",
-                "texto": "SID - OID.",
+                "texto": "También se deben llevar a cabo las Precauciones Estándar.",
+                "estado": "Incorrecta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 238,
+        "pregunta": "Según la clasificación de los procedimientos intervencionistas, ¿cuáles son los procedimientos contaminados?",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Aquéllos en los que no están involucrados los aparatos digestivo, genitourinario o respiratorio, y no existe infección.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Procedimientos en los que es necesario atravesar los aparatos digestivo, genitourinario o respiratorio, y no existe infección.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "c",
+                "texto": "Procedimientos en los que es necesario el acceso a los aparatos digestivo, genitourinario o respiratorio y puede existir infección de éstos, aunque sin acceso a colecciones de pus.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "d",
+                "texto": "Aquéllos en los que es necesario la entrada en zonas infectadas con material purulento.",
+                "estado": "Incorrecta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 239,
+        "pregunta": "Señala la INCORRECTA respecto a las precauciones por contacto:",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Los guantes deben retirarse antes de dejar el entorno de la persona paciente.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Cuando se entra en la habitación debe usarse una bata estéril.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "c",
+                "texto": "Los microorganismos se transmiten por contacto directo e indirecto.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "d",
+                "texto": "El material necesario para los cuidados de la persona paciente, deberán estar destinado para una única persona siempre que sea posible.",
+                "estado": "Incorrecta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 240,
+        "pregunta": "¿Cuándo debe cambiarse la mascarilla en el quirófano?",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Entre intervenciones.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "b",
+                "texto": "Cuando se humedece.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "c",
+                "texto": "Cada 3 horas.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "d",
+                "texto": "b) y c) son correctas.",
+                "estado": "Incorrecta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 241,
+        "pregunta": "¿Qué tipo de precauciones se deben llevar a cabo para la infección por Escherichia Coli?",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Precauciones de transmisión por gotas.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Precauciones de transmisión aérea.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "c",
+                "texto": "Precauciones de transmisión por contacto.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "d",
+                "texto": "Ninguna de las anteriores.",
+                "estado": "Incorrecta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 242,
+        "pregunta": "Al servicio de radiodiagnóstico llega una persona paciente con gripe, ¿qué tipo de precauciones se deben llevar a cabo?",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Precauciones de transmisión por gotas.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "b",
+                "texto": "Precauciones de transmisión aérea.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "c",
+                "texto": "Precauciones de transmisión por contacto.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "d",
+                "texto": "Ninguna de las anteriores.",
+                "estado": "Incorrecta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 243,
+        "pregunta": "En la actualidad, la gestión de los residuos sanitarios en la Comunidad Autónoma de Euskadi se regula en:",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Decreto 76/2002.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Decreto 313/1996.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "c",
+                "texto": "Decreto 21/2015.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "d",
+                "texto": "Real Decreto 815/2001.",
                 "estado": "Incorrecta"
             }
         ]
@@ -6558,26 +6558,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 244,
-        "pregunta": "Según la regla del 15%, ¿cómo se obtiene la misma densidad óptica de una radiografía?",
+        "pregunta": "¿En qué grupo de residuos sanitarios se clasifican las agujas hipodérmicas?",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Si se sube un 15% los mAs, equivale a dividir por cuatro los kV.",
+                "texto": "Grupo 1.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Si se sube un 15% los kV, equivale a dividir por dos los mAs.",
+                "texto": "Grupo 2.",
                 "estado": "Correcta"
             },
             {
                 "letra": "c",
-                "texto": "Si se sube un 15% los mAs, equivale a dividir por dos los kV.",
+                "texto": "Grupo 3.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "Si se sube un 15% los kV, equivale a dividir por cuatro los mAs.",
+                "texto": "Grupo 4.",
                 "estado": "Incorrecta"
             }
         ]
@@ -6585,26 +6585,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 245,
-        "pregunta": "La curva que relaciona densidad óptica y exposición de una película radiográfica se denomina:",
+        "pregunta": "Cuando los residuos sanitarios del grupo II se recogen en bolsas, ¿éstas de qué color deben ser?",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Curva de exposición.",
+                "texto": "Amarillo.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Curva contraste-detalle.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "Curva de brillo.",
+                "texto": "Negro.",
                 "estado": "Correcta"
             },
             {
+                "letra": "c",
+                "texto": "Rojo.",
+                "estado": "Incorrecta"
+            },
+            {
                 "letra": "d",
-                "texto": "Curva característica.",
+                "texto": "Azul.",
                 "estado": "Incorrecta"
             }
         ]
@@ -6612,26 +6612,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 246,
-        "pregunta": "¿Qué afecta a una pérdida de contraste en la imagen?",
+        "pregunta": "El grupo III de los residuos sanitarios, incluyen:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "La radiación Compton.",
+                "texto": "Fluidos biológicos, excepto orina.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "El efecto fotoeléctrico.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "Bremsstrahlung.",
+                "texto": "Residuos radioactivos.",
                 "estado": "Correcta"
             },
             {
+                "letra": "c",
+                "texto": "Residuos de medicamentos citotóxicos.",
+                "estado": "Incorrecta"
+            },
+            {
                 "letra": "d",
-                "texto": "Radiación característica.",
+                "texto": "Residuos tales como líquidos reveladores y fijadores procedentes de radiología.",
                 "estado": "Incorrecta"
             }
         ]
@@ -6639,26 +6639,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 247,
-        "pregunta": "¿Qué factores afectan a la energía de los rayos X?",
+        "pregunta": "“Residuos que por el riesgo que presentan de provocar infección requieren una gestión diferenciada”, ¿a qué grupo de residuo se refiere?",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "El kV y el mAs.",
+                "texto": "Grupo 1.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "El mAs y la filtración.",
+                "texto": "Grupo 2.",
                 "estado": "Correcta"
             },
             {
                 "letra": "c",
-                "texto": "El kV y la filtración.",
+                "texto": "Grupo 3.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "El mAs y la colimación.",
+                "texto": "Grupo 4.",
                 "estado": "Incorrecta"
             }
         ]
@@ -6666,26 +6666,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 248,
-        "pregunta": "Cuál de estas respuestas en INCORRECTA en la adquisición de imágenes:",
+        "pregunta": "¿En qué unidad del Sistema Internacional (SI) se expresa la magnitud de dosis equivalente?",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "La energía de los rayos X se mantiene aun cambiando los mAs.",
+                "texto": "Gray.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Un tiempo corto evita borrosidad de movimiento.",
+                "texto": "Sievert.",
                 "estado": "Correcta"
             },
             {
                 "letra": "c",
-                "texto": "La energía no afecta sobre la energía de la radiación.",
+                "texto": "Becquerel.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "La distancia foco-receptor no afecta a la intensidad del haz.",
+                "texto": "Kerma en aire.",
                 "estado": "Incorrecta"
             }
         ]
@@ -6693,26 +6693,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 249,
-        "pregunta": "Respecto a la radiación dispersa, es CIERTO que:",
+        "pregunta": "Si la incidencia de la respuesta a la radiación aumenta al aumentar la dosis de radiación, se denomina:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "No es la causa principal de irradiación de los profesionales, trabajadores y público en general.",
+                "texto": "Efecto cromosómico.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Es una de las causas más importantes de la pérdida de contraste en la imagen.",
+                "texto": "Efecto determinista.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "c",
-                "texto": "Disminuye cuanto mayor es el volumen irradiado.",
+                "texto": "Efecto estocástico.",
                 "estado": "Correcta"
             },
             {
                 "letra": "d",
-                "texto": "Todas las respuestas anteriores son falsas.",
+                "texto": "Efecto tisular.",
                 "estado": "Incorrecta"
             }
         ]
@@ -6720,26 +6720,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 250,
-        "pregunta": "Señale cuál de estas es una filtración inherente:",
+        "pregunta": "¿Cuál de los siguientes es un dosímetro personal activo?",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Filtros de compensación que colocamos para estudios con estructuras diferentes.",
+                "texto": "Películas fotográficas.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "La filtración propia de la carcasa de vidrio y metal.",
+                "texto": "Dosímetros fotoluminiscentes.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "c",
-                "texto": "Las láminas de aluminio que añadimos.",
+                "texto": "Dosímetros de trazas.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "Ninguna de las anteriores.",
+                "texto": "Detectores de semiconductor.",
                 "estado": "Correcta"
             }
         ]
@@ -6747,26 +6747,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 251,
-        "pregunta": "Una de estas afirmaciones NO es correcta sobre la resolución espacial:",
+        "pregunta": "Según la directiva 2013/59/EURATOM, el límite de dosis en cristalino en cinco años consecutivos para personas trabajadoras expuestas es:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Mejora con un punto focal grande.",
+                "texto": "20mSv.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Se mide en pares de líneas por milímetro (lp/mm).",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "En radiología digital está limitada por el tamaño del píxel.",
+                "texto": "50mSv.",
                 "estado": "Correcta"
             },
             {
+                "letra": "c",
+                "texto": "100mSv.",
+                "estado": "Incorrecta"
+            },
+            {
                 "letra": "d",
-                "texto": "Es la capacidad para ver objetos pequeños en la imagen.",
+                "texto": "150mSv.",
                 "estado": "Incorrecta"
             }
         ]
@@ -6774,26 +6774,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 252,
-        "pregunta": "La parte del tubo intensificador de rayos X donde se genera la imagen a partir de la luz visible se llama:",
+        "pregunta": "El criterio ALARA corresponde al principio de:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Ánodo.",
+                "texto": "Justificación.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Fotocátodo.",
+                "texto": "Optimización.",
                 "estado": "Correcta"
             },
             {
                 "letra": "c",
-                "texto": "Fósforo de entrada.",
+                "texto": "Limitación.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "Fósforo de salida.",
+                "texto": "Todas son correctas.",
                 "estado": "Incorrecta"
             }
         ]
@@ -6801,26 +6801,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 253,
-        "pregunta": "Respecto a las partes que forman el tubo intensificador de imagen de fluoroscopia, señala la INCORRECTA:",
+        "pregunta": "Señala la correcta respecto a los contadores Geiger:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Sus componentes están en una carcasa de metal o vidrio.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "b",
-                "texto": "El fotocátodo emite electrones cuando se ilumina por el fósforo de entrada.",
+                "texto": "Mide niveles de radiación muy bajos.",
                 "estado": "Incorrecta"
             },
             {
+                "letra": "b",
+                "texto": "La amplitud de los pulsos nos da información sobre la radiación incidente.",
+                "estado": "Correcta"
+            },
+            {
                 "letra": "c",
-                "texto": "Utiliza una diferencia de potencial de aproximadamente 25kV.",
+                "texto": "La amplitud del impulso es suficientemente baja para que no sea necesaria una amplificación previa.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "El componente del fósforo de salida es yoduro de cesio.",
+                "texto": "a) y c) son correctas.",
                 "estado": "Incorrecta"
             }
         ]
@@ -6828,26 +6828,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 254,
-        "pregunta": "La magnificación de imagen en fluoroscopia:",
+        "pregunta": "¿En qué zonas existe la posibilidad de recibir dosis efectivas entre 1mSv y 6mSv por año oficial?",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Da menor resolución espacial.",
+                "texto": "Zonas de permanencia limitada",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Da mejor resolución de contraste.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "La magnificación es usada para reducir dosis a la persona paciente.",
+                "texto": "Zonas de permanencia reglamentada",
                 "estado": "Correcta"
             },
             {
+                "letra": "c",
+                "texto": "Zonas vigiladas",
+                "estado": "Incorrecta"
+            },
+            {
                 "letra": "d",
-                "texto": "a) y b) son correctas.",
+                "texto": "Zonas controladas",
                 "estado": "Incorrecta"
             }
         ]
@@ -6855,26 +6855,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 255,
-        "pregunta": "El efecto piezoeléctrico:",
+        "pregunta": "¿Qué indica un trébol amarillo con puntas radiales y fondo punteado?",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Ya no se usa en los ecógrafos actuales.",
+                "texto": "Zona de acceso prohibido, riesgo de contaminación externa.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "El cuarzo se expande y se encoge si se aplica campo eléctrico.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "Generan ondas electromagnéticas capaces de trasmitirse por el vacío.",
+                "texto": "Zona de acceso prohibido, riesgo de contaminación externa y radiación.",
                 "estado": "Correcta"
             },
             {
+                "letra": "c",
+                "texto": "Zona de permanencia limitada, riesgo de contaminación e irradiación externa.",
+                "estado": "Incorrecta"
+            },
+            {
                 "letra": "d",
-                "texto": "Consiste en la producción de sondas de ultrasonidos por la acción de la temperatura.",
+                "texto": "Zona de permanencia reglamentada, riesgo de contaminación e irradiación externa.",
                 "estado": "Incorrecta"
             }
         ]
@@ -6882,53 +6882,53 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 256,
-        "pregunta": "En ecografía, el número de ciclos por unidad de tiempo es:",
+        "pregunta": "¿Cuál de las siguientes categorías en una instalación de radiodiagnóstico corresponde a una zona vigilada?",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Frecuencia.",
+                "texto": "Acceso prohibido.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Longitud.",
+                "texto": "Permanencia limitada.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "c",
-                "texto": "Periodo.",
-                "estado": "Incorrecta"
+                "texto": "Permanencia reglamentada.",
+                "estado": "Correcta"
             },
             {
                 "letra": "d",
-                "texto": "Potencia de onda.",
-                "estado": "Correcta"
+                "texto": "Ninguna de las anteriores.",
+                "estado": "Incorrecta"
             }
         ]
     },
     {
         "documento": "RADIOGRAFIA",
         "id": 257,
-        "pregunta": "¿Cuál no es parte de un elemento piezoeléctrico?",
+        "pregunta": "Señala la INCORRECTA respecto a la vigilancia dosimétrica de las personas trabajadoras expuestas:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Electrodo.",
+                "texto": "Las personas trabajadoras expuestas de la categoría A deberán usar dosímetros personales.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Lente.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "Capa hemirreductora.",
+                "texto": "Las dosis individuales de las personas trabajadoras expuestas de categoría B se podrán estimar a través de la vigilancia realizada en el ambiente de trabajo.",
                 "estado": "Correcta"
             },
             {
+                "letra": "c",
+                "texto": "De las personas trabajadoras de la categoría B se registrarán las dosis mensuales.",
+                "estado": "Incorrecta"
+            },
+            {
                 "letra": "d",
-                "texto": "Zirconato de titanato de plomo.",
+                "texto": "A cada persona trabajadora expuesta de categoría A le será abierto un historial médico que tendrá que ser actualizado.",
                 "estado": "Incorrecta"
             }
         ]
@@ -6936,22 +6936,616 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 258,
-        "pregunta": "¿Qué influye en la resolución de contraste en ecografía?",
+        "pregunta": "En las instalaciones de radiodiagnóstico hay dos tipos de barreras de protección radiológica, las primarias y las secundarias. Señale la respuesta correcta:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "La profundidad de la imagen.",
+                "texto": "Las secundarias protegen al personal de la radiación de fuga.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "La conversión analógico-digital.",
+                "texto": "Las secundarias protegen al personal de la radiación dispersa.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "c",
+                "texto": "Las primarias interceptan el haz útil de rayos X.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "d",
+                "texto": "Todas son correctas.",
+                "estado": "Incorrecta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 259,
+        "pregunta": "¿A qué tipo de relación dosis-respuesta se deben los efectos cutáneos derivados de una fluoroscopia de alta dosis?",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Lineal, umbral.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Lineal, no umbral.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "c",
-                "texto": "Transductor de mayor frecuencia.",
+                "texto": "No lineal, umbral.",
                 "estado": "Incorrecta"
+            },
+            {
+                "letra": "d",
+                "texto": "No lineal, no umbral.",
+                "estado": "Correcta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 260,
+        "pregunta": "El principal efecto de la radiación en los seres humanos es:",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Directo.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Radiólisis.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "c",
+                "texto": "Estocástico.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "d",
+                "texto": "Indirecto.",
+                "estado": "Correcta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 261,
+        "pregunta": "La relación entre la dosis de radiación estándar necesaria para producir un efecto determinado y la dosis de radiación de prueba necesaria para producir el mismo efecto se conoce como:",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Efecto del oxígeno.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Coeficiente de atenuación.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "c",
+                "texto": "Transferencia lineal de energía.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "d",
+                "texto": "Eficacia biológica relativa.",
+                "estado": "Correcta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 262,
+        "pregunta": "¿Qué vasos nacen del cayado aórtico?",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Arteria subclavia izquierda.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Carótida común izquierda.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "c",
+                "texto": "Tronco braquiocefálico derecho.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "d",
+                "texto": "Todas son correctas.",
+                "estado": "Incorrecta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 263,
+        "pregunta": "Señala la INCORRECTA respecto a las safenas.",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Se encargan del drenaje venoso de la extremidad inferior.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Forman parte del sistema venoso superficial.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "c",
+                "texto": "La safena interna asciende por la cara posterior y lateral de la extremidad hasta la ingle.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "d",
+                "texto": "La safena externa desemboca en la vena poplítea.",
+                "estado": "Incorrecta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 264,
+        "pregunta": "Señala la correcta:",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Las arterias presentan unas válvulas que impiden el reflujo venoso.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Las venas conducen la sangre desde el corazón a las porciones distales.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "c",
+                "texto": "Las arterias tienen una capa muscular que les permite la contractilidad.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "d",
+                "texto": "Todas son correctas.",
+                "estado": "Incorrecta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 265,
+        "pregunta": "¿Dónde se encuentran las apófisis clinoides?",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Escápula.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Cráneo.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "c",
+                "texto": "Húmero.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "d",
+                "texto": "Columna vertebral.",
+                "estado": "Incorrecta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 266,
+        "pregunta": "¿Qué estructura NO participa en la articulación del hombro?",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Clavícula.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Escápula.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "c",
+                "texto": "Húmero.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "d",
+                "texto": "Todas participan en la articulación del hombro.",
+                "estado": "Correcta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 267,
+        "pregunta": "El agujero vertebral con forma triangular es característico de:",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Vértebras cervicales y dorsales.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Vértebras dorsales.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "c",
+                "texto": "Vértebras cervicales y lumbares.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "d",
+                "texto": "Vértebras lumbares y dorsales.",
+                "estado": "Correcta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 268,
+        "pregunta": "¿Cuál es la prominencia ósea más anterolateral del ilion?",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Cresta ilíaca",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Espina iliaca anterosuperior.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "c",
+                "texto": "Espina iliaca anteroinferior.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "d",
+                "texto": "Trocánter mayor.",
+                "estado": "Incorrecta"
+            }
+        ]
+    },
+    {
+        "documento": "Física Médica/Radiobiología",
+        "id": 269,
+        "pregunta": "La constante relacionada con la radiosensibilidad de una célula se conoce como:",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Dosis letal media.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Numero de extrapolación.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "c",
+                "texto": "Dosis umbral.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "d",
+                "texto": "Daño subletal.",
+                "estado": "Correcta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 270,
+        "pregunta": "¿Cuál de los siguientes pasos debemos tener en cuenta en la preparación de una persona paciente a la que se le va a realizar una arteriografía diagnóstica?",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Retirada de maquillaje y esmalte de uñas si procede.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "b",
+                "texto": "Valorar el grado de movilidad y solicitar su colaboración si es posible.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "c",
+                "texto": "Comprobar que la vestimenta del paciente sea la adecuada.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "d",
+                "texto": "Todas son correctas.",
+                "estado": "Correcta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 271,
+        "pregunta": "En la preparación de una persona paciente a la que vamos a realizar una RM cardíaca debemos controlar los movimientos fisiológicos del corazón, ¿qué debemos tener en cuenta en la colocación de electrodos?",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Que la piel este húmeda, para ello podemos usar gel de contacto.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Rasurar la zona si es necesario.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "c",
+                "texto": "Obtener un registro ECG con buena identificación de las ondas R.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "d",
+                "texto": "b) y c) son correctas.",
+                "estado": "Incorrecta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 272,
+        "pregunta": "Ante una persona paciente con discapacidad auditiva, ¿cuál de las siguientes medidas NO es adecuada?",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Situarse de frente.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Vocalizar bien y despacio.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "c",
+                "texto": "Utilizar frases cortas y sencillas.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "d",
+                "texto": "Elevar la voz.",
+                "estado": "Correcta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 273,
+        "pregunta": "En la acogida de una persona paciente en el medio sanitario, ¿cuál de las siguientes actitudes del personal sanitario es correcta?",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Subestimar lo que le preocupa al paciente.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Valorar su nivel de estrés.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "c",
+                "texto": "Favorecer la actitud pasiva de la persona paciente.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "d",
+                "texto": "b) y c) son correctas.",
+                "estado": "Incorrecta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 274,
+        "pregunta": "En ocasiones, cuando una persona paciente miente al personal sanitario lo hace como un mecanismo de protección, ¿qué factor provoca esta situación?",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "La falta de ambiente confidencial.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "b",
+                "texto": "Falta de confianza en el personal sanitario.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "c",
+                "texto": "Sentirse intimidado por la imagen de la persona sanitaria.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "d",
+                "texto": "Todas son correctas.",
+                "estado": "Correcta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 275,
+        "pregunta": "Antonio es un paciente diagnosticado de un cáncer de pulmón en estado avanzado y acude a nuestro servicio con actitud irritable, intolerante y desconfiado. ¿En qué etapa psicológica, de las propuestas por la doctora Kübler- Ross, se encuentra Antonio?",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Etapa de negación.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Etapa de ira.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "c",
+                "texto": "Etapa de negociación.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "d",
+                "texto": "Etapa de depresión.",
+                "estado": "Incorrecta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 276,
+        "pregunta": "Ante una persona paciente en edad escolar, ¿qué actitud debe tomar el personal sanitario?",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Informarle sobre el procedimiento a realizar mediante argumentos asequibles de comprensión.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "b",
+                "texto": "Tratar de ser forzosamente ameno con las niñas y los niños.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "c",
+                "texto": "En caso de llanto, intentar por todos los medios que la niña o el niño deje llorar.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "d",
+                "texto": "Todas son correctas.",
+                "estado": "Incorrecta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 277,
+        "pregunta": "Entre las medidas de apoyo psicológicas básicas ante una persona paciente con autismo, NO encontramos:",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Procurar ambientes muy estructurados.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Usar un tono de voz suave y cálido.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "c",
+                "texto": "Cogerle siempre de la mano.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "d",
+                "texto": "Estimulación sensorial: gustos, fotos, dibujos etc.",
+                "estado": "Incorrecta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 278,
+        "pregunta": "¿Qué NO se debe hacer ante una persona paciente agitada?",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Retirar objetos lesivos.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Hacer que entre en razón.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "c",
+                "texto": "Escuchar sus demandas.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "d",
+                "texto": "Identificarnos.",
+                "estado": "Incorrecta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 279,
+        "pregunta": "Dentro del ámbito de la comunicación, de los siguientes comportamientos, ¿qué se entiende como paralenguaje?",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "No usar tecnicismos.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Tono de la voz.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "c",
+                "texto": "Gestos.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "d",
+                "texto": "Contacto visual.",
+                "estado": "Incorrecta"
+            }
+        ]
+    },
+    {
+        "documento": "RADIOGRAFIA",
+        "id": 280,
+        "pregunta": "Señala la barrera de comunicación que podemos encontrar en la comunicación con una persona paciente:",
+        "opciones": [
+            {
+                "letra": "a",
+                "texto": "Dar señales de que estamos escuchando.",
+                "estado": "Incorrecta"
+            },
+            {
+                "letra": "b",
+                "texto": "Dar la sensación de ir con prisas.",
+                "estado": "Correcta"
+            },
+            {
+                "letra": "c",
+                "texto": "Iniciar la conversación de manera contundente.",
+                "estado": "Correcta"
             },
             {
                 "letra": "d",
@@ -6962,621 +7556,27 @@
     },
     {
         "documento": "RADIOGRAFIA",
-        "id": 259,
-        "pregunta": "¿Qué parámetro básico permite el Doppler color en una ecografía?",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "Estimar la velocidad y dirección del flujo sanguíneo.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "Medir el tamaño de un órgano.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "Valorar la densidad del tejido.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "d",
-                "texto": "Detectar únicamente quistes.",
-                "estado": "Incorrecta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 260,
-        "pregunta": "En una ecografía, ¿qué artefacto visualizamos si nos encontramos material metálico?",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "Artefacto ring-down.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "Sombra acústica.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "Artefacto de cola de cometa.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "d",
-                "texto": "Una imagen especular.",
-                "estado": "Correcta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 261,
-        "pregunta": "Una imagen de línea o banda de líneas paralelas que se extienden detrás del gas gástrico en ecografía es:",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "Artefacto de cola de cometa.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "Sombra acústica.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "Artefacto ring-down.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "d",
-                "texto": "Aliasing.",
-                "estado": "Correcta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 262,
-        "pregunta": "¿Qué parámetro del Doppler color se modifica principalmente para evitar el artefacto de aliasing en una estructura con flujo rápido?",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "Reduciendo la frecuencia del transductor.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "Angulando a 90º la incidencia.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "Aumentando la ganancia de Doppler.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "d",
-                "texto": "Aumentando la repetición de pulsos.",
-                "estado": "Correcta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 263,
-        "pregunta": "En ecografía, una calcificación dentro de un tejido aparece como una zona hiperecogénica acompañada de un artefacto posterior. ¿Cuál es la opción correcta?",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "Refuerzo acústico posterior.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "Sombra acústica posterior.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "Reverberación.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "d",
-                "texto": "Refuerzo acústico anterior.",
-                "estado": "Incorrecta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 264,
-        "pregunta": "Las frecuencias que se usan en ecografía se miden en:",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "MV.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "MHz.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "Å.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "d",
-                "texto": "kVp.",
-                "estado": "Incorrecta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 265,
-        "pregunta": "¿Qué transductor debemos usar si queremos explorar el riñón izquierdo?",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "Convexos.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "Lineares.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "c",
-                "texto": "Phased array.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "d",
-                "texto": "Es indiferente siempre que sea alta frecuencia, más de 10Mhz.",
-                "estado": "Incorrecta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 266,
-        "pregunta": "En un detector DR indirecto, la secuencia CORRECTA es:",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "Rx – carga eléctrica – luz – señal digital.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "Rx – luz – carga eléctrica – señal digital.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "Rx – señal digital directa.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "d",
-                "texto": "Rx – carga eléctrica – señal digital.",
-                "estado": "Correcta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 267,
-        "pregunta": "Con respecto a los detectores de paneles planos, señala lo CORRECTO:",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "Los detectores de fósforo fotoestimulable del IP convierten los fotones X en luz visible y luego los transforman en carga eléctrica.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "Los detectores de silicio amorfo son de detección directa.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "Los detectores de selenio amorfo realizan una conversión directa de los fotones X en cargas eléctricas.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "d",
-                "texto": "Es necesaria una luz láser y un receptor TFT para obtener señal digital.",
-                "estado": "Incorrecta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 268,
-        "pregunta": "Una desventaja principal de los detectores CCD frente a los detectores de panel plano en DR es:",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "Limitación en el campo de visión debido al uso de acoplamiento óptico.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "Menor eficiencia cuántica.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "c",
-                "texto": "Mayor ruido electrónico.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "d",
-                "texto": "Menor resolución de contraste.",
-                "estado": "Incorrecta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 269,
-        "pregunta": "_________ es el número de tonos de gris que un sistema de imagen digital puede reproducir.",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "Resolución de contraste.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "b",
-                "texto": "Resolución espacial.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "Brillo.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "d",
-                "texto": "Rango dinámico.",
-                "estado": "Incorrecta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 270,
-        "pregunta": "La alta probabilidad de un receptor digital de interactuar con el haz de rayos X es:",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "DQE (detective quantum efficiency).",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "SNR (señal-ruido).",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "MTF (Función de transferencia de modulación).",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "d",
-                "texto": "Lp/mm.",
-                "estado": "Correcta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 271,
-        "pregunta": "En radiografía digital, la frecuencia espacial expresada en pares de líneas por milímetro (lp/mm) está determinada principalmente por:",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "El rango dinámico del detector.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "El tamaño del píxel del detector.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "La profundidad de bits de la imagen.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "d",
-                "texto": "El índice de exposición.",
-                "estado": "Correcta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 272,
-        "pregunta": "¿Cuál de las siguientes opciones describe mejor el estándar DICOM?",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "Un protocolo exclusivo para la transmisión de datos administrativos entre departamentos.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "Un estándar para la comunicación y formato de imágenes médicas digitales.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "Un software específico para procesar imágenes digitales.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "d",
-                "texto": "Una norma centrada únicamente en la privacidad de datos locales.",
-                "estado": "Correcta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 273,
-        "pregunta": "¿Qué es un píxel en radiología digital?",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "Es la mínima unidad física del detector DR encargada de convertir los fotones X directamente en electrones.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "Es la mínima unidad de una imagen digital, a la que se asigna un valor numérico que representa la intensidad o nivel de gris en ese punto.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "c",
-                "texto": "Es el área efectiva del detector encargada únicamente de almacenar carga eléctrica sin intervención de radiación.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "d",
-                "texto": "Es el conjunto de celdas del panel plano responsables de controlar la dosis administrada al paciente.",
-                "estado": "Incorrecta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 274,
-        "pregunta": "Aumentar la matriz de una imagen manteniendo el mismo FOV provoca:",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "Aumento del tamaño de píxel.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "Disminución de la resolución espacial.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "Disminución del tamaño de píxel.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "d",
-                "texto": "Mayor ruido electrónico.",
-                "estado": "Correcta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 275,
-        "pregunta": "En el sistema CR, ¿qué proceso NO es CORRECTO?",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "Tras incidir el haz de rayos X, los electrones del PSP se excitan y se mantienen, creando una imagen latente.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "La imagen latente se lee con un láser y libera luz ultravioleta.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "c",
-                "texto": "El tubo fotomultiplicador recoge la señal de luz y la convierte en dato numérico.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "d",
-                "texto": "Para un borrado eficaz es necesario un láser muy intenso dentro del lector.",
-                "estado": "Incorrecta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 276,
-        "pregunta": "En un sistema de imagen digital:",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "Se visualiza la imagen física por impresión digital.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "b",
-                "texto": "Se visualiza sin imagen física tras procesado digital en monitores.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "a) y b) son correctas.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "d",
-                "texto": "Ninguna es correcta.",
-                "estado": "Incorrecta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 277,
-        "pregunta": "Una imagen con 12 bits de rango dinámico, ¿cuántos niveles de grises tendrá?",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "256 niveles.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "1024 niveles.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "4096 niveles.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "d",
-                "texto": "16384 niveles.",
-                "estado": "Incorrecta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 278,
-        "pregunta": "En relación con la calidad de la imagen digital, señala la opción INCORRECTA:",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "La resolución espacial mejora aumentando el tamaño del píxel, pero también aumentamos dosis a la persona paciente.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "La latitud es muy amplia y mejora la resolución de contraste.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "c",
-                "texto": "Para una buena resolución de contraste el kVp aumenta acompañado de una disminución del mAs.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "d",
-                "texto": "El paso de analógico a digital ha reducido considerablemente la dosis a la persona paciente.",
-                "estado": "Incorrecta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 279,
-        "pregunta": "¿Qué significa PACS?",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "Patient Analysis and Control System.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "Picture Archiving and Communication System.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "c",
-                "texto": "Picture Acquisition and Computing Service.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "d",
-                "texto": "Patient Archiving and Communication Software.",
-                "estado": "Incorrecta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
-        "id": 280,
-        "pregunta": "¿Qué función es característica del RIS?",
-        "opciones": [
-            {
-                "letra": "a",
-                "texto": "Almacenar y distribuir imágenes médicas digitales.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "b",
-                "texto": "Controlar automáticamente los parámetros técnicos del equipo de rx.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "Gestionar la programación de estudios, datos de la persona paciente e informes radiológicos.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "d",
-                "texto": "Realizar reconstrucciones multiplanares de imagen.",
-                "estado": "Correcta"
-            }
-        ]
-    },
-    {
-        "documento": "RADIOGRAFIA",
         "id": 281,
-        "pregunta": "El aumento de la temperatura del contraste antes de su administración tiene como objetivo principal:",
+        "pregunta": "A la hora de realizar una técnica de exploración radiográfica en paciente de pediatría, ¿qué medida podría ser de utilidad a la hora de intentar inmovilizar a la persona paciente?",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Disminuir su osmolaridad.",
-                "estado": "Incorrecta"
+                "texto": "En caso de que la persona paciente sea bebé, darle la toma justo antes de la prueba.",
+                "estado": "Correcta"
             },
             {
                 "letra": "b",
-                "texto": "Reducir su viscosidad.",
+                "texto": "Usar siempre fármacos sedantes o anestésicos.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "c",
-                "texto": "Evitar reacciones alérgicas.",
-                "estado": "Incorrecta"
+                "texto": "Evitar, en la medida de los posible, el uso de sujeción mecánica.",
+                "estado": "Correcta"
             },
             {
                 "letra": "d",
-                "texto": "Aumentar su concentración.",
+                "texto": "a) y c) son correctas.",
                 "estado": "Correcta"
             }
         ]
@@ -7584,53 +7584,53 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 282,
-        "pregunta": "Los contrastes iodados iónicos monoméricos se caracterizan por:",
+        "pregunta": "Señala la INCORRECTA respecto a las normas de la mecánica corporal en la movilización de pacientes:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Alta osmolaridad y mayor incidencia de efectos adversos.",
+                "texto": "Siempre es preferible deslizar un objeto que levantarlo.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Baja osmolaridad.",
+                "texto": "Una base de sustentación amplia disminuye el riesgo de lesión.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "c",
-                "texto": "Ser isoosmolares.",
-                "estado": "Incorrecta"
+                "texto": "Para la movilización de pacientes conviene utilizar masas musculares grandes y potentes.",
+                "estado": "Correcta"
             },
             {
                 "letra": "d",
-                "texto": "No disociarse en solución.",
-                "estado": "Correcta"
+                "texto": "Alejar el peso al centro de gravedad.",
+                "estado": "Incorrecta"
             }
         ]
     },
     {
         "documento": "RADIOGRAFIA",
         "id": 283,
-        "pregunta": "Los contrastes iodados no iónicos se caracterizan por:",
+        "pregunta": "Imanol es un paciente con hemiplejia izquierda al que tenemos que realizar una radiografía de cadera. Acude en silla de ruedas. ¿Qué NO debemos tener en cuenta a la hora de movilizarle?",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Mayor osmolaridad e incidencia de reacciones adversas.",
+                "texto": "Aprovechar la parte derecha del cuerpo de Imanol para facilitar su colaboración.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Baja osmolaridad y menor tasa de reacciones adversas.",
+                "texto": "Desplazarlo sobre su lado izquierdo.",
                 "estado": "Correcta"
             },
             {
                 "letra": "c",
-                "texto": "Eliminación hepática exclusiva.",
+                "texto": "Frenar la silla de ruedas antes de cualquier maniobra de traslado y situarla en paralelo a la mesa de exploración.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "Administración exclusivamente oral.",
+                "texto": "Proteger el lado izquierdo de Imanol.",
                 "estado": "Incorrecta"
             }
         ]
@@ -7638,26 +7638,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 284,
-        "pregunta": "¿Cuál NO es una vía de administración de contraste?",
+        "pregunta": "Señala la INCORRECTA respecto al consentimiento informado:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Intracavitaria.",
+                "texto": "Es libre y voluntario.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Intravascular.",
+                "texto": "LA persona paciente muestra su conformidad en pleno uso de sus facultades.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "c",
-                "texto": "Intraarticular.",
+                "texto": "El TSIDMN debe asegurarse de que esté cumplimentado tras la realización de la prueba.",
                 "estado": "Correcta"
             },
             {
                 "letra": "d",
-                "texto": "Intersticial.",
+                "texto": "La información que se le da a la persona paciente es de calidad y de cantidad suficiente (alternativas, consecuencias y riesgos).",
                 "estado": "Incorrecta"
             }
         ]
@@ -7665,26 +7665,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 285,
-        "pregunta": "La osmolaridad elevada de un contraste puede provocar:",
+        "pregunta": "Un delantal de protección radiológica viene a absorber aproximadamente:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Mayor riesgo de reacciones adversas.",
+                "texto": "El 96% de la radiación que recibe.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Menor viscosidad.",
-                "estado": "Incorrecta"
+                "texto": "El 97% de la radiación que recibe.",
+                "estado": "Correcta"
             },
             {
                 "letra": "c",
-                "texto": "Eliminación más lenta.",
+                "texto": "El 98% de la radiación que recibe.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "Menor riesgo cardiovascular.",
+                "texto": "El 99% de la radiación que recibe.",
                 "estado": "Incorrecta"
             }
         ]
@@ -7692,26 +7692,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 286,
-        "pregunta": "Los contrastes iodados se clasifican según su estructura química en:",
+        "pregunta": "¿En qué casos está indicado el uso del collarín de tiroides?",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Lineales y macrocíclicos.",
-                "estado": "Correcta"
+                "texto": "Intervencionismo cardíaco.",
+                "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Iónicos y no iónicos.",
+                "texto": "Fluoroscopia de tránsito intestinal.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "c",
-                "texto": "Liposolubles y gaseosos.",
-                "estado": "Incorrecta"
+                "texto": "Mamografía.",
+                "estado": "Correcta"
             },
             {
                 "letra": "d",
-                "texto": "Simples y dobles.",
+                "texto": "Radiología portátil.",
                 "estado": "Incorrecta"
             }
         ]
@@ -7719,26 +7719,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 287,
-        "pregunta": "Una reacción adversa leve al contraste iodado puede manifestarse como:",
+        "pregunta": "¿Cuál de los siguientes fármacos es usado para disminuir el peristaltismo digestivo?",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Shock anafiláctico.",
+                "texto": "Butilescopolamina.",
                 "estado": "Correcta"
             },
             {
                 "letra": "b",
-                "texto": "Edema laríngeo.",
+                "texto": "Furosemida.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "c",
-                "texto": "Náuseas y sensación de calor.",
+                "texto": "Dobutamina.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "Parada cardiorrespiratoria.",
+                "texto": "Secretina.",
                 "estado": "Incorrecta"
             }
         ]
@@ -7746,26 +7746,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 288,
-        "pregunta": "Los contrastes iodados hipoosmolares presentan una osmolaridad aproximada de:",
+        "pregunta": "La bilis llega a la ampolla de Vater a través de:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "50 – 100 mOsm/kg.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "b",
-                "texto": "Similar al plasma.",
+                "texto": "Conducto colédoco.",
                 "estado": "Incorrecta"
             },
             {
+                "letra": "b",
+                "texto": "Conducto cístico.",
+                "estado": "Correcta"
+            },
+            {
                 "letra": "c",
-                "texto": "600 – 850 mOsm/kg.",
+                "texto": "Vía hepática común.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": ">1500 mOsm/kg.",
+                "texto": "Conducto de Wirsung.",
                 "estado": "Incorrecta"
             }
         ]
@@ -7773,26 +7773,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 289,
-        "pregunta": "En un paciente en tratamiento con metformina que va a recibir contraste iodado intravenoso, se debe:",
+        "pregunta": "Respecto a la carcasa del tubo de rayos X, señale la opción CORRECTA:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Administrar contraste sin ninguna precaución.",
+                "texto": "Su función principal es absorber la mayor cantidad posible de radiación dispersa generada en el ánodo.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Suspender metformina solo si hay hipertensión.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "Valorar función renal y suspender metformina si el FG está disminuido.",
+                "texto": "Está fabricada en vidrio o metal, mantiene el vacío en el interior y proporciona aislamiento eléctrico entre cátodo y ánodo.",
                 "estado": "Correcta"
             },
             {
+                "letra": "c",
+                "texto": "Contiene aceite aislante en su interior para facilitar la disipación térmica del ánodo.",
+                "estado": "Incorrecta"
+            },
+            {
                 "letra": "d",
-                "texto": "Sustituir el contraste iodado por gadolinio.",
+                "texto": "Permite la presencia de gas residual controlado para mejorar la eficiencia de producción de rayos X.",
                 "estado": "Incorrecta"
             }
         ]
@@ -7800,26 +7800,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 290,
-        "pregunta": "La nefropatía inducida por contraste se define habitualmente como:",
+        "pregunta": "En relación con el principio del foco lineal y el tamaño del foco efectivo en un tubo de rayos X, señale la opción CORRECTA:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Elevación de creatinina ≥0,5 mg/dl o ≥25% respecto al basal en 48 – 72 h.",
-                "estado": "Correcta"
+                "texto": "Al disminuir el ángulo del ánodo, disminuye el tamaño del foco efectivo, mejorando la resolución espacial.",
+                "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Disminución inmediata de diuresis tras la inyección.",
+                "texto": "El foco efectivo depende exclusivamente del mA aplicado durante la exposición.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "c",
-                "texto": "Aumento de urea exclusivamente.",
-                "estado": "Incorrecta"
+                "texto": "El principio del foco lineal se basa en aumentar el tamaño del foco efectivo para reducir la carga térmica del ánodo.",
+                "estado": "Correcta"
             },
             {
                 "letra": "d",
-                "texto": "Proteinuria aislada.",
+                "texto": "El tamaño del foco efectivo es igual al tamaño real de la pista focal cuando el ángulo del ánodo es de 90°.",
                 "estado": "Incorrecta"
             }
         ]
@@ -7827,26 +7827,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 291,
-        "pregunta": "En caso de extravasación de contraste iodado intravenoso, la actuación inicial CORRECTA es:",
+        "pregunta": "En relación con el índice de rejilla y la frecuencia de rejilla, señale la opción CORRECTA:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Aplicar calor inmediato.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "b",
-                "texto": "Elevar el miembro afectado y aplicar frío local.",
+                "texto": "A mayor índice de rejilla, mayor capacidad para eliminar radiación dispersa, pero también mayor factor Bucky.",
                 "estado": "Incorrecta"
             },
             {
+                "letra": "b",
+                "texto": "El índice de rejilla se calcula dividiendo el espesor de las láminas de plomo entre la distancia entre ellas.",
+                "estado": "Correcta"
+            },
+            {
                 "letra": "c",
-                "texto": "Masajear la zona vigorosamente.",
+                "texto": "La frecuencia de rejilla se expresa en mm y determina la capacidad de la rejilla para absorber radiación dispersa.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "Administrar más contraste en la misma vía.",
+                "texto": "Una rejilla con baja frecuencia produce menor riesgo de visualizar las líneas de rejilla en sistemas digitales.",
                 "estado": "Incorrecta"
             }
         ]
@@ -7854,26 +7854,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 292,
-        "pregunta": "Las reacciones adversas graves e inmediatas al contraste iodado suelen producirse:",
+        "pregunta": "La incidencia del cáncer de mama es mayor en:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Más de 24 horas después.",
+                "texto": "El cuadrante superointerno de la mama.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Durante la inyección o en la primera hora.",
+                "texto": "El cuadrante superoexterno de la mama.",
                 "estado": "Correcta"
             },
             {
                 "letra": "c",
-                "texto": "A las 12 horas.",
+                "texto": "El cuadrante inferointerno de la mama.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "Solo tras administración oral.",
+                "texto": "El cuadrante inferoexterno de la mama.",
                 "estado": "Incorrecta"
             }
         ]
@@ -7881,53 +7881,53 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 293,
-        "pregunta": "En relación con los medios de contraste basados en gadolinio en RM, ¿cuál de las siguientes afirmaciones es CORRECTA?",
+        "pregunta": "Para una formación de la imagen lo más exacta posible, señale la INCORRECTA:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Son completamente inocuos en cualquier grado de insuficiencia renal.",
-                "estado": "Correcta"
+                "texto": "El foco deberá ser tan grande como sea posible.",
+                "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Su mecanismo de acción se basa en aumentar la atenuación de los rayos X.",
+                "texto": "La distancia foco-objeto deberá ser la mayor posible.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "c",
-                "texto": "Modifican los tiempos de relajación T1 y T2 de los tejidos.",
+                "texto": "El movimiento deberá ser el mínimo posible.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "Se eliminan principalmente por vía biliar.",
-                "estado": "Incorrecta"
+                "texto": "La distancia objeto-receptor deberá ser la menor posible.",
+                "estado": "Correcta"
             }
         ]
     },
     {
         "documento": "RADIOGRAFIA",
         "id": 294,
-        "pregunta": "Los medios de contraste utilizados en ecografía se caracterizan por:",
+        "pregunta": "Decimos que es una lesión hipoecoica cuando:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Ser compuestos iodados hidrosolubles.",
+                "texto": "Cuando la imagen se presenta con ecos brillantes y posible sombra tras ella.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Emitir radiación ionizante de baja intensidad.",
+                "texto": "Cuando tiene ecos bajos con buen borde posterior.",
                 "estado": "Correcta"
             },
             {
                 "letra": "c",
-                "texto": "Estar contraindicados en estudios hepáticos.",
+                "texto": "Cuando muestra casi la misma estructura que el parénquima adyacente.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "Estar formados por microburbujas que aumentan la reflectividad ultrasónica.",
+                "texto": "Cuando no muestra ecos internos y paredes lisas.",
                 "estado": "Incorrecta"
             }
         ]
@@ -7935,26 +7935,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 295,
-        "pregunta": "Según las recomendaciones de seguridad en la administración de contrastes, el carro de parada que está en una sala donde se administran contrastes debe:",
+        "pregunta": "En Tomografía Computarizada (TC), ¿qué tipo de reconstrucción es más útil para estudiar estructuras con aire en su interior como la tráquea o los bronquios?",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Debe contener únicamente material de vía aérea.",
+                "texto": "La reconstrucción de proyección de máxima intensidad.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Estar disponible solo en el servicio de urgencias.",
+                "texto": "La reconstrucción de proyección de mínima intensidad.",
                 "estado": "Correcta"
             },
             {
                 "letra": "c",
-                "texto": "Estar accesible, revisado periódicamente y con medicación para reacciones anafilácticas.",
+                "texto": "La reconstrucción de superficie sombreada.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "Utilizarse únicamente tras orden médica escrita.",
+                "texto": "La reconstrucción volumétrica.",
                 "estado": "Incorrecta"
             }
         ]
@@ -7962,26 +7962,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 296,
-        "pregunta": "¿Para qué se usan las radiografías seriadas?",
+        "pregunta": "La secuencia STIR en un estudio de RM:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Para tener un control radiográfico de las fracturas prequirúrgicas.",
+                "texto": "Suprime tejidos con un T1 largo.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "Para el estudio de órganos móviles.",
+                "texto": "Es selectiva con la grasa que se mostrará brillante.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "c",
-                "texto": "Para un control de dosimetría personalizada.",
+                "texto": "Alarga T1 para los tejidos con sustancias paramagnéticas.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "Cuando hay diferencias de densidades radiológicas.",
+                "texto": "Suprime tejidos con un T1 corto.",
                 "estado": "Correcta"
             }
         ]
@@ -7989,26 +7989,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 297,
-        "pregunta": "El plano que divide la cabeza de forma vertical y separa el cráneo en dos mitades simétricas se llama:",
+        "pregunta": "¿En qué forma se puede mejorar la relación señal-ruido (S/R) en RM?",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Plano sagital medio.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "b",
-                "texto": "Línea orbitomeatal.",
+                "texto": "Administrando contrastes paramagnéticos.",
                 "estado": "Incorrecta"
             },
             {
+                "letra": "b",
+                "texto": "Reduciendo FOV.",
+                "estado": "Correcta"
+            },
+            {
                 "letra": "c",
-                "texto": "Plano coronal.",
+                "texto": "Disminuyendo el tiempo de repetición (TR).",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "Plano acantomeatal.",
+                "texto": "Con cortes más finos.",
                 "estado": "Incorrecta"
             }
         ]
@@ -8016,26 +8016,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 298,
-        "pregunta": "Si una persona paciente se encuentra en posición PA formando un ángulo de 45º y apoya su lado izquierdo, hablamos de una posición:",
+        "pregunta": "En mamografía, señala la ERRONEA:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "OPD.",
+                "texto": "Se usan técnicas de bajo kVp.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "OAI.",
-                "estado": "Correcta"
-            },
-            {
-                "letra": "c",
-                "texto": "OAD.",
+                "texto": "Los tubos de rayos X están fabricados de tungsteno (W), torio (Th) o renio (Re).",
                 "estado": "Incorrecta"
             },
             {
+                "letra": "c",
+                "texto": "Las rejillas son móviles con cocientes entre 4:1 y 5:1.",
+                "estado": "Correcta"
+            },
+            {
                 "letra": "d",
-                "texto": "OPI.",
+                "texto": "Las CAE están situadas después del receptor de imagen.",
                 "estado": "Incorrecta"
             }
         ]
@@ -8043,26 +8043,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 299,
-        "pregunta": "En la proyección Caldwell, el rayo central se dirige:",
+        "pregunta": "En un TC de oído:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "Perpendicular a la LOM.",
+                "texto": "El examen debe incluir imágenes axiales y coronales.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "15º caudal a la LOM.",
-                "estado": "Incorrecta"
-            },
-            {
-                "letra": "c",
-                "texto": "15º caudal a la LIOM.",
+                "texto": "Se usan algoritmos de reconstrucción ósea y de ambos oídos por separado.",
                 "estado": "Correcta"
             },
             {
+                "letra": "c",
+                "texto": "a) y b) son ciertas.",
+                "estado": "Incorrecta"
+            },
+            {
                 "letra": "d",
-                "texto": "30º caudal a la LOM.",
+                "texto": "a) y b) son falsas.",
                 "estado": "Incorrecta"
             }
         ]
@@ -8070,26 +8070,26 @@
     {
         "documento": "RADIOGRAFIA",
         "id": 300,
-        "pregunta": "En la proyección Towne para occipital, el ángulo CORRECTO del rayo central es:",
+        "pregunta": "El sustentaculum tali se encuentra en:",
         "opciones": [
             {
                 "letra": "a",
-                "texto": "30° caudal al LOM.",
+                "texto": "Astrágalo.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "b",
-                "texto": "37° caudal al LOM.",
+                "texto": "Calcáneo.",
                 "estado": "Correcta"
             },
             {
                 "letra": "c",
-                "texto": "15° caudal al LIOM.",
+                "texto": "Esfenoides.",
                 "estado": "Incorrecta"
             },
             {
                 "letra": "d",
-                "texto": "Perpendicular al LIOM.",
+                "texto": "Temporal.",
                 "estado": "Incorrecta"
             }
         ]

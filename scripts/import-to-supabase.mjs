@@ -8,7 +8,7 @@ const rootDir = path.resolve(__dirname, "..");
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
-const SOURCES = ["data/preguntas-bateria-comun.json", "data/preguntas-rayos.json"];
+const SOURCES = ["data/preguntas-comun.json", "data/preguntas-rayos.json"];
 const INACTIVE_DOCUMENTS = ["CELADOR"];
 const CHUNK_SIZE = 200;
 
