@@ -5418,6 +5418,11 @@
                 "letra": "c",
                 "texto": "Mayor contraste en partes blandas.",
                 "estado": "Incorrecta"
+            },
+            {
+                "letra": "d",
+                "texto": "Menor resolución espacial.",
+                "estado": "Incorrecta"
             }
         ]
     },
@@ -6158,12 +6163,12 @@
             {
                 "letra": "a",
                 "texto": "Es el paso intermedio entre la limpieza física y la esterilización.",
-                "estado": "Correcta"
+                "estado": "Incorrecta"
             },
             {
                 "letra": "b",
                 "texto": "Elimina la mayoría de los agentes patógenos de una superficie, a excepción de las esporas.",
-                "estado": "Correcta"
+                "estado": "Incorrecta"
             },
             {
                 "letra": "c",
@@ -6185,12 +6190,12 @@
             {
                 "letra": "a",
                 "texto": "Antes de depositar cualquier elemento en el campo estéril, hay que comprobar su fecha de caducidad.",
-                "estado": "Correcta"
+                "estado": "Incorrecta"
             },
             {
                 "letra": "b",
                 "texto": "Detectar posibles alteraciones en los envoltorios.",
-                "estado": "Correcta"
+                "estado": "Incorrecta"
             },
             {
                 "letra": "c",
@@ -6200,7 +6205,7 @@
             {
                 "letra": "d",
                 "texto": "Todas son correctas.",
-                "estado": "Incorrecta"
+                "estado": "Correcta"
             }
         ]
     },
@@ -6244,12 +6249,12 @@
             {
                 "letra": "b",
                 "texto": "Sangre.",
-                "estado": "Correcta"
+                "estado": "Incorrecta"
             },
             {
                 "letra": "c",
                 "texto": "Membranas mucosas.",
-                "estado": "Correcta"
+                "estado": "Incorrecta"
             },
             {
                 "letra": "d",
@@ -6455,22 +6460,22 @@
             {
                 "letra": "a",
                 "texto": "Entre intervenciones.",
-                "estado": "Correcta"
+                "estado": "Incorrecta"
             },
             {
                 "letra": "b",
                 "texto": "Cuando se humedece.",
-                "estado": "Correcta"
+                "estado": "Incorrecta"
             },
             {
                 "letra": "c",
                 "texto": "Cada 3 horas.",
-                "estado": "Correcta"
+                "estado": "Incorrecta"
             },
             {
                 "letra": "d",
                 "texto": "b) y c) son correctas.",
-                "estado": "Incorrecta"
+                "estado": "Correcta"
             }
         ]
     },
@@ -7265,17 +7270,17 @@
             {
                 "letra": "a",
                 "texto": "Retirada de maquillaje y esmalte de uñas si procede.",
-                "estado": "Correcta"
+                "estado": "Incorrecta"
             },
             {
                 "letra": "b",
                 "texto": "Valorar el grado de movilidad y solicitar su colaboración si es posible.",
-                "estado": "Correcta"
+                "estado": "Incorrecta"
             },
             {
                 "letra": "c",
                 "texto": "Comprobar que la vestimenta del paciente sea la adecuada.",
-                "estado": "Correcta"
+                "estado": "Incorrecta"
             },
             {
                 "letra": "d",
@@ -7373,17 +7378,17 @@
             {
                 "letra": "a",
                 "texto": "La falta de ambiente confidencial.",
-                "estado": "Correcta"
+                "estado": "Incorrecta"
             },
             {
                 "letra": "b",
                 "texto": "Falta de confianza en el personal sanitario.",
-                "estado": "Correcta"
+                "estado": "Incorrecta"
             },
             {
                 "letra": "c",
                 "texto": "Sentirse intimidado por la imagen de la persona sanitaria.",
-                "estado": "Correcta"
+                "estado": "Incorrecta"
             },
             {
                 "letra": "d",
@@ -7540,12 +7545,12 @@
             {
                 "letra": "b",
                 "texto": "Dar la sensación de ir con prisas.",
-                "estado": "Correcta"
+                "estado": "Incorrecta"
             },
             {
                 "letra": "c",
                 "texto": "Iniciar la conversación de manera contundente.",
-                "estado": "Correcta"
+                "estado": "Incorrecta"
             },
             {
                 "letra": "d",
@@ -7562,7 +7567,7 @@
             {
                 "letra": "a",
                 "texto": "En caso de que la persona paciente sea bebé, darle la toma justo antes de la prueba.",
-                "estado": "Correcta"
+                "estado": "Incorrecta"
             },
             {
                 "letra": "b",
@@ -7572,7 +7577,7 @@
             {
                 "letra": "c",
                 "texto": "Evitar, en la medida de los posible, el uso de sujeción mecánica.",
-                "estado": "Correcta"
+                "estado": "Incorrecta"
             },
             {
                 "letra": "d",
