@@ -144,8 +144,27 @@
   }
 
   function getReviewStatusLabel(value) {
-    const found = REVIEW_STATUS_OPTIONS.find((item) => item.value === value);
+    const normalized = normalizeReviewStatus(value);
+    const found = REVIEW_STATUS_OPTIONS.find((item) => item.value === normalized);
     return found ? found.label : value;
+  }
+
+  function normalizeReviewStatus(value) {
+    const status = cleanText(value || "pending").toLowerCase();
+
+    if (["published", "publicada", "publicado"].includes(status)) {
+      return "published";
+    }
+
+    if (["needs_review", "needs review", "needs-review", "reviewing", "en revision", "en revisión", "revision", "revisión"].includes(status)) {
+      return "needs_review";
+    }
+
+    return "pending";
+  }
+
+  function questionNeedsReview(question) {
+    return normalizeReviewStatus(question.review_status) === "needs_review" || getOpenReportCount(question.id) > 0;
   }
 
   function getOpenReportCount(questionId) {
@@ -180,7 +199,15 @@
         return false;
       }
 
-      if (state.filters.reviewStatus !== "all" && question.review_status !== state.filters.reviewStatus) {
+      if (state.filters.reviewStatus === "needs_review" && !questionNeedsReview(question)) {
+        return false;
+      }
+
+      if (
+        state.filters.reviewStatus !== "all" &&
+        state.filters.reviewStatus !== "needs_review" &&
+        normalizeReviewStatus(question.review_status) !== state.filters.reviewStatus
+      ) {
         return false;
       }
 
@@ -612,7 +639,7 @@
               >
                 ${REVIEW_STATUS_OPTIONS.map(
                   (option) => `
-                    <option value="${option.value}" ${question.review_status === option.value ? "selected" : ""}>
+                    <option value="${option.value}" ${normalizeReviewStatus(question.review_status) === option.value ? "selected" : ""}>
                       ${escapeHtml(option.label)}
                     </option>
                   `,
@@ -756,7 +783,7 @@
             <article class="rounded-3xl bg-white/85 p-5 ring-1 ring-slate-200">
               <p class="text-sm text-slate-500">Pendientes</p>
               <p class="mt-2 text-3xl font-extrabold text-amber-600">${
-                state.questions.filter((question) => question.review_status !== "published").length
+                state.questions.filter((question) => normalizeReviewStatus(question.review_status) !== "published").length
               }</p>
             </article>
             <article class="rounded-3xl bg-white/85 p-5 ring-1 ring-slate-200">
